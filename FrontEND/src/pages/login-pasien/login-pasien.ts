@@ -5,6 +5,7 @@ import { AlertController } from 'ionic-angular';
 import { SignupPasien } from '../signup-pasien/signup-pasien';
 import { Http } from '@angular/http';
 import { Data } from '../../providers/data';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class LoginPasien {
 
   email:string;
   password:string;
+  submitted = false;
   
   constructor(public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data) {
   }
@@ -31,24 +33,21 @@ export class LoginPasien {
   	this.navCtrl.push(SignupPasien);
   }
 
-  masuk(){
-
-    let input = JSON.stringify({
+  login(form: NgForm){
+    this.submitted = true;
+    if(form.valid){
+      let input = JSON.stringify({
         email: this.email, 
         password: this.password
-        
       });
-console.log(input);
-    this.http.post(this.data.BASE_URL+"/test/login_patients.php", input).subscribe(data => {
-           
-           let response = data.json();
-           
-           if(response.status=="200"){
-             //storage data local di ionicnya dari data base
-             this.data.login(response.data);
-             this.gotoTab();
-           }
-           else
+        this.http.post(this.data.BASE_URL+"/login_patients.php",input).subscribe(data => {
+        let response = data.json();
+	if(response.status=="200"){
+        //console.log(response);
+        this.data.login(response.data);
+        this.gotoTab();
+      }
+      else
            {
              let alert = this.alertCtrl.create({
                 title: 'Gagal Masuk',
@@ -57,12 +56,21 @@ console.log(input);
               });
               alert.present();
            }
-           console.log(response);
-           console.log(data);
-        }, err => { 
-           
-        });
 
+      });
+    }
   }
+
+
+
+
+  lupaPassword(){
+             let alert = this.alertCtrl.create({
+                title: 'Hubungi Admin',
+                subTitle: 'Nuh  : @nuhsat <br> Fatim  : @haefa',      
+                buttons: ['OK']
+              });
+              alert.present();
+           }
   
 }

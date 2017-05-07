@@ -19,6 +19,10 @@ export class ProfilDokter {
     console.log('ionViewDidLoad ProfilDokter');
   }
 
+  ionViewWillEnter(){
+
+  }
+
   editProfil(){
   	this.navCtrl.push(EditProfilDokter);
   }
@@ -34,6 +38,7 @@ export class ProfilDokter {
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
+    this.ionViewWillEnter();
 
     setTimeout(() => {
       console.log('Async operation has ended');

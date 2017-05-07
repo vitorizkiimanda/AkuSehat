@@ -1,7 +1,7 @@
 <?php
 $localhost = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $db_name = "akusehat";
 
 //create connection

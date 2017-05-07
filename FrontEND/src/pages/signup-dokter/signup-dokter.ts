@@ -61,7 +61,7 @@ export class SignupDokter {
 
       });
 console.log(input);
-    this.http.post(this.data.BASE_URL+"/test/register_doctors.php", input).subscribe(data => {
+    this.http.post(this.data.BASE_URL+"/register_doctors.php", input).subscribe(data => {
            console.log(data);
            let response = data.json();
            

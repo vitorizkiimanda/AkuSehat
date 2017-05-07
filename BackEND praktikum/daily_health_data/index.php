@@ -28,6 +28,7 @@ require_once 'php_action/db_connect.php';
     <thead>
       <tr>
         <th>id_pat</th>
+          <th>date</th>
         <th>tension_sistol</th>
         <th>tension_diastol</th>
         <th>sleep_duration</th>
@@ -44,6 +45,7 @@ require_once 'php_action/db_connect.php';
         while($row = $result->fetch_assoc()) {
           echo"<tr>
             <td>".$row['id_pat']."</td>
+            <td>".$row['date_daily']."</td>
             <td>".$row['tension_sistol']."</td>
             <td>".$row['tension_diastol']."</td>
             <td>".$row['sleep_duration']."</td>

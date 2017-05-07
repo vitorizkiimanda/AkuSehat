@@ -20,12 +20,18 @@ export class Bayar {
     console.log('ionViewDidLoad Bayar');
   }
 
+  ionViewWillEnter(){
+
+    
+  }
+
   pembayaran(){
     this.navCtrl.push(BayarUpload);
   }
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
+    this.ionViewWillEnter();
 
     setTimeout(() => {
       console.log('Async operation has ended');

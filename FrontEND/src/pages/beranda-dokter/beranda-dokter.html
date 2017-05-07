@@ -38,7 +38,7 @@
 	<ion-list>
 		<ion-item>
 		    <ion-thumbnail item-left>
-		      <img src="../../assets/pict/doctor-flat.png">
+		      <img src="../../assets/pict/doctor-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
 		    </ion-thumbnail>
 		    <font size="4">{{name}}</font>
 		    <p text-wrap>Dokter {{specialization}}</p>
@@ -51,6 +51,10 @@
 
 	</ion-list>
 </ion-item>
+
+
+ 
+
 
 <ion-item *ngFor="let data of pasien">
 	  <button ion-button clear item-right>

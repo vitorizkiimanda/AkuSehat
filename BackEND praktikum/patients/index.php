@@ -31,9 +31,7 @@ require_once 'php_action/db_connect.php';
         <th>name_patient</th>
         <th>email_patient</th>
         <th>password_patient</th>
-        <th>no_account_patient</th>
         <th>sex_patient</th>
-        <th>bank_patient</th>
         <th>no_tel_patient</th>
         <th>Option</th>
       </tr>
@@ -50,9 +48,7 @@ require_once 'php_action/db_connect.php';
             <td>".$row['name_patient']."</td>
             <td>".$row['email_patient']."</td>
             <td>".$row['password_patient']."</td>
-            <td>".$row['no_account_patient']."</td>
             <td>".$row['sex_patient']."</td>
-            <td>".$row['bank_patient']."</td>
             <td>".$row['no_tel_patient']."</td>
             <td>
               <a href='edit.php?id_patient=".$row['id_patient']."'><button type='button'>Edit</button></a>

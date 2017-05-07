@@ -1,20 +1,14 @@
-<!--
-  Generated template for the ProfilPasien page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Profil Dokter
+      Profil
     </ion-title>
   </ion-navbar>		
 </ion-header>
 
 
 <ion-content padding>
-	
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"
@@ -24,12 +18,17 @@
     </ion-refresher-content>
   </ion-refresher>
 
-	
+	<ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      
+    </ion-fab-list>
+  </ion-fab>
 
 	<ion-card>
-	  <img src="../../assets/pict/doctor-flat.png" style='height: 100%; width: 100%; object-fit: contain'>
-	  <ion-item>
-</ion-item>
+	  <img src="../../assets/pict/doctor-flat.png" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
 	  <ion-card-content>
 	    <ion-card-title>
 	      Nama Si Dokter
@@ -41,14 +40,7 @@
 	  <ion-item>
 	    <ion-icon name="mail" item-left></ion-icon>
 	     <font size="3">Email</font>
-	     <p>emailsidokter@pasien.com</p>
-	  </ion-item>
-
-
-	  <ion-item>
-	    <ion-icon name="medkit" item-left></ion-icon>
-	     <font size="3">Spesialisasi</font>
-	     <p>gelar S2 Si Dokter</p>
+	     <p>emaildokter@pasien.com</p>
 	  </ion-item>
 
 	  <ion-item>
@@ -56,6 +48,34 @@
 	     <font size="3">Nomor Telepon</font>
 	     <p>08965701xxxx</p>
 	  </ion-item>
+
+
+	  <ion-item>
+	    <ion-icon name="medkit" item-left></ion-icon>
+	     <font size="3">Spesialisasi</font>
+	     <p>Dokter Kandungan</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="md-home" item-left></ion-icon>
+	     <font size="3">Rumah Sakit</font>
+	     <p>RS KBP</p>
+	  </ion-item>
+		
+	  <ion-item>
+	    <ion-icon name="ios-school" item-left></ion-icon>
+	     <font size="3">Riwayat Pendidikan</font>
+	     <p>S1 Pendidikan Dokter IPB</p>
+	     <p>S2 Dokter Kandungan IPB</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-ribbon" item-left></ion-icon>
+	     <font size="3">Riwayat Bekerja</font>
+	     <p>Ketua Bedah Kandungan RS KBP</p>
+	     <p>Anggota Tim Bedah RS Sarjito</p>
+	  </ion-item>
+	  
 
 	</ion-list>
 	

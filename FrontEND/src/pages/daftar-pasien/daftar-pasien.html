@@ -19,54 +19,55 @@
 
 
 
-  <ion-item>
-	<ion-list>
-		<ion-item>
-		    <ion-thumbnail item-left>
-		      <img src="../../assets/pict/person-flat.png">
-		    </ion-thumbnail>
-		    <font size="4">Nama Si Pasien</font>
-		    <p text-wrap>Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien </p>
-		    <!-- <button ion-button clear item-right>
-			  <ion-icon name="settings"  (click)='nextProfil()'></ion-icon>
-			  &nbsp;&nbsp;&nbsp;&nbsp;
-			  <ion-icon name="cash"  (click)='nextBayar()'></ion-icon>
-			</button> -->
-		</ion-item>
-
-	</ion-list>
-</ion-item>
-
 <ion-item>
-	<ion-item>
-	  <ion-icon name="pulse" item-left></ion-icon>
-	  Data Kesehatan
-	  <ion-badge item-right color="dark">03/05/17</ion-badge>
-	</ion-item>
-	&nbsp;
-	<ion-list >
-		  <ion-item >
-		  &nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
-		   	<ion-note item-right color="dark">
-        	120/80 mmHg
-      		</ion-note>
-		  </ion-item>
-		  <ion-item>
-		  &nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
-		  	<ion-note item-right color="dark">
-        	8 jam
-      		</ion-note>
-		  </ion-item>
-		  <ion-item>
-		  &nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
-		  <ion-card text-wrap>
-			  <ion-card-content >
-			  <p>  Hari ini saya merasa seperti muda kembali. Tubuh segar bugar. Tidak terasa nyeri ataupun letih. Saya senang</p>
-			  </ion-card-content>
-			</ion-card>
-		  </ion-item>
-	</ion-list>
+	<ion-list>
+			<ion-item>
+					<ion-thumbnail item-left>
+						<img src="../../assets/pict/person-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+					</ion-thumbnail>
+					<ion-item text-wrap>
+						<font size="4">Dummy{{name}}</font>
+						<p>{{address_patient}}Dummy Address Dummy Address Dummy Address Dummy AddressDummy Address Dummy Address Dummy Address</p>
+					</ion-item>
+					
+			</ion-item>
+
+		</ion-list>
 </ion-item>
+
+
+		<!--*ngFor="let data of daily"-->
+<ion-item  >  
+		<ion-item>
+			<ion-icon name="pulse"></ion-icon>
+			&nbsp;&nbsp;&nbsp;Data Kesehatan
+			<ion-badge item-right color="dark" small><font size="2">dummy</font></ion-badge>
+		</ion-item>
+		&nbsp;
+		<ion-list >
+				<ion-item >
+				&nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
+					<ion-note item-right color="dark">
+						dummy/dummy mmHg
+						</ion-note>
+				</ion-item>
+				<ion-item>
+				&nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
+					<ion-note item-right color="dark">
+						dummy jam
+						</ion-note>
+				</ion-item>
+				<ion-item text wrap>
+				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
+				<ion-card text-wrap>
+					<ion-item text-wrap>
+						<p> dummy dummydummydummydummydummydummy dummydummy dummy dummy dummy dummydummydummydummydummydummydummydummy </p>
+					</ion-item>
+				</ion-card>
+				</ion-item>
+		</ion-list>
+
+	</ion-item>
 
 
 

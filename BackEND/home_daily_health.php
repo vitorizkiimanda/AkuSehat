@@ -5,8 +5,8 @@
     header('Access-Control-Allow-Header; Content-Type');
 
   include 'db_connect.php';
-    $id=$_GET['doctor'];
-    $query_user = mysqli_query($connect, "SELECT * FROM doctors WHERE id_doctor='$id'");
+    $id=$_GET['patient'];
+    $query_user = mysqli_query($connect, "SELECT * FROM daily_health_data JOIN patients WHERE id_pat=id_patient && id_pat='$id' ORDER BY  date_daily DESC");
     
     $result_set = array();
     while($result =mysqli_fetch_assoc($query_user)){
@@ -20,4 +20,3 @@ $data =array(
 
 echo json_encode($data);
 ?>
-

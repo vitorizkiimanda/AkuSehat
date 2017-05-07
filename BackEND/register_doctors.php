@@ -25,6 +25,7 @@
         $sum_patient =$request->patients_max;
     }
     $encrypt_password = md5($password_doctor);
+
     if($name_doctor=="" or $email_doctor=="" or $password_doctor=="" or $sex=="" or $no_tel_doctor=="" or $bank=="" or $no_account=="" or $specialization=="" or $sum_patient==""){
         $data=array(
         'message'=>"isinya kurang lengkap",

@@ -5,7 +5,7 @@ import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class Data {
-  public BASE_URL = 'http://172.18.16.19';
+  public BASE_URL = 'http://localhost/akusehat/BackEND';
   public HAS_LOGGED_IN = 'status_login';
   
   constructor(public http: Http , public storage: Storage) {
@@ -18,9 +18,11 @@ export class Data {
   };
 
   //ini kalo mau save ke local storage--> cache file gitu,, keren lah
-  getNama() {
+
+  // dapetnnya pas dari login
+  getDataPasien() {
     return this.storage.get('user_data').then((value) => {
-      return value.name_patient;
+      return value;
     });
   }
   getDataDokter() {

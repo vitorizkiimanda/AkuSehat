@@ -14,7 +14,6 @@ import { Http } from '@angular/http';
 export class BerandaDokter {
 
   pasien: any;
-  dokter: any;
   name:string;
   specialization:string;
   email:string;
@@ -23,6 +22,7 @@ export class BerandaDokter {
   bank:string;
   telephone:number;
   sum:number;
+  
 
 
   constructor(public navCtrl: NavController,public alertCtrl: AlertController, public navParams: NavParams, public http: Http, public data: Data) {
@@ -65,6 +65,7 @@ export class BerandaDokter {
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
+    this.ionViewWillEnter();
 
     setTimeout(() => {
       console.log('Async operation has ended');
@@ -83,7 +84,7 @@ export class BerandaDokter {
 
 
   getDataPasien(){
-    this.http.get(this.data.BASE_URL+"/test/user.php?doctor="+this.id_doctor).subscribe(data => {
+    this.http.get(this.data.BASE_URL+"/user.php?doctor="+this.id_doctor).subscribe(data => {
       let response = data.json();
       console.log(response);
       if(response.status=="200"){

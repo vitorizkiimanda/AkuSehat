@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Buat Akun
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+<ion-content padding>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>
+	    <ion-input [(ngModel)]="name" type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>
+	    <ion-input [(ngModel)]="email" type="email"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Password</font></ion-label>
+	    <ion-input [(ngModel)]="password" type="password"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+	    <ion-select [(ngModel)]="sex">
+	      <ion-option value="L">Laki-laki</ion-option>
+	      <ion-option value="P">Perempuan</ion-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+	    <ion-input [(ngModel)]="telephone" type="number"></ion-input>
+	</ion-item>	
+	<ion-item>
+	    <ion-label><font size="3" color="black">Bank</font></ion-label>
+	    <ion-select [(ngModel)]="bank">
+	      <ion-option value="mandiri">Mandiri</ion-option>
+	      <ion-option value="bni">BNI</ion-option>
+	      <ion-option value="bri">BRI</ion-option>
+	      <ion-option value="bca">BCA</ion-option>
+	      <ion-option value="btn">BTN</ion-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Rekening</font></ion-label>
+	    <ion-input [(ngModel)]="bank_number" type="number"></ion-input>
+	</ion-item>
+	<ion-item>
+	    <ion-label><font size="3" color="black">Spesialisasi</font></ion-label>
+	    <ion-select [(ngModel)]="specialization">
+	      <ion-option value="Umum">Umum</ion-option>
+	      <ion-option value="Gigi">Gigi</ion-option>
+	      <ion-option value="Anak">Anak</ion-option>
+	      <ion-option value="Kandungan">Kandungan</ion-option>
+	      <ion-option value="THT">THT</ion-option>
+	    </ion-select>
+	</ion-item>
+	
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Jumlah Pasien Maksimal</font></ion-label>
+	    <ion-input [(ngModel)]="patients_max" type="number"></ion-input>
+	</ion-item>
+	
+	<button ion-button block (click)='daftar()'>DAFTAR</button>
+
+</ion-content>
+

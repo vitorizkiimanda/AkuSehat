@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Buat Akun
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+<ion-content padding>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>
+	    <ion-input [(ngModel)]="name" type="text" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>
+	    <ion-input [(ngModel)]="email" type="email" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Password</font></ion-label>
+	    <ion-input [(ngModel)]="password" type="password" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+	    <ion-select [(ngModel)]="sex" required>
+	      <ion-option value="L">Laki-laki</ion-option>
+	      <ion-option value="P">Perempuan</ion-option>
+	    </ion-select>
+	</ion-item>
+
+	
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+	    <ion-input [(ngModel)]="telephone" type="number" required></ion-input>
+	</ion-item>	
+	<ion-item>
+	    <ion-label stacked color="dark" lineHeight="22"><font size="3">Alamat</font></ion-label>
+	    <ion-textarea [(ngModel)]="address" autosize type="text" required></ion-textarea>
+	</ion-item>
+
+
+	<button ion-button block (click)='daftar()'>DAFTAR</button>
+
+</ion-content>
+

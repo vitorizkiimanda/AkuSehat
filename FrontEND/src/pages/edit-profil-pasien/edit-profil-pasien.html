@@ -1,0 +1,121 @@
+<!--
+  Generated template for the EditProfilPasien page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Edit Profil
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>
+	    <ion-input type="text" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>
+	    <ion-input type="email" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+	    <ion-input type="number" required></ion-input>
+	</ion-item>	
+
+
+	<ion-item>
+	    <ion-label stacked color="dark" lineHeight="22"><font size="3">Alamat</font></ion-label>
+	    <ion-textarea autosize type="text" required></ion-textarea>
+	</ion-item>
+
+
+	<ion-list insert>
+	<ion-item></ion-item>
+	<ion-item text-center><font size="5">Riwayat Kesehatan</font></ion-item>
+	  <ion-item>
+	    <ion-label stacked color="dark">
+				<font size="3">Umur</font>
+			</ion-label>
+	    <ion-input type="number" required placeholder="(tahun)"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label stacked color="dark">
+				<font size="3">Berat Badan</font>
+			</ion-label>
+	    <ion-input type="number" required placeholder="(kg)"></ion-input>
+	  </ion-item>
+
+
+	  <ion-item>
+	    <ion-label stacked color="dark">
+				<font size="3">Tinggi Badan</font>
+			</ion-label>
+	    <ion-input type="number" required placeholder="(cm)"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label stacked color="dark"><font size="3">Alergi</font></ion-label>
+		<ion-textarea autosize type="text"></ion-textarea>
+	  </ion-item>
+
+	  <ion-item></ion-item>
+	  <ion-item text-center>Penyakit Yang Pernah Diderita</ion-item>
+	  	
+	  <ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nama Penyakit</font></ion-label>
+	    <ion-input type="text"></ion-input>
+	  </ion-item>
+
+
+	  <ion-item>
+	    <ion-label stacked color="dark"><font size="3">Tanggal Dirawat</font></ion-label>
+	    <ion-input type="date"></ion-input>
+	  </ion-item>
+
+	  	<ion-item>
+		    <ion-label stacked color="dark">
+					<font size="3">Lama Dirawat</font>
+		    </ion-label>
+		    <ion-input type="number" placeholder="(hari)" ></ion-input>
+		</ion-item>
+
+	  	<ion-item>
+		    <ion-label stacked color="dark"><font size="3">Cacat</font></ion-label>
+		    <ion-textarea autosize type="text"></ion-textarea>
+		</ion-item>
+
+		<ion-item>
+		<ion-buttons end>
+			<button ion-button icon-left>
+			  <ion-icon name="add-circle"></ion-icon>
+			  &nbsp;&nbsp;Tambah Riwayat
+			</button>
+		</ion-buttons>
+		</ion-item>
+
+		<ion-item></ion-item>
+
+		<ion-item>
+		    <ion-label stacked color="dark"><font size="3">Operasi</font></ion-label>
+			<ion-textarea autosize type="text"></ion-textarea>
+		  </ion-item>
+
+		<ion-item>
+		    <ion-label stacked color="dark"><font size="3">Deskripsi</font></ion-label>
+		    <ion-textarea autosize type="text"></ion-textarea>
+		</ion-item>
+
+	</ion-list>
+
+	<button ion-button block (click)='simpanProfil()'>SIMPAN</button>
+
+</ion-content>

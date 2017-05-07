@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Pasien
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+	<ion-list>
+
+	  <ion-item>
+	    <ion-label stacked>Email</ion-label>
+	    <ion-input [(ngModel)]="email" type="email"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label stacked>Password</ion-label>
+	    <ion-input [(ngModel)]="password" type="password"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+
+	<ion-buttons end>
+		<button ion-button color="primary" (click)="masuk()">
+			<font size="e" text-wrap>Masuk</font>
+		</button>
+	</ion-buttons>
+
+	<ion-item text-center>
+	<a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat Akun.</a></a>
+
+	</ion-item>
+</ion-content>

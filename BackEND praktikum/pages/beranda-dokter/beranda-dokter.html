@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Beranda
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <!-- Real floating action button, fixed. It will not scroll with the content -->
+
+
+  <ion-fab bottom left>
+    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      <button ion-fab (click)='profildokter()'><ion-icon name="medkit"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+<ion-item>
+	<ion-list>
+		<ion-item>
+		    <ion-thumbnail item-left>
+		      <img src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png">
+		    </ion-thumbnail>
+		    <font size="4">Nama Si Dokter</font>
+		    <p text-wrap>Alamat Si Dokter Alamat Si Dokter Alamat Si Dokter</p>
+		    <!-- <button ion-button clear item-right>
+			  <ion-icon name="settings"  (click)='nextProfil()'></ion-icon>
+			  &nbsp;&nbsp;&nbsp;&nbsp;
+			  <ion-icon name="cash"  (click)='nextBayar()'></ion-icon>
+			</button> -->
+		</ion-item>
+
+	</ion-list>
+</ion-item>
+
+<ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 1
+	</ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 2
+	</ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 3
+	</ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 4
+	</ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 5
+	</ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 6
+	</ion-item>
+	<ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+		</button>
+	  Nama Pasien 7
+	</ion-item>
+</ion-item>
+
+</ion-content>

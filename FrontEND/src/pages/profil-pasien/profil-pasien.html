@@ -1,0 +1,149 @@
+<!--
+  Generated template for the ProfilPasien page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Profil
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tarik untuk memperbaharui"
+      refreshingSpinner="circles"
+      refreshingText="Memperbaharui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+	<ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      <button ion-fab (click)='profildokter()'><ion-icon name="medkit"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+	<ion-card>
+	  <img src="../../assets/pict/person-flat.png" style='height: 100%; width: 100%; object-fit: contain'>
+	  <ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="ios-image" color="primary" (click)='editFoto()'></ion-icon>
+			</button>
+		</ion-item>
+	  <ion-card-content>
+	    <ion-card-title>
+	      Nama Si Pasien
+	      </ion-card-title>
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-list>
+	  <ion-item>
+	    <ion-icon name="mail" item-left></ion-icon>
+	     <font size="3">Email</font>
+	     <p>emailpasien@pasien.com</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="call" item-left></ion-icon>
+	     <font size="3">Nomor Telepon</font>
+	     <p>08965701xxxx</p>
+	  </ion-item>
+
+
+	  <ion-item>
+	    <ion-icon name="map" item-left></ion-icon>
+	     <font size="3">Alamat</font>
+	     <p text-wrap>Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien</p>
+	  </ion-item>
+
+  	  <ion-item>
+	    <ion-icon name="medkit" item-left></ion-icon>
+	     <font size="3">Dokter</font>
+	     <p>dr.Dokter Si Pasien</p>
+	  </ion-item>
+
+	<ion-item></ion-item>
+	<ion-item text-center><font size="5">Riwayat Kesehatan</font></ion-item>
+
+	<ion-item>
+	    <ion-icon name="md-calendar" item-left></ion-icon>
+	     <font size="3">Umur</font>
+	     <p>60 Tahun</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="body" item-left></ion-icon>
+	     <font size="3">Berat Badan</font>
+	     <p>33 kg</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-body" item-left></ion-icon>
+	     <font size="3">Tinggi Badan</font>
+	     <p>149 cm</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-bug" item-left></ion-icon>
+	     <font size="3">Alergi</font>
+	     <p>bokek,anget,sepoi-sepoi</p>
+	  </ion-item>
+
+
+	<ion-item></ion-item>
+	<ion-item text-center><font size="4">Penyakit Yang Pernah Diderita</font></ion-item>
+
+	  <ion-item>
+	    <ion-icon name="list" item-left></ion-icon>
+	     <font size="3">Nama Penyakit</font>
+	     <p>Males Ngerjain Project</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-calendar" item-left></ion-icon>
+	     <font size="3">Tanggal Dirawat</font>
+	     <p>3 Mei 2017</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-timer" item-left></ion-icon>
+	     <font size="3">Lama Dirawat</font>
+	     <p>15 Hari</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="md-trending-down" item-left></ion-icon>
+	     <font size="3">Cacat</font>
+	     <p> - </p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-construct" item-left></ion-icon>
+	     <font size="3">Operasi</font>
+	     <p> - </p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="ios-search" item-left></ion-icon>
+	     <font size="3">Deskripsi Kesehatan</font>
+
+	  	<ion-card text-wrap>
+			  <ion-card-content >
+			  <p>  Ku sehat, ku senang, ku bahagia, YEAY!!</p>
+			  </ion-card-content>
+			</ion-card>
+	  </ion-item>
+
+	</ion-list>
+	<button ion-button block (click)='editProfil()'>EDIT</button>
+</ion-content>

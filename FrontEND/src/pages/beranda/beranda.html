@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Beranda
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tarik untuk memperbaharui"
+      refreshingSpinner="circles"
+      refreshingText="Memperbaharui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <!-- Real floating action button, fixed. It will not scroll with the content -->
+
+
+  <ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      <button ion-fab (click)='profildokter()'><ion-icon name="medkit"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+<ion-item>
+	<ion-list>
+		<ion-item>
+		    <ion-thumbnail item-left>
+		      <img src="../../assets/pict/person-flat.png">
+		    </ion-thumbnail>
+		    <font size="4">{{name}}</font>
+		    <p text-wrap>Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien </p>
+		    
+		</ion-item>
+
+	</ion-list>
+</ion-item >
+
+<ion-item>
+	<ion-item>
+	  <ion-icon name="pulse" item-left></ion-icon>
+	  Data Kesehatan
+	  <ion-badge item-right color="dark">03/05/17</ion-badge>
+	</ion-item>
+	&nbsp;
+	<ion-list >
+		  <ion-item >
+		  &nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
+		   	<ion-note item-right color="dark">
+        	120/80 mmHg
+      		</ion-note>
+		  </ion-item>
+		  <ion-item>
+		  &nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
+		  	<ion-note item-right color="dark">
+        	8 jam
+      		</ion-note>
+		  </ion-item>
+		  <ion-item>
+		  &nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
+		  <ion-card text-wrap>
+			  <ion-card-content >
+			  <p>  Hari ini saya merasa seperti muda kembali. Tubuh segar bugar. Tidak terasa nyeri ataupun letih. Saya senang</p>
+			  </ion-card-content>
+			</ion-card>
+		  </ion-item>
+	</ion-list>
+</ion-item>
+
+<ion-item>
+	<ion-item>
+	  <ion-icon name="pulse" item-left></ion-icon>
+	  Data Kesehatan
+	  <ion-badge item-right color="dark">02/05/17</ion-badge>
+	</ion-item>
+	&nbsp;
+	<ion-list >
+		  <ion-item >
+		  &nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
+		   	<ion-note item-right color="dark">
+        	125/83 mmHg
+      		</ion-note>
+		  </ion-item>
+		  <ion-item>
+		  &nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
+		  	<ion-note item-right color="dark">
+        	7 jam
+      		</ion-note>
+		  </ion-item>
+		  <ion-item>
+		  &nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
+		  <ion-card text-wrap>
+			  <ion-card-content >
+			  <p>  Hari ini saya merasa seperti muda kembali. Tubuh segar bugar. Tidak terasa nyeri ataupun letih. Saya senang</p>
+			  </ion-card-content>
+			</ion-card>
+		  </ion-item>
+	</ion-list>
+</ion-item>
+
+<ion-item>
+	<ion-item>
+	  <ion-icon name="pulse" item-left></ion-icon>
+	  Data Kesehatan
+	  <ion-badge item-right color="dark">01/05/17</ion-badge>
+	</ion-item>
+	&nbsp;
+	<ion-list >
+		  <ion-item >
+		  &nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
+		   	<ion-note item-right color="dark">
+        	130/90 mmHg
+      		</ion-note>
+		  </ion-item>
+		  <ion-item>
+		  &nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
+		  	<ion-note item-right color="dark">
+        	6 jam
+      		</ion-note>
+		  </ion-item>
+		  <ion-item>
+		  &nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
+		  <ion-card text-wrap>
+			  <ion-card-content >
+			  <p>  Hari ini saya merasa seperti muda kembali. Tubuh segar bugar. Tidak terasa nyeri ataupun letih. Saya senang</p>
+			  </ion-card-content>
+			</ion-card>
+		  </ion-item>
+	</ion-list>
+</ion-item>
+
+</ion-content>

@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { LoginPasien } from '../login-pasien/login-pasien';
 import { LoginDokter } from '../login-dokter/login-dokter';
 import { Http,Headers,RequestOptions } from '@angular/http';
+import { AkuSehat } from '../aku-sehat/aku-sehat';
 
 @Component({
   selector: 'page-login',
@@ -36,6 +37,11 @@ export class Login {
 
   loginDokter(){
   	this.navCtrl.push(LoginDokter);
+  }
+
+
+  gotoAbout(){
+    this.navCtrl.push(AkuSehat);
   }
 
 

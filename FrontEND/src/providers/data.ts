@@ -12,7 +12,7 @@ export class Data {
     console.log('Hello Data Provider');
   }
 
-  login(data : string) {
+  login(data : any) {
     this.storage.set(this.HAS_LOGGED_IN, true);
     this.storage.set('user_data', data);
   };

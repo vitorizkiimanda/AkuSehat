@@ -24,8 +24,9 @@
 					required>
 				</ion-input>
 			</ion-item>
+			
 			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>
-				Username is required
+				Email is required
 			</p>
 
 			<ion-item>
@@ -46,7 +47,7 @@
 
 		<ion-grid>
 			<ion-row>
-				<ion-col text-center><a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat Akun.</a></a></ion-col>
+				<ion-col text-center><a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat akun.</a></a></ion-col>
 			</ion-row>
 			<ion-row>
 				<ion-col text-center><a><font color="black"></font><a (click)="lupaPassword()">Lupa password.</a></a></ion-col>

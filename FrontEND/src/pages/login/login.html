@@ -7,7 +7,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      AkuSehat!
+      
     </ion-title>
   </ion-navbar>		
 </ion-header>
@@ -15,7 +15,9 @@
 
 
 <ion-content padding>
-
+<ion-item (tap)="gotoAbout()">
+<img src="../../assets/pict/AkuSehat.png"/>
+</ion-item>	
 	<ion-item>
 		<ion-list>
 			<ion-item>
@@ -23,7 +25,7 @@
 			      <img src="../../assets/pict/pasien-login.jpg" style='height: 30vw; width: 30vw; display: block; margin: auto;'>
 			    </ion-thumbnail>
 
-			    <button ion-button clear  block color="dark" (click)="loginPasien()">
+			    <button class='login_button' clear ion-button  block color="dark" (click)="loginPasien()">
 		  			<font size="5" text-wrap>Pasien</font>
 				</button>
 			    
@@ -36,7 +38,7 @@
 			      <img src="../../assets/pict/doctor-login.jpg" style='height: 30vw; width: 30vw; display: block; margin: auto;'>
 			    </ion-thumbnail>
 
-			    <button ion-button clear  block color="dark" (click)="loginDokter()">
+			    <button class='login_button' clear ion-button  block color="dark" (click)="loginDokter()">
 		  			<font size="5" text-wrap>Dokter</font>
 				</button>
 			</ion-item>

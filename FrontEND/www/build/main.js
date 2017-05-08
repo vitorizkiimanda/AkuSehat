@@ -761,7 +761,7 @@ var ConfigToken = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* OpaqueT
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navigation_deep_linker__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__platform_dom_controller__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__util_events__ = __webpack_require__(378);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__gestures_gesture_controller__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__tap_click_haptic__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__gestures_gesture_config__ = __webpack_require__(503);
@@ -802,7 +802,7 @@ var ConfigToken = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* OpaqueT
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_img_img__ = __webpack_require__(331);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_infinite_scroll_infinite_scroll__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_infinite_scroll_infinite_scroll_content__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_item_item_reorder__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_item_item_sliding__ = __webpack_require__(335);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_label_label__ = __webpack_require__(204);
@@ -962,7 +962,7 @@ var ConfigToken = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* OpaqueT
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_100__navigation_nav_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_101__navigation_nav_controller_base__ = __webpack_require__(126);
 /* unused harmony reexport NavControllerBase */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_102__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_102__navigation_nav_params__ = __webpack_require__(35);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_102__navigation_nav_params__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_103__navigation_nav_util__ = __webpack_require__(68);
 /* unused harmony reexport DeepLink */
@@ -3973,7 +3973,7 @@ function literal(value, type) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nav_params__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewController; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = isViewController;
 
@@ -5768,7 +5768,7 @@ function copyInputAttributes(srcElement, destElement) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_collection__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_lang__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__selector__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util__ = __webpack_require__(37);
 /* unused harmony export CompileMetadataWithIdentifier */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CompileAnimationEntryMetadata; });
 /* unused harmony export CompileAnimationStateMetadata */
@@ -8944,9 +8944,46 @@ function escapeRegExp(s) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AkuSehat; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AkuSehat = (function () {
+    function AkuSehat(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AkuSehat.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AkuSehat');
+    };
+    AkuSehat = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
+            selector: 'page-aku-sehat',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\aku-sehat\aku-sehat.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      AkuSehat!\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<ion-item>\n		<ion-list>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/c191.0.697.697/14488339_1365218023518494_8289474416732012544_n.jpg?ig_cache_key=MTM1NzIxNjMzNTU1NDA3MjI3MQ%3D%3D.2.c" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Hafidlotul Fatimah Ahmad</font>\n			    <p text-wrap>G64150018</p>\n			</ion-item>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="https://scontent.cdninstagram.com/t51.2885-19/s150x150/13573522_1936743163218652_1378592098_a.jpg" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Dwi Aditya Damayanti</font>\n			    <p text-wrap>G74150010</p>\n			</ion-item>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="data:image/jpeg;base64,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" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Nuh Satria Putra</font>\n			    <p text-wrap>G64150075</p>\n			</ion-item>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="data:image/jpeg;base64,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" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Vito Rizki Imanda</font>\n			    <p text-wrap>G64150093</p>\n			</ion-item>\n\n		</ion-list>\n	</ion-item>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\aku-sehat\aku-sehat.html"*/,
+        }), 
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+    ], AkuSehat);
+    return AkuSehat;
+}());
+//# sourceMappingURL=aku-sehat.js.map
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icon_icon__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__label_label__ = __webpack_require__(204);
@@ -9506,7 +9543,7 @@ var ItemGroup = (function () {
 //# sourceMappingURL=item.js.map
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9565,7 +9602,7 @@ var NavParams = (function () {
 //# sourceMappingURL=nav-params.js.map
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9659,7 +9696,7 @@ var IonicFormInput = (function () {
 //# sourceMappingURL=form.js.map
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9760,7 +9797,7 @@ var SyncAsyncResult = (function () {
 //# sourceMappingURL=util.js.map
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9810,43 +9847,6 @@ var ControlContainer = (function (_super) {
     return ControlContainer;
 }(__WEBPACK_IMPORTED_MODULE_0__abstract_control_directive__["a" /* AbstractControlDirective */]));
 //# sourceMappingURL=control_container.js.map
-
-/***/ }),
-/* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AkuSehat; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var AkuSehat = (function () {
-    function AkuSehat(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    AkuSehat.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AkuSehat');
-    };
-    AkuSehat = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-aku-sehat',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\aku-sehat\aku-sehat.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      AkuSehat!\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<ion-item>\n		<ion-list>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/c191.0.697.697/14488339_1365218023518494_8289474416732012544_n.jpg?ig_cache_key=MTM1NzIxNjMzNTU1NDA3MjI3MQ%3D%3D.2.c">\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Hafidlotul Fatimah Ahmad</font>\n			    <p text-wrap>G64150018</p>\n			</ion-item>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="https://scontent.cdninstagram.com/t51.2885-19/s150x150/13573522_1936743163218652_1378592098_a.jpg">\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Dwi Aditya Damayanti</font>\n			    <p text-wrap>G74150010</p>\n			</ion-item>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="data:image/jpeg;base64,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">\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Nuh Satria Putra</font>\n			    <p text-wrap>G64150075</p>\n			</ion-item>\n			<ion-item>\n			    <ion-thumbnail item-left>\n			      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEBUQEA8QFRAWFRYXFRAVFRUQEBUVFRUXFhUVFxcYHSggGBolGxUVITEhJSkrLi4vFx8zODMtNyktLisBCgoKDg0OFxAQFSsdHyArLS0tLS0rLS4tLS00LSstODctLS0tKy03KystLS0xMC0rLS0rKy0rLTEuMC0rLisrK//AABEIAKAAoAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAQMEBQYABwj/xAA7EAACAQIEBAMGBQIEBwAAAAABAgADEQQFEiEGMUFREyJhBzJxgZGhQlJiscEj0RQkcoIzU2Oy4fDx/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAIBEBAQACAwACAwEAAAAAAAAAAAECEQMhMQRBEiJRMv/aAAwDAQACEQMRAD8A9bEKCIQEAIRYgiwDrRZ06BEtOnXlRxVma4XDPVYkbWAGxJ6CM0biTi7DYFT4jgvby0x7xnmGfe1qtUFqFIU/1E6j+0xGOxNbFVCRqdidzzP/AMllg+DMVUFyqr8dpFzk9VMLfDS8dY0P4njtft02m/4e9rasAmJp2bYBwdvUmYivwFiQL+Q+kosbktaj71Nh69Ipnjfs7hlPp9R5fjUrIHpsGUi9x2j88K9kGeMmLFCpVsjKdm6kcgO091Uy0OMEwzAMZBgmEYhgDZgGONG2gEyLBEIRGKKIkURgsSLOiDp5R7XsTUq16WDpnbTqI6XY2uflPV55jxThmfNztt4aH5byc7rFWE3ZEbI8kp4ZAqgFurdSf4mkw2HuJGVZZ0Kfl5zzu7luu/qTURsVQFpRY+gDswBmk8AsL3tKTMKVusWUs8Vj368z4jyg4eoMRR2F72HQjrPfeHcd/iMLSrdXRSfjbf8AaeWZ1T1U2Fuhm49mDE5bSvyBYD4XndwZWztxc2Mxy6auCYRiGbsAwTCgmAAYBhtAaAShFEEQojEIoMSLGCxYk6IFmR4ipr/jQwPmNGxHazbfuZrpms/wn+YWr3TTb4H/AMzPl/y04u8mWx9Ilrirp9b2Ei0Mwqo+hqgcdwb/ALSZmPDwqMW3JIO19t/SBkXDCYbexHO1zcm/ecO+ndrsWY5rUVdryiaoKu9XEqG/Jq801uaUgdIttaZrF8JIz6hTXlbVyNv7wxv9Vcf4ZpoAjANewNr79J6JwFTVcvoBCCNO5/UdyPvMVQyxaK6R12PWb3hPAmhhKaHnbUf9286fj3e3L8jHS3gmEYBnU5HQDCgGACYDQmgNA0oGEI2IYiMd4sC8IQIU6JOvAClXn1IlAwHu3vLK8axK6kZe4Ik5Tc0rG6srM064FjIWPx+k63NkHM/tI73BI7dJDfHP5h4BYdCSAh+s87venpYuzPiHDsq2NvWWOHxJNME9QD8pnsVTceYYbD36m+5+VrR3DY2o6HVTKActwR6wyljSpVZ9Tqo5k2nouGbygbXAA+08xyo6q6nsb/Seh4OrcTr+PNRwfJu8pFgTBM68EmdLldeCTOvBJgZGMbaEYDGASRDBjcIRGK8IGAsUGAFeLeDeJeMhaoFVto1isSlJS9R1VBzZjYfWeX8be0HxFajhCQljqr8iw7KOg9ZUxtK1a5zmVI1nFJ76TZyPd1dgeslUKgdB2mLy/AmjZCNmpoQe53Lfcx5MY9LZSbdp5fNr87p6HFv8Y0tTD09zck/HaVGaYwAaQflKfFZtU77ypxOLb3mJJ6CTjNryza7hzFo51I197E9iOk3mAqTwrCZg2CrUmG4ItUHfe/13M9j4fzGnXQPScMv3HoexnoYY6nTz88t1qFbacTGaTQ7zRJSYhM68AtECkxtjOLRCYwkiGI0DFDRGdvFvGwZVcRZ/SwNLxKpuT7qD3mP9vWE7CzxmLSihqVGCoObE2E8+zv2oIt1wtHUf+Y5so/2gXP1mH4o4tr45vOdNMe7SX3R6nufWZqrU2+03x45PWdy/ixznP6+LfVWqs3YE+X5DkJBZrqRGBTFtxFC26zWJemZNihiKC3tcKLtz02O//u0i5tSKttvbrM9w3iWVgF0lr+VDsDt5gT6e9y/CZtMPi6L6Hf8A4LXF9yAADpa/QGx59p5nPw7y6dnFy6jH4uv0VSW7f3tHMBl5J11CD63It6AfSaLMjhqB10G1BhuEYli19lt1uCJAbD1MQSq1NGgDzBNSnVqAI3HLSd+59JGHFcRnybZfPm1WYKCobSHvc6h723aM5bmtXDP4lGoVb7H0I6wM6xbOEFrLYuB189ib/wAGVrOeQG/fpPR45rHTly9ez8J+0SlXtSxIFKryD3/pt9fdM3gafL1O/U/2mx4T46rYO1OperQ/IT5l/wBJ/iK4fcOZPcbwCZX5RnFLF0/EouGXqPxKexHSTbzJRSYJMQmATAJYMK8a1Qg0kzoM8F40zZsTi6hYnSrMqjoFU2Fvpee346vopu5Oyox+gM+bXranvfckn6zbi9TkWq1hIx3IHaFXe+wg09zNre0aPXnQSYlr9ZSVvkA11ChbSrKdTA2YAcwptsTJjLUxKlDUUUmps97hAWWwfnzBJuR6ymwGJNOoGDaeY1dgRYnbnaX3+HK+VhtZWUBtJuQbUTtvqUC49Jzc0/Zrj4bweHOml5CtRyAXBGsDQAfUbDv+ODisLTvVBpMVpFgq2FgPK5Asdhf485MfBoqo6t52uSdQIUt52cLYaQrKOcgZlS003fxHWzaNJAJc7Ozk38pYsTt6TKTtVZ/E1mclmN2O5P8AA9I2sRpx2nXGQrxbwFa4vCvGS04fz6rgqvi0j6Mh91h2M91yTN6eLorWpHY8x1U9QZ863m29lWYsmLNG50VFNx01LuD8eYmXJPtcewkwWMEtEJmNUlgwi20aBi6pKmc45x7U8BXblddI+LG08GVt56/7X8bpwlOn+ep9lFz97TxpmmnFNRNEh5x9fKPWRqc7VczaVFSbxLxu868rZaPsdpo8AfEp1DU1FqaAqwAI1NvrFzsQFUXHrMvql3lTaqLPc6UFqi2uXAN6elum5IPp8ZlyqxTqdJWNIaCPEuGAAJIJ8RtgfMCTbf8ALKbOqn9QpdvJdLHYWB8u3extv2EvMVgWpMg8bXUYEJdSFDKddyLnUp1WvMpiD5m8xbc+Y9TfcyOObp0ggHfbp1nM8EGboPdIjQA/eCXvHsSOdtpoeAK+nMaPqxH1UzMuZa8M1tGLot2qp+8zyVH0MTBYwNc4tMVJt52qNhoqmSp5V7Z8V/VoUx+FHb5swA/7Z5rea/2qYnXmDjoqqv2v/Mxt5rOoinQdpw5RL7RRLlIoi3g3iCMDvLfKKoFNnZ7aGChb7aamz7db7b/pEpWk7KWJYqCPMBZT+Jh7g+p+0nPwRY43EFVZPFZiUAJLFjYc7X5FiRf0EpDLLO3YEBwA3QAhvLYcyP1BpUOekWHUFLe8HVOMv8JkVMBDiajK1QXSmouxHT94uTlxwnY1tQgxWaWmaZL4a+JTfXTvY87qQesp6zWhjyTObh6JqkvLKmmqjdnU/RhIV49QbcfGMPpINBvGcLUuin9IP2jjGZGm3i3jV4FappUt2BP0ERvAeM8R4mNrt/1GHyG38SjvJGPq6qjN3Yn6m8jTRJ4HYThBHKEkqApnRLziZWyEYWDqlKisvvA3HUX6fGN3gjntzivcCdmmILuWYg9NhpHyEgr3POI7XPp/MW8UNIwABqoGPlLqCfQkXm+YGjiqq1gB5QUqbOCFW2nSd+Z2t3N/Tzi80NLiUMoXEUfFItZiQTsLdRt8pz8szmczxmznmljSxAenXfRop2tci2pwDewttzExVXpLjNc8qV1WnYLRXlTXkfU95TvHxY5ftllNbFdHaRjMcpzaE+hMqqXo0yfyL+wkpjK/Jm/y9L/Qv7CTC0g3/9k=">\n			    </ion-thumbnail>\n			    <font size="4" text-wrap>Vito Rizki Imanda</font>\n			    <p text-wrap>G64150093</p>\n			</ion-item>\n\n		</ion-list>\n	</ion-item>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\aku-sehat\aku-sehat.html"*/,
-        }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
-    ], AkuSehat);
-    return AkuSehat;
-}());
-//# sourceMappingURL=aku-sehat.js.map
 
 /***/ }),
 /* 39 */
@@ -13086,7 +13086,7 @@ var ProfilDokterPasien = (function () {
     };
     ProfilDokterPasien = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-profil-dokter-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\profil-dokter-pasien\profil-dokter-pasien.html"*/'<!--\n  Generated template for the ProfilPasien page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Profil Dokter\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n<ion-content padding>\n	\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n	\n\n	<ion-card>\n	  <img src="../../assets/pict/doctor-flat.png" style=\'height: 100%; width: 100%; object-fit: contain\'>\n	  <ion-item>\n</ion-item>\n	  <ion-card-content>\n	    <ion-card-title>\n	      Nama Si Dokter\n	      </ion-card-title>\n	  </ion-card-content>\n	</ion-card>\n\n	<ion-list>\n	  <ion-item>\n	    <ion-icon name="mail" item-left></ion-icon>\n	     <font size="3">Email</font>\n	     <p>emailsidokter@pasien.com</p>\n	  </ion-item>\n\n\n	  <ion-item>\n	    <ion-icon name="medkit" item-left></ion-icon>\n	     <font size="3">Spesialisasi</font>\n	     <p>gelar S2 Si Dokter</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="call" item-left></ion-icon>\n	     <font size="3">Nomor Telepon</font>\n	     <p>08965701xxxx</p>\n	  </ion-item>\n\n	</ion-list>\n	\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\profil-dokter-pasien\profil-dokter-pasien.html"*/,
+            selector: 'page-profil-dokter-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\profil-dokter-pasien\profil-dokter-pasien.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Profil\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n	<ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      \n    </ion-fab-list>\n  </ion-fab>\n\n	<ion-card>\n	  <img src="../../assets/pict/doctor-flat.png" style=\'height: 40vh; width: 40vh; display: block; margin: auto;\'>\n	  <ion-card-content>\n	    <ion-card-title>\n	      Nama Si Dokter\n	      </ion-card-title>\n	  </ion-card-content>\n	</ion-card>\n\n	<ion-list>\n	  <ion-item>\n	    <ion-icon name="mail" item-left></ion-icon>\n	     <font size="3">Email</font>\n	     <p>emaildokter@pasien.com</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="call" item-left></ion-icon>\n	     <font size="3">Nomor Telepon</font>\n	     <p>08965701xxxx</p>\n	  </ion-item>\n\n\n	  <ion-item>\n	    <ion-icon name="medkit" item-left></ion-icon>\n	     <font size="3">Spesialisasi</font>\n	     <p>Dokter Kandungan</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="md-home" item-left></ion-icon>\n	     <font size="3">Rumah Sakit</font>\n	     <p>RS KBP</p>\n	  </ion-item>\n		\n	  <ion-item>\n	    <ion-icon name="ios-school" item-left></ion-icon>\n	     <font size="3">Riwayat Pendidikan</font>\n	     <p>S1 Pendidikan Dokter IPB</p>\n	     <p>S2 Dokter Kandungan IPB</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="ios-ribbon" item-left></ion-icon>\n	     <font size="3">Riwayat Bekerja</font>\n	     <p>Ketua Bedah Kandungan RS KBP</p>\n	     <p>Anggota Tim Bedah RS Sarjito</p>\n	  </ion-item>\n	  \n\n	</ion-list>\n	\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\profil-dokter-pasien\profil-dokter-pasien.html"*/,
         }), 
         __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], ProfilDokterPasien);
@@ -17165,7 +17165,7 @@ var CompilerFactory = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared__ = __webpack_require__(44);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbstractFormGroupDirective; });
 /**
@@ -17250,7 +17250,7 @@ var AbstractFormGroupDirective = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_async__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared__ = __webpack_require__(44);
 /* unused harmony export formDirectiveProvider */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NgForm; });
@@ -17591,7 +17591,7 @@ var RadioControlValueAccessor = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_async__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_collection__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reactive_errors__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared__ = __webpack_require__(44);
 /* unused harmony export formDirectiveProvider */
@@ -17792,7 +17792,7 @@ var FormGroupDirective = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validators__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abstract_form_group_directive__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reactive_errors__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__form_group_directive__ = __webpack_require__(79);
@@ -23116,7 +23116,7 @@ var DefaultValueAccessor = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validators__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abstract_form_group_directive__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ng_form__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__template_driven_errors__ = __webpack_require__(285);
 /* unused harmony export modelGroupProvider */
@@ -25409,7 +25409,7 @@ var DOCUMENT = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* OpaqueToke
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profil_pasien_edit_profil_pasien__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pengaturan_pasien_pengaturan_pasien__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profil_dokter_pasien_profil_dokter_pasien__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_data__ = __webpack_require__(46);
@@ -25517,7 +25517,7 @@ var ProfilPasien = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__gestures_gesture_controller__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tap_click_haptic__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_key__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__util_dom__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gestures_ui_event_manager__ = __webpack_require__(47);
@@ -27734,7 +27734,7 @@ var PanGesture = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nav_controller__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__swipe_back__ = __webpack_require__(508);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavControllerBase; });
 var __extends = (this && this.__extends) || function (d, b) {
@@ -29896,7 +29896,7 @@ function isAsciiHexDigit(code) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__style_url_resolver__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__template_parser_template_preparser__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__url_resolver__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__util__ = __webpack_require__(37);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectiveNormalizer; });
 /**
  * @license
@@ -30114,7 +30114,7 @@ var TemplatePreparseVisitor = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_collection__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_lang__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__private_import_core__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util__ = __webpack_require__(37);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectiveResolver; });
 /**
  * @license
@@ -31032,7 +31032,7 @@ var I18nError = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__private_import_core__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__schema_element_schema_registry__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__url_resolver__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__util__ = __webpack_require__(37);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompileMetadataResolver; });
 /**
  * @license
@@ -36022,7 +36022,7 @@ var AbstractControlDirective = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_control__ = __webpack_require__(54);
 /* unused harmony export AbstractControlStatus */
 /* unused harmony export ngControlStatusHost */
@@ -36148,7 +36148,7 @@ var NgControlStatusGroup = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__abstract_form_group_directive__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__control_value_accessor__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ng_control__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ng_form__ = __webpack_require__(77);
@@ -36700,7 +36700,7 @@ var FormControlDirective = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facade_async__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validators__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__abstract_form_group_directive__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__control_container__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__control_value_accessor__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ng_control__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__reactive_errors__ = __webpack_require__(111);
@@ -38248,7 +38248,7 @@ var MyApp = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bayar_upload_bayar_upload__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pengaturan_pasien_pengaturan_pasien__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profil_dokter_pasien_profil_dokter_pasien__ = __webpack_require__(56);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Bayar; });
@@ -38303,10 +38303,9 @@ var Bayar = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
             selector: 'page-bayar',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\bayar\bayar.html"*/'<!--\n  Generated template for the Bayar page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Pembayaran\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n	<ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      <button ion-fab (click)=\'profildokter()\'><ion-icon name="medkit"></ion-icon></button>\n    </ion-fab-list>\n  </ion-fab>\n\n<ion-buttons>\n<button ion-button block (click)="pembayaran()">BAYAR</button>\n</ion-buttons>\n<ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  Mei 2017\n	  <ion-badge item-right color="danger">Belum LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  April 2017\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  Maret 2017\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  Februari 2017\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  Januari 2017\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  Desember 2016\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  November 2016\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  Oktober 2016\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n	<ion-item>\n	  <ion-icon name="ios-cash-outline" item-left></ion-icon>\n	  September 2016\n	  <ion-badge item-right color="secondary">LUNAS</ion-badge>\n	</ion-item>\n</ion-item>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\bayar\bayar.html"*/,
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], Bayar);
     return Bayar;
-    var _a, _b, _c;
 }());
 //# sourceMappingURL=bayar.js.map
 
@@ -38319,7 +38318,7 @@ var Bayar = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profil_pasien_profil_pasien__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bayar_bayar__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pengaturan_pasien_pengaturan_pasien__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profil_dokter_pasien_profil_dokter_pasien__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_data__ = __webpack_require__(46);
@@ -38402,10 +38401,9 @@ var Beranda = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
             selector: 'beranda',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\beranda\beranda.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Beranda\n\n    </ion-title>\n\n  </ion-navbar>		\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n<ion-content padding>\n\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n\n    <ion-refresher-content\n\n      pullingIcon="arrow-dropdown"\n\n      pullingText="Tarik untuk memperbaharui"\n\n      refreshingSpinner="circles"\n\n      refreshingText="Memperbaharui...">\n\n    </ion-refresher-content>\n\n  </ion-refresher>\n\n\n\n\n\n  <!-- Real floating action button, fixed. It will not scroll with the content -->\n\n\n\n\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n\n    <ion-fab-list side="top">\n\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n\n      <button ion-fab (click)=\'profildokter()\'><ion-icon name="medkit"></ion-icon></button>\n\n    </ion-fab-list>\n\n  </ion-fab>\n\n\n\n\n\n\n\n	<ion-item>\n\n		<ion-list>\n\n			<ion-item>\n\n					<ion-thumbnail item-left>\n\n						<img src="../../assets/pict/person-flat.png" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n\n					</ion-thumbnail>\n\n					<ion-item text-wrap>\n\n						<font size="4">{{name}}</font>\n\n						<p>{{address_patient}}</p>\n\n					</ion-item>\n\n					\n\n			</ion-item>\n\n\n\n		</ion-list>\n\n	</ion-item >\n\n	<ion-item *ngFor="let data of daily" >\n\n		<ion-item>\n\n			<ion-icon name="pulse"></ion-icon>\n\n			&nbsp;&nbsp;&nbsp;Data Kesehatan\n\n			<ion-badge item-right color="dark" small><font size="2">{{data.date_daily}}</font></ion-badge>\n\n		</ion-item>\n\n		&nbsp;\n\n		<ion-list >\n\n				<ion-item >\n\n				&nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah\n\n					<ion-note item-right color="dark">\n\n						{{data.tension_sistol}}/{{data.tension_diastol}} mmHg\n\n						</ion-note>\n\n				</ion-item>\n\n				<ion-item>\n\n				&nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur\n\n					<ion-note item-right color="dark">\n\n						{{data.sleep_duration}} jam\n\n						</ion-note>\n\n				</ion-item>\n\n				<ion-item text wrap>\n\n				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi\n\n				<ion-card text-wrap>\n\n					<ion-item text-wrap>\n\n						<p>  {{data.daily_description}}</p>\n\n					</ion-item>\n\n				</ion-card>\n\n				</ion-item>\n\n		</ion-list>\n\n\n\n	</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\beranda\beranda.html"*/
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__providers_data__["a" /* Data */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__providers_data__["a" /* Data */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_8__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__angular_http__["b" /* Http */]) === 'function' && _d) || Object])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_7__providers_data__["a" /* Data */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_8__angular_http__["b" /* Http */]])
     ], Beranda);
     return Beranda;
-    var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=beranda.js.map
 
@@ -38482,7 +38480,7 @@ var PengaturanDokter = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profil_dokter_edit_profil_dokter__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pengaturan_dokter_pengaturan_dokter__ = __webpack_require__(190);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilDokter; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -38539,10 +38537,9 @@ var ProfilDokter = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
             selector: 'page-profil-dokter',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\profil-dokter\profil-dokter.html"*/'<!--\n  Generated template for the ProfilPasien page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Profil\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n	<ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      \n    </ion-fab-list>\n  </ion-fab>\n\n	<ion-card>\n	  <img src="../../assets/pict/doctor-flat.png" style=\'height: 40vh; width: 40vh; display: block; margin: auto;\'>\n	  <ion-item>\n	  <button ion-button clear item-right>\n			  <ion-icon name="ios-image" color="primary" (click)=\'editFoto()\'></ion-icon>\n			</button>\n		</ion-item>\n	  <ion-card-content>\n	    <ion-card-title>\n	      Nama Si Dokter\n	      </ion-card-title>\n	  </ion-card-content>\n	</ion-card>\n\n	<ion-list>\n	  <ion-item>\n	    <ion-icon name="mail" item-left></ion-icon>\n	     <font size="3">Email</font>\n	     <p>emaildokter@pasien.com</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="call" item-left></ion-icon>\n	     <font size="3">Nomor Telepon</font>\n	     <p>08965701xxxx</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="card" item-left></ion-icon>\n	     <font size="3">Rekening</font>\n	     <p>Mand*ri</p>\n	     <p>136 14458961</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="medkit" item-left></ion-icon>\n	     <font size="3">Spesialisasi</font>\n	     <p>Dokter Kandungan</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="md-home" item-left></ion-icon>\n	     <font size="3">Rumah Sakit</font>\n	     <p>RS KBP</p>\n	  </ion-item>\n\n		<ion-item>\n	    <ion-icon name="ios-people" item-left></ion-icon>\n	     <font size="3">Jumlah Pasien Terkini</font>\n	     <p>5 orang</p>\n	  </ion-item>\n\n		<ion-item>\n	    <ion-icon name="" item-left></ion-icon>\n	     <font size="3">Jumlah Pasien Maksimal</font>\n	     <p>7 orang</p>\n	  </ion-item>\n	  \n	  <ion-item>\n	    <ion-icon name="ios-school" item-left></ion-icon>\n	     <font size="3">Riwayat Pendidikan</font>\n	     <p>S1 Pendidikan Dokter IPB</p>\n	     <p>S2 Dokter Kandungan IPB</p>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-icon name="ios-ribbon" item-left></ion-icon>\n	     <font size="3">Riwayat Bekerja</font>\n	     <p>Ketua Bedah Kandungan RS KBP</p>\n	     <p>Anggota Tim Bedah RS Sarjito</p>\n	  </ion-item>\n	  \n\n	</ion-list>\n	<button ion-button block (click)=\'editProfil()\'>EDIT</button>\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\profil-dokter\profil-dokter.html"*/,
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], ProfilDokter);
     return ProfilDokter;
-    var _a, _b, _c;
 }());
 //# sourceMappingURL=profil-dokter.js.map
 
@@ -38646,7 +38643,7 @@ var TabsPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_key__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionSheetCmp; });
 
@@ -39070,7 +39067,7 @@ var ActionSheetController = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gestures_gesture_controller__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_key__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_view_controller__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertCmp; });
@@ -41424,7 +41421,7 @@ var List = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gestures_gesture_controller__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadingCmp; });
@@ -41528,7 +41525,7 @@ var loadingIds = -1;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_key__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_view_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__gestures_gesture_controller__ = __webpack_require__(11);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalCmp; });
@@ -41924,7 +41921,7 @@ var PickerController = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__platform_key__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_view_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__gestures_gesture_controller__ = __webpack_require__(11);
@@ -44478,7 +44475,7 @@ var TabHighlight = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_nav_params__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_nav_params__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navigation_view_controller__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastCmp; });
 
@@ -47886,7 +47883,7 @@ var _TsEmitterVisitor = (function (_super) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compile_metadata__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__output_ast__ = __webpack_require__(8);
 /* harmony export (immutable) */ __webpack_exports__["a"] = convertValueToOutputAst;
 /**
@@ -48441,7 +48438,7 @@ function _addQueryToTokenMap(map, query) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__output_output_jit__ = __webpack_require__(418);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__style_compiler__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__template_parser_template_parser__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__view_compiler_view_compiler__ = __webpack_require__(97);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RuntimeCompiler; });
 /**
@@ -48842,7 +48839,7 @@ var ModuleBoundCompiler = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dom_security_schema__ = __webpack_require__(420);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__element_schema_registry__ = __webpack_require__(43);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DomElementSchemaRegistry; });
@@ -49335,7 +49332,7 @@ var _urlWithSchemaRe = /^([^:/?#]+):/;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ml_parser_tags__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__parse_util__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selector__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__template_ast__ = __webpack_require__(30);
 /* unused harmony export BoundPropertyType */
 /* unused harmony export BoundProperty */
@@ -57259,7 +57256,7 @@ var StatusBar = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pengaturan_pasien_pengaturan_pasien__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profil_dokter_pasien_profil_dokter_pasien__ = __webpack_require__(56);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BayarUpload; });
@@ -57311,7 +57308,7 @@ var BayarUpload = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pengaturan_dokter_pengaturan_dokter__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_data__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(27);
@@ -57392,12 +57389,11 @@ var BerandaDokter = (function () {
     };
     BerandaDokter = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-beranda-dokter',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\beranda-dokter\beranda-dokter.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Beranda\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n\n  <!-- Real floating action button, fixed. It will not scroll with the content -->\n\n\n  <ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      \n    </ion-fab-list>\n  </ion-fab>\n\n\n\n<ion-item>\n	<ion-list>\n		<ion-item>\n		    <ion-thumbnail item-left>\n		      <img src="../../assets/pict/doctor-flat.png" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n		    </ion-thumbnail>\n		    <font size="4">{{name}}</font>\n		    <p text-wrap>Dokter {{specialization}}</p>\n		    <!-- <button ion-button clear item-right>\n			  <ion-icon name="settings"  (click)=\'nextProfil()\'></ion-icon>\n			  &nbsp;&nbsp;&nbsp;&nbsp;\n			  <ion-icon name="cash"  (click)=\'nextBayar()\'></ion-icon>\n			</button> -->\n		</ion-item>\n\n	</ion-list>\n</ion-item>\n\n\n \n\n\n<ion-item *ngFor="let data of pasien">\n	  <button ion-button clear item-right>\n			  <ion-icon name="call"  (click)=\'teleponPasien()\'></ion-icon>\n		</button>\n	  {{data.name_patient}}\n</ion-item>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\beranda-dokter\beranda-dokter.html"*/,
+            selector: 'page-beranda-dokter',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\beranda-dokter\beranda-dokter.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Beranda\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n\n  <!-- Real floating action button, fixed. It will not scroll with the content -->\n\n\n  <ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      \n    </ion-fab-list>\n  </ion-fab>\n\n\n\n<ion-item>\n	<ion-list>\n		<ion-item text-wrap>\n		    <ion-thumbnail item-left>\n		      <img src="../../assets/pict/doctor-flat.png" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n		    </ion-thumbnail>\n		    <font size="4">{{name}}</font>\n		    <p text-wrap>Dokter {{specialization}}</p>\n		    <!-- <button ion-button clear item-right>\n			  <ion-icon name="settings"  (click)=\'nextProfil()\'></ion-icon>\n			  &nbsp;&nbsp;&nbsp;&nbsp;\n			  <ion-icon name="cash"  (click)=\'nextBayar()\'></ion-icon>\n			</button> -->\n		</ion-item>\n\n	</ion-list>\n</ion-item>\n\n\n \n\n\n<ion-item *ngFor="let data of pasien">\n	  <button ion-button clear item-right>\n			  <ion-icon name="call"  (click)=\'teleponPasien()\'></ion-icon>\n		</button>\n	  {{data.name_patient}}\n</ion-item>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\beranda-dokter\beranda-dokter.html"*/,
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */]) === 'function' && _e) || Object])
+        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */]])
     ], BerandaDokter);
     return BerandaDokter;
-    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=beranda-dokter.js.map
 
@@ -57437,7 +57433,7 @@ var DaftarPasien = (function () {
     };
     DaftarPasien = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-daftar-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\daftar-pasien\daftar-pasien.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Daftar Pasien\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n\n\n  <ion-item>\n	<ion-list>\n		<ion-item>\n		    <ion-thumbnail item-left>\n		      <img src="../../assets/pict/person-flat.png">\n		    </ion-thumbnail>\n		    <font size="4">Nama Si Pasien</font>\n		    <p text-wrap>Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien Alamat Pasien </p>\n		    <!-- <button ion-button clear item-right>\n			  <ion-icon name="settings"  (click)=\'nextProfil()\'></ion-icon>\n			  &nbsp;&nbsp;&nbsp;&nbsp;\n			  <ion-icon name="cash"  (click)=\'nextBayar()\'></ion-icon>\n			</button> -->\n		</ion-item>\n\n	</ion-list>\n</ion-item>\n\n<ion-item>\n	<ion-item>\n	  <ion-icon name="pulse" item-left></ion-icon>\n	  Data Kesehatan\n	  <ion-badge item-right color="dark">03/05/17</ion-badge>\n	</ion-item>\n	&nbsp;\n	<ion-list >\n		  <ion-item >\n		  &nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah\n		   	<ion-note item-right color="dark">\n        	120/80 mmHg\n      		</ion-note>\n		  </ion-item>\n		  <ion-item>\n		  &nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur\n		  	<ion-note item-right color="dark">\n        	8 jam\n      		</ion-note>\n		  </ion-item>\n		  <ion-item>\n		  &nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi\n		  <ion-card text-wrap>\n			  <ion-card-content >\n			  <p>  Hari ini saya merasa seperti muda kembali. Tubuh segar bugar. Tidak terasa nyeri ataupun letih. Saya senang</p>\n			  </ion-card-content>\n			</ion-card>\n		  </ion-item>\n	</ion-list>\n</ion-item>\n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\daftar-pasien\daftar-pasien.html"*/,
+            selector: 'page-daftar-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\daftar-pasien\daftar-pasien.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Daftar Pasien\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingIcon="arrow-dropdown"\n      pullingText="Tarik untuk memperbaharui"\n      refreshingSpinner="circles"\n      refreshingText="Memperbaharui...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n\n\n<ion-item>\n	<ion-list>\n			<ion-item>\n					<ion-thumbnail item-left>\n						<img src="../../assets/pict/person-flat.png" style=\'height: 25vw; width: 25vw; display: block; margin: auto;\'>\n					</ion-thumbnail>\n					<ion-item text-wrap>\n						<font size="4">Dummy{{name}}</font>\n						<p>{{address_patient}}Dummy Address Dummy Address Dummy Address Dummy AddressDummy Address Dummy Address Dummy Address</p>\n					</ion-item>\n					\n			</ion-item>\n\n		</ion-list>\n</ion-item>\n\n\n		<!--*ngFor="let data of daily"-->\n<ion-item  >  \n		<ion-item>\n			<ion-icon name="pulse"></ion-icon>\n			&nbsp;&nbsp;&nbsp;Data Kesehatan\n			<ion-badge item-right color="dark" small><font size="2">dummy</font></ion-badge>\n		</ion-item>\n		&nbsp;\n		<ion-list >\n				<ion-item >\n				&nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah\n					<ion-note item-right color="dark">\n						dummy/dummy mmHg\n						</ion-note>\n				</ion-item>\n				<ion-item>\n				&nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur\n					<ion-note item-right color="dark">\n						dummy jam\n						</ion-note>\n				</ion-item>\n				<ion-item text wrap>\n				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi\n				<ion-card text-wrap>\n					<ion-item text-wrap>\n						<p> dummy dummydummydummydummydummydummy dummydummy dummy dummy dummy dummydummydummydummydummydummydummydummy </p>\n					</ion-item>\n				</ion-card>\n				</ion-item>\n		</ion-list>\n\n	</ion-item>\n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\daftar-pasien\daftar-pasien.html"*/,
         }), 
         __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], DaftarPasien);
@@ -57551,9 +57547,11 @@ var EditProfilPasien = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__beranda_beranda__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pengaturan_pasien_pengaturan_pasien__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profil_dokter_pasien_profil_dokter_pasien__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_data__ = __webpack_require__(46);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IsiData; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57571,22 +57569,60 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var IsiData = (function () {
-    function IsiData(navCtrl, alertCtrl, navParams) {
+    function IsiData(navCtrl, http, alertCtrl, navParams, data) {
         this.navCtrl = navCtrl;
+        this.http = http;
         this.alertCtrl = alertCtrl;
         this.navParams = navParams;
+        this.data = data;
+        this.submitted = false;
     }
     IsiData.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad IsiData');
     };
-    IsiData.prototype.simpanData = function () {
-        var alert = this.alertCtrl.create({
-            title: 'Data Tersimpan!',
-            buttons: ['OK']
+    IsiData.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        //ini ni ngambil value yang di return dari data.ts
+        this.data.getDataPasien().then(function (data) {
+            _this.id_patient = data.id_patient;
         });
-        alert.present();
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__beranda_beranda__["a" /* Beranda */]);
+    };
+    IsiData.prototype.simpanData = function (form) {
+        var _this = this;
+        this.submitted = true;
+        if (form.valid) {
+            var input = JSON.stringify({
+                date_daily: this.date_daily,
+                sistol: this.sistol,
+                duration: this.duration,
+                description: this.description,
+                diastol: this.diastol
+            });
+            this.http.post(this.data.BASE_URL + "/daily_health.php?patient=" + this.id_patient, input).subscribe(function (data) {
+                var response = data.json();
+                if (response.status == "200") {
+                    //console.log(response);
+                    //this.data.login(response.data);
+                    var alert = _this.alertCtrl.create({
+                        title: 'Data Tersimpan!',
+                        buttons: ['OK']
+                    });
+                    alert.present();
+                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__beranda_beranda__["a" /* Beranda */]);
+                }
+                else {
+                    var alert = _this.alertCtrl.create({
+                        title: 'Gagal',
+                        subTitle: 'silahkan coba lagi',
+                        buttons: ['OK']
+                    });
+                    alert.present();
+                }
+            });
+        }
     };
     IsiData.prototype.doRefresh = function (refresher) {
         console.log('Begin async operation', refresher);
@@ -57606,11 +57642,12 @@ var IsiData = (function () {
     };
     IsiData = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-isi-data',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\isi-data\isi-data.html"*/'<!--\n  Generated template for the IsiData page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Data Kesehatan Rutin\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      <button ion-fab (click)=\'profildokter()\'><ion-icon name="medkit"></ion-icon></button>\n    </ion-fab-list>\n  </ion-fab>\n\n	<ion-list insert>\n\n	<ion-item>\n	    <ion-label stacked color="dark">\n				<font size="3">Tekanan Darah</font>\n			</ion-label>\n			<ion-input type="number" required placeholder="Sistolik (mmHg)">\n			</ion-input>\n			<ion-input type="number" placeholder="Diastolik (mmHg)">\n			</ion-input>\n					\n	</ion-item>\n\n	 <ion-item>\n	    <ion-label stacked color="dark">\n				<font size="3">Durasi Tidur</font>\n			</ion-label>\n	    <ion-input type="number" required placeholder="(jam)"></ion-input>\n	</ion-item>\n\n	  <ion-item>\n	    <ion-label stacked color="dark"><font size="3">Deskripsi</font></ion-label>\n		<ion-textarea autosize type="text" required text-wrap></ion-textarea>\n	  </ion-item>\n\n		<ion-buttons>\n		<button ion-button block (click)="simpanData()">SIMPAN</button>\n		</ion-buttons>\n	</ion-list>\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\isi-data\isi-data.html"*/,
+            selector: 'page-isi-data',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\isi-data\isi-data.html"*/'<!--\n  Generated template for the IsiData page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Data Kesehatan Rutin\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<ion-fab bottom right>\n    <button ion-fab mini><ion-icon name="ios-arrow-up"></ion-icon></button>\n    <ion-fab-list side="top">\n      <button ion-fab (click)=\'gotoSettings()\'><ion-icon name="ios-settings"></ion-icon></button>\n      <button ion-fab (click)=\'gotoAbout()\'><ion-icon name="information"></ion-icon></button>\n      <button ion-fab (click)=\'profildokter()\'><ion-icon name="medkit"></ion-icon></button>\n    </ion-fab-list>\n  </ion-fab>\n\n<form #simpanDataForm="ngForm" novalidate>\n		<ion-list >\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Tanggal</font></ion-label>\n				<ion-input [(ngModel)]="date_daily" name="date_daily" type="date" #tanggall="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			\n			<p ion-text [hidden]="tanggall.valid || submitted == false" color="danger" padding-left>\n				Email is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Tekanan Darah</font></ion-label>\n				<ion-input [(ngModel)]="sistol" placeholder="Sistolik (mmHg)" name="sistol" type="number" #sistolikk="ngModel" required>\n				</ion-input>\n				<ion-input [(ngModel)]="diastol" placeholder="Diastolik (mmHg)" name="diastol" type="number" #diastolikk="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="diastolikk.valid && sistolikk.valid || submitted == false" color="danger" padding-left>\n				Tekanan Darah is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Durasi Tidur</font></ion-label>\n				<ion-input [(ngModel)]="duration" name="duration" type="number" #tidurr="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			\n			<p ion-text [hidden]="tidurr.valid || submitted == false" color="danger" padding-left>\n				Durasi Tidur is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Deskripsi</font></ion-label>\n				<ion-textarea [(ngModel)]="description" name="description" type="text" #deskripsii="ngModel" spellcheck="false" autocapitalize="off"\n					autosize text-wrap required>\n				</ion-textarea>\n			</ion-item>\n			\n			<p ion-text [hidden]="deskripsii.valid || submitted == false" color="danger" padding-left>\n				Deskripsi is required\n			</p>\n\n		</ion-list>\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button (click)="simpanData(simpanDataForm)" type="submit" block>SIMPAN</button>\n			</ion-col>\n		</ion-row>	\n\n	</form>\n\n\n<!--<form #simpanDataForm="ngForm" novalidate>\n	<ion-list insert>\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Tanggal</font></ion-label>\n	    <ion-input [(ngModel)]="date_daily" name="date_daily" type="date" #tanggal="ngModel" spellcheck="false" autocapitalize="off"\n					required></ion-input>\n	</ion-item>\n	<p ion-text [hidden]="tanggal.valid || submitted == false" color="danger" padding-left>\n				Date is required\n	</p>\n\n	<ion-item>\n	    <ion-label stacked color="dark">\n				<font size="3">Tekanan Darah</font>\n			</ion-label>\n			<ion-input [(ngModel)]="sistol" name="sistol" type="number" #tekananSistol="ngModel" spellcheck="false" autocapitalize="off"\n				 required placeholder="Sistolik (mmHg)">\n			</ion-input>\n			<ion-input [(ngModel)]="diastol" name="diastol" type="number" #tekananDiastol="ngModel" spellcheck="false" autocapitalize="off"\n					required type="number" placeholder="Diastolik (mmHg)">\n			</ion-input>\n	</ion-item>\n	<p ion-text [hidden]="tekananSistol.valid AND tekananDiastol.valid || submitted == false" color="danger" padding-left>\n				Tekanan Darah is required\n	</p>\n\n	 <ion-item>\n	    <ion-label stacked color="dark">\n				<font size="3">Durasi Tidur</font>\n			</ion-label>\n	    <ion-input [(ngModel)]="duration" name="duration" type="number" #tidur="ngModel" spellcheck="false" autocapitalize="off"\n				 required placeholder="(jam)"></ion-input>\n	</ion-item>\n	<p ion-text [hidden]="tidur.valid || submitted == false" color="danger" padding-left>\n				Durasi Tidur is required\n	</p>\n\n	  <ion-item>\n	    <ion-label stacked color="dark"><font size="3">Deskripsi</font></ion-label>\n		<ion-textarea [(ngModel)]="description" name="description" type="text" #deskripsi="ngModel" spellcheck="false" autocapitalize="off"\n				 autosize type="text" required text-wrap></ion-textarea>\n	  </ion-item>\n		<p ion-text [hidden]="Deskripsi.valid || submitted == false" color="danger" padding-left>\n				Deskripsi is required\n	</p>\n\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button block (click)="simpanData()" type="submit" block>SIMPAN</button>\n			</ion-col>\n		</ion-row>		\n\n	</ion-list>\n</form>-->\n\n\n\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\isi-data\isi-data.html"*/,
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* Http */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__providers_data__["a" /* Data */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__providers_data__["a" /* Data */]) === 'function' && _e) || Object])
     ], IsiData);
     return IsiData;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=isi-data.js.map
 
@@ -57696,7 +57733,7 @@ var LoginDokter = (function () {
     };
     LoginDokter = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-login-dokter',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-dokter\login-dokter.html"*/'<!--\n  Generated template for the LoginPasien page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Dokter\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n\n<ion-content padding>\n\n\n	    <img src="../../assets/pict/AkuSehat.png"/>\n	    \n\n\n<form #loginForm="ngForm" novalidate>\n		<ion-list >\n			<ion-item>\n				<ion-label stacked>Email</ion-label>\n				<ion-input [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>\n				Username is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked>Password</ion-label>\n				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>\n				Password is required\n			</p>\n		</ion-list>\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button (click)="login(loginForm)" type="submit" block>Masuk</button>\n			</ion-col>\n		</ion-row>		\n\n		<ion-grid>\n			<ion-row>\n				<ion-col text-center><a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat Akun.</a></a></ion-col>\n			</ion-row>\n			<ion-row>\n				<ion-col text-center><a><font color="black"></font><a (click)="lupaPassword()">Lupa password.</a></a></ion-col>\n			</ion-row>\n		</ion-grid>\n\n	</form>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-dokter\login-dokter.html"*/,
+            selector: 'page-login-dokter',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-dokter\login-dokter.html"*/'<!--\n  Generated template for the LoginPasien page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Dokter\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n\n<ion-content padding>\n\n\n	    <img src="../../assets/pict/AkuSehat.png"/>\n	    \n\n\n<form #loginForm="ngForm" novalidate>\n		<ion-list >\n			<ion-item>\n				<ion-label stacked>Email</ion-label>\n				<ion-input [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>\n				Username is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked>Password</ion-label>\n				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>\n				Password is required\n			</p>\n		</ion-list>\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button (click)="login(loginForm)" type="submit" block>Masuk</button>\n			</ion-col>\n		</ion-row>		\n\n		<ion-grid>\n			<ion-row>\n				<ion-col text-center><a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat akun.</a></a></ion-col>\n			</ion-row>\n			<ion-row>\n				<ion-col text-center><a><font color="black"></font><a (click)="lupaPassword()">Lupa password.</a></a></ion-col>\n			</ion-row>\n		</ion-grid>\n\n	</form>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-dokter\login-dokter.html"*/,
         }), 
         __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_data__["a" /* Data */]])
     ], LoginDokter);
@@ -57786,7 +57823,7 @@ var LoginPasien = (function () {
     };
     LoginPasien = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-login-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-pasien\login-pasien.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Pasien\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n<!--height="300"-->\n		<ion-item>\n	    <img   src="../../assets/pict/AkuSehat.png"/>\n		</ion-item>\n\n\n<form #loginForm="ngForm" novalidate>\n		<ion-list >\n			<ion-item>\n				<ion-label stacked>Email</ion-label>\n				<ion-input [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>\n				Username is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked>Password</ion-label>\n				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>\n				Password is required\n			</p>\n		</ion-list>\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button (click)="login(loginForm)" type="submit" block>Masuk</button>\n			</ion-col>\n		</ion-row>		\n\n		<ion-grid>\n			<ion-row>\n				<ion-col text-center><a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat Akun.</a></a></ion-col>\n			</ion-row>\n			<ion-row>\n				<ion-col text-center><a><font color="black"></font><a (click)="lupaPassword()">Lupa password.</a></a></ion-col>\n			</ion-row>\n		</ion-grid>\n\n	</form>\n\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-pasien\login-pasien.html"*/,
+            selector: 'page-login-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-pasien\login-pasien.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Pasien\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n<!--height="300"-->\n		<ion-item>\n	    <img   src="../../assets/pict/AkuSehat.png"/>\n		</ion-item>\n\n\n<form #loginForm="ngForm" novalidate>\n		<ion-list >\n			<ion-item>\n				<ion-label stacked>Email</ion-label>\n				<ion-input [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			\n			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>\n				Email is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked>Password</ion-label>\n				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>\n				Password is required\n			</p>\n		</ion-list>\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button (click)="login(loginForm)" type="submit" block>Masuk</button>\n			</ion-col>\n		</ion-row>		\n\n		<ion-grid>\n			<ion-row>\n				<ion-col text-center><a><font color="black">Tidak punya akun?</font><a (click)="signUp()"> Buat akun.</a></a></ion-col>\n			</ion-row>\n			<ion-row>\n				<ion-col text-center><a><font color="black"></font><a (click)="lupaPassword()">Lupa password.</a></a></ion-col>\n			</ion-row>\n		</ion-grid>\n\n	</form>\n\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login-pasien\login-pasien.html"*/,
         }), 
         __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_data__["a" /* Data */]])
     ], LoginPasien);
@@ -57804,6 +57841,7 @@ var LoginPasien = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_pasien_login_pasien__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_dokter_login_dokter__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Login; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57814,6 +57852,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -57843,9 +57882,12 @@ var Login = (function () {
     Login.prototype.loginDokter = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__login_dokter_login_dokter__["a" /* LoginDokter */]);
     };
+    Login.prototype.gotoAbout = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__aku_sehat_aku_sehat__["a" /* AkuSehat */]);
+    };
     Login = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login\login.html"*/'<!--\n  Generated template for the Login page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      AkuSehat!\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<ion-item>\n		<ion-list>\n			<ion-item>\n			    <ion-thumbnail item-left (tap)="loginPasien()">\n			      <img src="../../assets/pict/pasien-login.jpg" style=\'height: 30vw; width: 30vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n\n			    <button ion-button clear  block color="dark" (click)="loginPasien()">\n		  			<font size="5" text-wrap>Pasien</font>\n				</button>\n			    \n			</ion-item>\n\n\n\n			<ion-item>\n			    <ion-thumbnail item-left (tap)="loginDokter()">\n			      <img src="../../assets/pict/doctor-login.jpg" style=\'height: 30vw; width: 30vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n\n			    <button ion-button clear  block color="dark" (click)="loginDokter()">\n		  			<font size="5" text-wrap>Dokter</font>\n				</button>\n			</ion-item>\n		</ion-list>\n	</ion-item>\n\n	<button ion-button  block color="primary" (click)="showBantuan()">\n		  			<font size="4" text-wrap>Bantuan</font>\n				</button>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login\login.html"*/'<!--\n  Generated template for the Login page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      \n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n<ion-item (tap)="gotoAbout()">\n<img src="../../assets/pict/AkuSehat.png"/>\n</ion-item>	\n	<ion-item>\n		<ion-list>\n			<ion-item>\n			    <ion-thumbnail item-left (tap)="loginPasien()">\n			      <img src="../../assets/pict/pasien-login.jpg" style=\'height: 30vw; width: 30vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n\n			    <button class=\'login_button\' clear ion-button  block color="dark" (click)="loginPasien()">\n		  			<font size="5" text-wrap>Pasien</font>\n				</button>\n			    \n			</ion-item>\n\n\n\n			<ion-item>\n			    <ion-thumbnail item-left (tap)="loginDokter()">\n			      <img src="../../assets/pict/doctor-login.jpg" style=\'height: 30vw; width: 30vw; display: block; margin: auto;\'>\n			    </ion-thumbnail>\n\n			    <button class=\'login_button\' clear ion-button  block color="dark" (click)="loginDokter()">\n		  			<font size="5" text-wrap>Dokter</font>\n				</button>\n			</ion-item>\n		</ion-list>\n	</ion-item>\n\n	<button ion-button  block color="primary" (click)="showBantuan()">\n		  			<font size="4" text-wrap>Bantuan</font>\n				</button>\n\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\login\login.html"*/,
         }), 
         __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], Login);
@@ -57861,7 +57903,7 @@ var Login = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__ = __webpack_require__(478);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pengaturan_pasien_pengaturan_pasien__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profil_dokter_pasien_profil_dokter_pasien__ = __webpack_require__(56);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PanggilDokter; });
@@ -58010,7 +58052,7 @@ var SignupDokter = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_pasien_login_pasien__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_data__ = __webpack_require__(46);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPasien; });
@@ -58036,6 +58078,7 @@ var SignupPasien = (function () {
         this.alertCtrl = alertCtrl;
         this.navParams = navParams;
         this.data = data;
+        this.submitted = false;
     }
     SignupPasien.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad SignupPasien');
@@ -58047,7 +58090,7 @@ var SignupPasien = (function () {
             buttons: ['OK']
         });
         alert.present();
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_pasien_login_pasien__["a" /* LoginPasien */]);
     };
     SignupPasien.prototype.daftar = function () {
         var _this = this;
@@ -58064,27 +58107,56 @@ var SignupPasien = (function () {
             console.log(data);
             var response = data.json();
             if (response.status == "200") {
-                _this.akunBaru();
             }
             else {
-                var alert_1 = _this.alertCtrl.create({
+                var alert = _this.alertCtrl.create({
                     title: 'Gagal Membuat Akun!',
                     subTitle: 'Periksa kembali data.',
                     buttons: ['OK']
                 });
-                alert_1.present();
+                alert.present();
             }
             console.log(response);
         }, function (err) {
         });
     };
+    SignupPasien.prototype.signup = function (form) {
+        var _this = this;
+        this.submitted = true;
+        if (form.valid) {
+            var input = JSON.stringify({
+                name: this.name,
+                email: this.email,
+                password: this.password,
+                sex: this.sex,
+                telephone: this.telephone,
+                address: this.address
+            });
+            this.http.post(this.data.BASE_URL + "/register_patients.php", input).subscribe(function (data) {
+                var response = data.json();
+                if (response.status == "200") {
+                    // this.data.login(response.data);
+                    _this.akunBaru();
+                }
+                else {
+                    var alert = _this.alertCtrl.create({
+                        title: 'Gagal Membuat Akun',
+                        subTitle: 'Periksa kembali data.',
+                        buttons: ['OK']
+                    });
+                    alert.present();
+                }
+            });
+        }
+    };
     SignupPasien = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Component */])({
-            selector: 'page-signup-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\signup-pasien\signup-pasien.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Buat Akun\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>\n	    <ion-input [(ngModel)]="name" type="text" required></ion-input>\n	</ion-item>\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>\n	    <ion-input [(ngModel)]="email" type="email" required></ion-input>\n	</ion-item>\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Password</font></ion-label>\n	    <ion-input [(ngModel)]="password" type="password" required></ion-input>\n	</ion-item>\n\n	<ion-item>\n	    <ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>\n	    <ion-select [(ngModel)]="sex" required>\n	      <ion-option value="L">Laki-laki</ion-option>\n	      <ion-option value="P">Perempuan</ion-option>\n	    </ion-select>\n	</ion-item>\n\n	\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>\n	    <ion-input [(ngModel)]="telephone" type="number" required></ion-input>\n	</ion-item>	\n	<ion-item>\n	    <ion-label stacked color="dark" lineHeight="22"><font size="3">Alamat</font></ion-label>\n	    <ion-textarea [(ngModel)]="address" autosize type="text" required></ion-textarea>\n	</ion-item>\n\n\n	<button ion-button block (click)=\'daftar()\'>DAFTAR</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\signup-pasien\signup-pasien.html"*/,
+            selector: 'page-signup-pasien',template:/*ion-inline-start:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\signup-pasien\signup-pasien.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Buat Akun\n    </ion-title>\n  </ion-navbar>		\n</ion-header>\n\n\n\n<ion-content padding>\n\n<form #signupForm="ngForm" novalidate>\n		<ion-list >\n			\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Nama</font></ion-label>\n				<ion-input [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			\n			<p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left>\n				Name is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Email</font></ion-label>\n				<ion-input [(ngModel)]="email" name="email" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"\n					required>\n				</ion-input>\n			</ion-item>\n			\n			<p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left>\n				Email is required\n			</p>\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Password</font></ion-label>\n				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>\n				Password is required\n			</p>\n\n			<ion-item>\n				<ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>\n				<ion-select [(ngModel)]="sex" name="sex" #jk="ngModel" required>\n				<ion-option value="L">Laki-laki</ion-option>\n				<ion-option value="P">Perempuan</ion-option>\n				</ion-select>\n			</ion-item>\n\n			<p ion-text [hidden]="jk.valid || submitted == false" color="danger" padding-left>\n				Select one\n			</p>\n\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>\n				<ion-input [(ngModel)]="telephone" name="telephone" type="number" #telpon="ngModel" required>\n				</ion-input>\n			</ion-item>\n			<p ion-text [hidden]="telpon.valid || submitted == false" color="danger" padding-left>\n				Phone number is required\n			</p>\n\n\n			<ion-item>\n				<ion-label stacked color="dark"><font size="3">Alamat</font></ion-label>\n				<ion-textarea  [(ngModel)]="address" name="address" type="text" #alamat="ngModel" required autosize></ion-textarea>\n			</ion-item>\n			<p ion-text [hidden]="alamat.valid || submitted == false" color="danger" padding-left>\n				Address is required\n			</p>\n\n		</ion-list>\n\n		<ion-row responsive-sm>\n			<ion-col>\n				<button ion-button block (click)="signup(signupForm)" type="submit">DAFTAR</button>\n			</ion-col>\n		</ion-row>\n\n	</form>\n\n\n\n	<!--<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>\n	    <ion-input [(ngModel)]="name" type="text" required></ion-input>\n	</ion-item>\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>\n	    <ion-input [(ngModel)]="email" type="email" required></ion-input>\n	</ion-item>\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Password</font></ion-label>\n	    <ion-input [(ngModel)]="password" type="password" required></ion-input>\n	</ion-item>\n\n	<ion-item>\n	    <ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>\n	    <ion-select [(ngModel)]="sex" required>\n	      <ion-option value="L">Laki-laki</ion-option>\n	      <ion-option value="P">Perempuan</ion-option>\n	    </ion-select>\n	</ion-item>\n\n	\n\n	<ion-item>\n	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>\n	    <ion-input [(ngModel)]="telephone" type="number" required></ion-input>\n	</ion-item>	\n	<ion-item>\n	    <ion-label stacked color="dark" lineHeight="22"><font size="3">Alamat</font></ion-label>\n	    <ion-textarea [(ngModel)]="address" autosize type="text" required></ion-textarea>\n	</ion-item>\n\n\n	<button ion-button block (click)=\'daftar()\'>DAFTAR</button>-->\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\akusehat\FrontEND\src\pages\signup-pasien\signup-pasien.html"*/,
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */]])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* AlertController */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */]) === 'function' && _e) || Object])
     ], SignupPasien);
     return SignupPasien;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=signup-pasien.js.map
 
@@ -58427,10 +58499,10 @@ var CardTitle = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__item_item__ = __webpack_require__(34);
 /* unused harmony export CHECKBOX_VALUE_ACCESSOR */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Checkbox; });
 var __extends = (this && this.__extends) || function (d, b) {
@@ -58848,9 +58920,9 @@ var Chip = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__picker_picker__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ion__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_datetime_util__ = __webpack_require__(515);
 /* unused harmony export DATETIME_VALUE_ACCESSOR */
@@ -60575,10 +60647,10 @@ var InfiniteScrollContent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__content_content__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_dom__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_dom_controller__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__native_input__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__navigation_nav_controller__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__platform_platform__ = __webpack_require__(5);
@@ -61531,7 +61603,7 @@ function findReorderItem(node, listNode) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_dom_controller__ = __webpack_require__(12);
@@ -63949,10 +64021,10 @@ var PopoverController = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__radio_group__ = __webpack_require__(213);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioButton; });
 var __extends = (this && this.__extends) || function (d, b) {
@@ -64275,10 +64347,10 @@ var RangeKnob = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_config__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_dom_controller__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__tap_click_haptic__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ion__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__util_dom__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__util_debouncer__ = __webpack_require__(377);
@@ -65921,10 +65993,10 @@ var Segment = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__alert_alert__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_config__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navigation_nav_controller__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__option_option__ = __webpack_require__(210);
 /* unused harmony export SELECT_VALUE_ACCESSOR */
@@ -68169,12 +68241,12 @@ var TOAST_POSITION_BOTTOM = 'bottom';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_dom_controller__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_form__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_form__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gestures_gesture_controller__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__tap_click_haptic__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ion__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__platform_key__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__platform_platform__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__toggle_gesture__ = __webpack_require__(500);
@@ -71175,7 +71247,7 @@ webpackEmptyContext.id = 381;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_profil_pasien_profil_pasien__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_bayar_bayar__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_edit_profil_pasien_edit_profil_pasien__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_aku_sehat_aku_sehat__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_aku_sehat_aku_sehat__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_login_login__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_login_pasien_login_pasien__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_login_dokter_login_dokter__ = __webpack_require__(316);
@@ -75646,7 +75718,7 @@ var CATCH_STACK_VAR = 'stack';
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facade_lang__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abstract_emitter__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__abstract_js_emitter__ = __webpack_require__(416);
 /* harmony export (immutable) */ __webpack_exports__["a"] = jitStatements;
@@ -80815,7 +80887,7 @@ var ReactiveFormsModule = (function () {
 /* unused harmony reexport AbstractFormGroupDirective */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_checkbox_value_accessor__ = __webpack_require__(108);
 /* unused harmony reexport CheckboxControlValueAccessor */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_control_container__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_control_container__ = __webpack_require__(38);
 /* unused harmony reexport ControlContainer */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_control_value_accessor__ = __webpack_require__(26);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_4__directives_control_value_accessor__["a"]; });

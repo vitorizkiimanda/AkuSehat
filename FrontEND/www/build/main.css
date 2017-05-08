@@ -21325,6 +21325,18 @@ page-isi-data .text-input::placeholder {
   font-size: 85%;
 }
 
+page-login img {
+  height: 30vh;
+  width: 30vh;
+  margin: auto;
+  display: block;
+}
+
+page-login .login_button {
+  height: 25vw !important;
+  width: 100%;
+}
+
 page-login-dokter img {
   height: 40vh;
   width: 40vh;

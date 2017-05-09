@@ -48,7 +48,7 @@ require_once 'php_action/db_connect.php';
             <td>".$row['hospitalized_long']."</td>
             <td>
               <a href='edit.php?id_history=".$row['id_history']."'><button type='button'>Edit</button></a>
-              <a href='remove.php?id_patient=".$row['id_history']."'><button type='button'>Remove</button></a>
+              <a href='remove.php?id_history=".$row['id_history']."'><button type='button'>Remove</button></a>
           </tr>";
         }
       } else {

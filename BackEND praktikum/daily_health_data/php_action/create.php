@@ -4,7 +4,7 @@ require_once 'db_connect.php';
 
 if($_POST) {
   $id_pat = $_POST['id_pat'];
-    $date_daily = $_POST['date_daily'];
+  $date_daily = $_POST['date_daily'];
   $tension_sistol = $_POST['tension_sistol'];
   $tension_diastol = $_POST['tension_diastol'];
   $sleep_duration =$_POST['sleep_duration'];

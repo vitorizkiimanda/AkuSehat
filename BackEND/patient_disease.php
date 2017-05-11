@@ -7,8 +7,9 @@
 
   include 'db_connect.php';
     $id=$_GET['patient'];
-    $query_user = mysqli_query($connect, "SELECT * FROM patients P JOIN health_history H JOIN patients_disease D WHERE id_patient=id_pat AND id_pat='$id' AND H.id_history=D.id_history");
-    
+    // $query_user = mysqli_query($connect, "SELECT * FROM patients P JOIN health_history H JOIN patients_disease D WHERE id_patient=id_pat AND id_pat='$id' AND H.id_history=D.id_history ORDER BY hospitalized_date DESC");
+
+    $query_user = mysqli_query($connect, "SELECT disease_type,hospitalized_date,hospitalized_long FROM patients P JOIN health_history H JOIN patients_disease D WHERE id_patient=id_pat AND id_pat='$id' AND H.id_history=D.id_history");    
         
         
     $result_set = array();

@@ -1,0 +1,202 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Buat Akun
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+<ion-content padding>
+
+
+<form #signupForm="ngForm" novalidate>
+		<ion-list >
+			
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Nama</font></ion-label>
+				<ion-input [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			
+			<p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left>
+				Name is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Email</font></ion-label>
+				<ion-input [(ngModel)]="email" name="email" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			
+			<p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left>
+				Email is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Password</font></ion-label>
+				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">konfirmasi Password</font></ion-label>
+				<ion-input [(ngModel)]="password2" name="pass2" type="password" #passconfirm="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="submitted2 == true" color="danger" padding-left>
+				Password salah.
+			</p>
+
+			<ion-item>
+				<ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+				<ion-select [(ngModel)]="sex" name="sex" #jk="ngModel" required>
+				<ion-option value="L">Laki-laki</ion-option>
+				<ion-option value="P">Perempuan</ion-option>
+				</ion-select>
+			</ion-item>
+
+			<p ion-text [hidden]="jk.valid || submitted == false" color="danger" padding-left>
+				Select one
+			</p>
+
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+				<ion-input [(ngModel)]="telephone" name="telephone" type="number" #telpon="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="telpon.valid || submitted == false" color="danger" padding-left>
+				Phone number is required
+			</p>
+
+
+			<ion-item>
+				<ion-label><font size="2" color="black">Bank</font></ion-label>
+				<ion-select [(ngModel)]="bank" name="bank" #bang="ngModel" required>
+				<ion-option value="mandiri">Mandiri</ion-option>
+				<ion-option value="bni">BNI</ion-option>
+				<ion-option value="bri">BRI</ion-option>
+				<ion-option value="bca">BCA</ion-option>
+				<ion-option value="btn">BTN</ion-option>
+				</ion-select>
+			</ion-item>
+
+			<p ion-text [hidden]="bang.valid || submitted == false" color="danger" padding-left>
+				Select one
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Nomor Rekening</font></ion-label>
+				<ion-input [(ngModel)]="bank_number" name="bank_number" type="number" #rekening="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="rekening.valid || submitted == false" color="danger" padding-left>
+				Nomor Rekening is required
+			</p>
+
+			<ion-item>
+				<ion-label><font size="2" color="black">Spesialisasi</font></ion-label>
+				<ion-select [(ngModel)]="specialization" name="specialization" #spesialisasi="ngModel" required>
+			    <ion-option value="Umum">Umum</ion-option>
+				<ion-option value="Gigi">Gigi</ion-option>
+				<ion-option value="Anak">Anak</ion-option>
+				<ion-option value="Kandungan">Kandungan</ion-option>
+				<ion-option value="THT">THT</ion-option>
+				</ion-select>
+			</ion-item>
+
+			<p ion-text [hidden]="spesialisasi.valid || submitted == false" color="danger" padding-left>
+				Select one
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Jumlah Pasien Maksimal</font></ion-label>
+				<ion-input [(ngModel)]="patients_max" name="patients_max" type="number" #maksimal="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="maksimal.valid || submitted == false" color="danger" padding-left>
+				Jumlah Pasien Maksimal is required
+			</p>
+			
+
+
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button ion-button block (click)="signup(signupForm)" type="submit">DAFTAR</button>
+			</ion-col>
+		</ion-row>
+
+	</form>
+
+<!--
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>
+	    <ion-input [(ngModel)]="name" type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>
+	    <ion-input [(ngModel)]="email" type="email"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Password</font></ion-label>
+	    <ion-input [(ngModel)]="password" type="password"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+	    <ion-select [(ngModel)]="sex">
+	      <ion-option value="L">Laki-laki</ion-option>
+	      <ion-option value="P">Perempuan</ion-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+	    <ion-input [(ngModel)]="telephone" type="number"></ion-input>
+	</ion-item>	
+	<ion-item>
+	    <ion-label><font size="3" color="black">Bank</font></ion-label>
+	    <ion-select [(ngModel)]="bank">
+	      <ion-option value="mandiri">Mandiri</ion-option>
+	      <ion-option value="bni">BNI</ion-option>
+	      <ion-option value="bri">BRI</ion-option>
+	      <ion-option value="bca">BCA</ion-option>
+	      <ion-option value="btn">BTN</ion-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Rekening</font></ion-label>
+	    <ion-input [(ngModel)]="bank_number" type="number"></ion-input>
+	</ion-item>
+	<ion-item>
+	    <ion-label><font size="3" color="black">Spesialisasi</font></ion-label>
+	    <ion-select [(ngModel)]="specialization">
+	      <ion-option value="Umum">Umum</ion-option>
+	      <ion-option value="Gigi">Gigi</ion-option>
+	      <ion-option value="Anak">Anak</ion-option>
+	      <ion-option value="Kandungan">Kandungan</ion-option>
+	      <ion-option value="THT">THT</ion-option>
+	    </ion-select>
+	</ion-item>
+	
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Jumlah Pasien Maksimal</font></ion-label>
+	    <ion-input [(ngModel)]="patients_max" type="number"></ion-input>
+	</ion-item>
+	
+	<button ion-button block (click)='daftar()'>DAFTAR</button>-->
+
+</ion-content>
+

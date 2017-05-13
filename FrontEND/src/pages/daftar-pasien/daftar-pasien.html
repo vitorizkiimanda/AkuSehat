@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Daftar Pasien
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tarik untuk memperbaharui"
+      refreshingSpinner="circles"
+      refreshingText="Memperbaharui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+	<ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+<ion-item>
+	<ion-list>
+			<ion-item>
+					<ion-thumbnail item-left>
+						<img src="assets/pict/person-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+					</ion-thumbnail>
+					<ion-item text-wrap>
+						<font size="4">Dummy{{name}}</font>
+						<p>{{address_patient}}Dummy Address Dummy Address Dummy Address Dummy AddressDummy Address Dummy Address Dummy Address</p>
+					</ion-item>
+					
+			</ion-item>
+
+		</ion-list>
+</ion-item>
+
+
+		<!--*ngFor="let data of daily"-->
+<ion-item  >  
+		<ion-item>
+			<ion-icon name="pulse"></ion-icon>
+			&nbsp;&nbsp;&nbsp;Data Kesehatan
+			<ion-badge item-right color="dark" small><font size="2">dummy</font></ion-badge>
+		</ion-item>
+		&nbsp;
+		<ion-list >
+				<ion-item >
+				&nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
+					<ion-note item-right color="dark">
+						dummy/dummy mmHg
+						</ion-note>
+				</ion-item>
+				<ion-item>
+				&nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
+					<ion-note item-right color="dark">
+						dummy jam
+						</ion-note>
+				</ion-item>
+				<ion-item text wrap>
+				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
+				<ion-card text-wrap>
+					<ion-item text-wrap>
+						<p> dummy dummydummydummydummydummydummy dummydummy dummy dummy dummy dummydummydummydummydummydummydummydummy </p>
+					</ion-item>
+				</ion-card>
+				</ion-item>
+		</ion-list>
+
+	</ion-item>
+
+
+
+</ion-content>

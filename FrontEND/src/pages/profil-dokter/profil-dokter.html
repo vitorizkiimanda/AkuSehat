@@ -1,0 +1,108 @@
+<!--
+  Generated template for the ProfilPasien page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Profil
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tarik untuk memperbaharui"
+      refreshingSpinner="circles"
+      refreshingText="Memperbaharui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+	<ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      
+    </ion-fab-list>
+  </ion-fab>
+
+	<ion-card>
+	  <img src="assets/pict/doctor-flat.png" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
+	  <ion-item>
+	  <button ion-button clear item-right>
+			  <ion-icon name="ios-image" color="primary" (click)='editFoto()'></ion-icon>
+			</button>
+		</ion-item>
+	  <ion-card-content>
+	    <ion-card-title>
+	      {{name}}
+	      </ion-card-title>
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-list>
+	  <ion-item>
+	    <ion-icon name="mail" item-left></ion-icon>
+	     <font size="3">Email</font>
+	     <p>{{email}}</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="call" item-left></ion-icon>
+	     <font size="3">Nomor Telepon</font>
+	     <p>{{no_tel_doctor}}</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="card" item-left></ion-icon>
+	     <font size="3">Rekening</font>
+	     <p>{{bank_doctor}}</p>
+	     <p>{{no_account_doctor}}</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="medkit" item-left></ion-icon>
+	     <font size="3">Spesialisasi</font>
+	     <p>{{specialization}}</p>
+	  </ion-item>
+
+	  <ion-item text-wrap>
+	    <ion-icon name="md-home" item-left></ion-icon>
+	     <font size="3">Rumah Sakit</font>
+	     <p *ngFor="let data of profilDokter">{{data.hospital}}</p>
+	  </ion-item>
+
+		<ion-item>
+	    <ion-icon name="ios-people" item-left></ion-icon>
+	     <font size="3">Jumlah Pasien Terkini</font>
+	     <p *ngFor="let data of profilDokter">x orang</p>
+	  </ion-item>
+
+		<ion-item>
+	    <ion-icon name="" item-left></ion-icon>
+	     <font size="3">Jumlah Pasien Maksimal</font>
+	     <p>{{sum_patient}} orang</p>
+	  </ion-item>
+	  
+	  <ion-item text-wrap>
+	    <ion-icon name="ios-school" item-left></ion-icon>
+	     <font size="3">Riwayat Pendidikan</font>
+	     <p *ngFor="let data of profilDokter">{{data.educational_background}}</p>
+	  </ion-item>
+
+	  <ion-item text-wrap>
+	    <ion-icon name="ios-ribbon" item-left></ion-icon>
+	     <font size="3">Riwayat Bekerja</font>
+	     <p *ngFor="let data of profilDokter">{{data.experience}}</p>
+	  </ion-item>
+	  
+
+	</ion-list>
+	<button ion-button block (click)='editProfil()'>EDIT</button>
+</ion-content>

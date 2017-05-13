@@ -1,0 +1,80 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Profil
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tarik untuk memperbaharui"
+      refreshingSpinner="circles"
+      refreshingText="Memperbaharui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+	<ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
+      
+    </ion-fab-list>
+  </ion-fab>
+
+	<ion-card>
+	  <img src="assets/pict/doctor-flat.png" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
+	  <ion-card-content>
+	    <ion-card-title  *ngFor="let data of profilDokter">
+	      {{data.name_doctor}}
+	      </ion-card-title>
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-list>
+	  <ion-item>
+	    <ion-icon name="mail" item-left></ion-icon>
+	     <font size="3">Email</font>
+	     <p  *ngFor="let data of profilDokter">{{data.email_doctor}}</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="call" item-left></ion-icon>
+	     <font size="3">Nomor Telepon</font>
+	     <p  *ngFor="let data of profilDokter">{{data.no_tel_doctor}}</p>
+	  </ion-item>
+
+
+	  <ion-item>
+	    <ion-icon name="medkit" item-left></ion-icon>
+	     <font size="3">Spesialisasi</font>
+	     <p  *ngFor="let data of profilDokter">{{data.specialization}}</p>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-icon name="md-home" item-left></ion-icon>
+	     <font size="3">Rumah Sakit</font>
+	     <p  *ngFor="let data of profilDokter">{{data.hospital}}</p>
+	  </ion-item>
+		
+	  <ion-item text-wrap>
+	    <ion-icon name="ios-school" item-left></ion-icon>
+	     <font size="3">Riwayat Pendidikan</font>
+	     <p  *ngFor="let data of profilDokter">{{data.educational_background}}</p>
+	  </ion-item>
+
+	  <ion-item text-wrap>
+	    <ion-icon name="ios-ribbon" item-left></ion-icon>
+	     <font size="3">Riwayat Bekerja</font>
+	     <p  *ngFor="let data of profilDokter">{{data.experience}}</p>
+	  </ion-item>
+	  
+
+	</ion-list>
+	
+</ion-content>

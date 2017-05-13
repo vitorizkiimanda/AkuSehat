@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Buat Akun
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+<ion-content padding>
+
+<form #signupForm="ngForm" novalidate>
+		<ion-list >
+			
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Nama</font></ion-label>
+				<ion-input [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			
+			<p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left>
+				Name is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Email</font></ion-label>
+				<ion-input [(ngModel)]="email" name="email" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			
+			<p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left>
+				Email is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Password</font></ion-label>
+				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">konfirmasi Password</font></ion-label>
+				<ion-input [(ngModel)]="password2" name="pass2" type="password" #passconfirm="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="submitted2 == true" color="danger" padding-left>
+				Password salah.
+			</p>
+
+			<ion-item>
+				<ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+				<ion-select [(ngModel)]="sex" name="sex" #jk="ngModel" required>
+				<ion-option value="L">Laki-laki</ion-option>
+				<ion-option value="P">Perempuan</ion-option>
+				</ion-select>
+			</ion-item>
+
+			<p ion-text [hidden]="jk.valid || submitted == false" color="danger" padding-left>
+				Select one
+			</p>
+
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+				<ion-input [(ngModel)]="telephone" name="telephone" type="number" #telpon="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="telpon.valid || submitted == false" color="danger" padding-left>
+				Phone number is required
+			</p>
+
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Alamat</font></ion-label>
+				<ion-textarea  [(ngModel)]="address" name="address" type="text" #alamat="ngModel" required autosize></ion-textarea>
+			</ion-item>
+			<p ion-text [hidden]="alamat.valid || submitted == false" color="danger" padding-left>
+				Address is required
+			</p>
+
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button ion-button block (click)="signup(signupForm)" type="submit">DAFTAR</button>
+			</ion-col>
+		</ion-row>
+
+	</form>
+
+
+
+	<!--<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>
+	    <ion-input [(ngModel)]="name" type="text" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>
+	    <ion-input [(ngModel)]="email" type="email" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Password</font></ion-label>
+	    <ion-input [(ngModel)]="password" type="password" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+	    <ion-select [(ngModel)]="sex" required>
+	      <ion-option value="L">Laki-laki</ion-option>
+	      <ion-option value="P">Perempuan</ion-option>
+	    </ion-select>
+	</ion-item>
+
+	
+
+	<ion-item>
+	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+	    <ion-input [(ngModel)]="telephone" type="number" required></ion-input>
+	</ion-item>	
+	<ion-item>
+	    <ion-label stacked color="dark" lineHeight="22"><font size="3">Alamat</font></ion-label>
+	    <ion-textarea [(ngModel)]="address" autosize type="text" required></ion-textarea>
+	</ion-item>
+
+
+	<button ion-button block (click)='daftar()'>DAFTAR</button>-->
+
+
+</ion-content>
+

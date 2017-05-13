@@ -1,0 +1,52 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+<ion-content padding>
+<ion-item (tap)="gotoAbout()">
+<img src="assets/pict/AkuSehat.png"/>
+</ion-item>	
+	<ion-item>
+		<ion-list>
+			<ion-item>
+			    <ion-thumbnail item-left (tap)="loginPasien()">
+			      <img src="assets/pict/pasien-login.jpg" style='height: 30vw; width: 30vw; display: block; margin: auto;'>
+			    </ion-thumbnail>
+
+			    <button class='login_button' clear ion-button  block color="dark" (click)="loginPasien()">
+		  			<font size="5" text-wrap>Pasien</font>
+				</button>
+			    
+			</ion-item>
+
+
+
+			<ion-item>
+			    <ion-thumbnail item-left (tap)="loginDokter()">
+			      <img src="assets/pict/doctor-login.jpg" style='height: 30vw; width: 30vw; display: block; margin: auto;'>
+			    </ion-thumbnail>
+
+			    <button class='login_button' clear ion-button  block color="dark" (click)="loginDokter()">
+		  			<font size="5" text-wrap>Dokter</font>
+				</button>
+			</ion-item>
+		</ion-list>
+	</ion-item>
+
+	<button ion-button  block color="primary" (click)="showBantuan()">
+		  			<font size="4" text-wrap>Bantuan</font>
+				</button>
+
+</ion-content>

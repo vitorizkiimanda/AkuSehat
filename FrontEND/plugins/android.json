@@ -36,10 +36,16 @@
         },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.ionicframework.cobatabs512505"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.cobatabs512505"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.ionicframework.cobatabs512505"
+        },
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.ionicframework.cobatabs512505"
         }
     }

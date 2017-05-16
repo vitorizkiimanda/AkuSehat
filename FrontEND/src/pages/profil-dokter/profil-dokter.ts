@@ -14,6 +14,7 @@ import { Http } from '@angular/http';
 export class ProfilDokter {
 
   profilDokter: any;
+  profilDokterSum : any;
     name :string;
     email :string;
     no_tel_doctor :number;
@@ -42,17 +43,17 @@ export class ProfilDokter {
       this.specialization = data.specialization;
       this.sum_patient = data.sum_patient;
 
+
+      this.getProfilDokter();
+      this.getProfilDokterSum();
     })
 
-    this.getProfilDokter();
+    
 
   }
 
 
    getProfilDokter(){
-
-
-
     this.http.get(this.data.BASE_URL+"/profile_doctor.php?doctor="+this.id_doctor).subscribe(data => { 
       let response = data.json();
       console.log(response);
@@ -62,6 +63,15 @@ export class ProfilDokter {
     });
   }
 
+  getProfilDokterSum(){
+    this.http.get(this.data.BASE_URL+"/profile_doctor_sum.php?doctor="+this.id_doctor).subscribe(data => { 
+      let response = data.json();
+      console.log(response);
+      if(response.status=="200"){
+        this.profilDokterSum= response.data;   //ini disimpen ke variabel pasien diatas itu ,, yang udah di delacre
+      }
+    });
+  }
 
   editProfil(){
   	this.navCtrl.push(EditProfilDokter);

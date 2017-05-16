@@ -47,7 +47,7 @@ export class LoginDokter {
         let response = data.json();
 	if(response.status=="200"){
         //console.log(response);
-        this.data.login(response.data);
+        this.data.login(response.data);//masukin data ke localstorage
         this.gotoTab();
       }
       else

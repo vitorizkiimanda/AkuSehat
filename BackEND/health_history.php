@@ -1,10 +1,5 @@
 <?php
     
-
-    header('Access-Control-Allow-Origin; *');
-    header('Access-Control-Methods; GET, POST, PUT, OPTIONS');
-    header('Access-Control-Allow-Header; Content-Type');
-
   include 'db_connect.php';
     $id=$_GET['patient'];
     $query_user = mysqli_query($connect, "SELECT * FROM patients P JOIN health_history WHERE id_patient=id_pat AND id_pat='$id'");

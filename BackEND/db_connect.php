@@ -18,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-$localhost = "localhost";
-$username = "root";
-$password = "";
-$db_name = "akusehat";
+$localhost = "mysql.idhostinger.com";
+$username = "u152232156_admin";
+$password = "akusehat";
+$db_name = "u152232156_sehat";
 
 //create connection
-$connect = new mysqli($localhost, $username, $password, $db_name);
+$connect = mysqli_connect($localhost, $username, $password, $db_name);
 
 //check connection
 if($connect->connect_error) {

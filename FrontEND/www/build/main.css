@@ -21295,6 +21295,16 @@ ion-icon {
   font-size: 20px;
 }
 
+page-daftar-pasien .profil_button {
+  height: 5vw !important;
+  width: 25%;
+}
+
+page-daftar-pasien .data_button {
+  height: 5vw !important;
+  width: 45%;
+}
+
 page-edit-profil-pasien .text-input::-webkit-input-placeholder {
   color: #bcc0c6;
   font-size: 85%;

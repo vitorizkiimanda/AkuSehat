@@ -37,6 +37,7 @@ import {Storage } from '@ionic/storage';
 import { BackgroundMode } from '@ionic-native/background-mode';
 import { Vibration } from '@ionic-native/vibration';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     BerandaDokter,
     EditProfilDokter,
     PanggilPasien,
-    PengaturanDokter,
+        PengaturanDokter,
     ProfilDokter,
     ProfilPasienDokter,
     SignupDokter,
@@ -106,6 +107,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     CallNumber,
     BackgroundMode,
     Vibration,
+    Camera,
     LocalNotifications,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

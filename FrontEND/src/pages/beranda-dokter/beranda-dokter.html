@@ -58,7 +58,7 @@
 
 <ion-item *ngFor="let data of pasien">
 	  <button ion-button clear item-right>
-			  <ion-icon name="call"  (click)='teleponPasien()'></ion-icon>
+			  <ion-icon name="call"  (click)='teleponPasien(data.no_tel_patient)'></ion-icon>
 		</button>
 	  {{data.name_patient}}
 </ion-item>

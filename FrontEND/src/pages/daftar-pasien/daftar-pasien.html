@@ -28,15 +28,23 @@
 
 
 
-<ion-item>
+<ion-item *ngFor="let data of pasien">
 	<ion-list>
 			<ion-item>
 					<ion-thumbnail item-left>
 						<img src="assets/pict/person-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
 					</ion-thumbnail>
 					<ion-item text-wrap>
-						<font size="4">Dummy{{name}}</font>
-						<p>{{address_patient}}Dummy Address Dummy Address Dummy Address Dummy AddressDummy Address Dummy Address Dummy Address</p>
+						<font size="4"> {{data.name_patient}}</font>
+						<ion-row responsive-sm>
+							<ion-col>
+								 <ion-icon name="person" color="primary" (click)="profilPasien()" ></ion-icon>
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								 <ion-icon name="pulse" color="primary" (click)="harianPasien()" ></ion-icon>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <ion-icon name="map" color="primary" (click)="harianPasien()" ></ion-icon>
+							</ion-col>
+						</ion-row>		
 					</ion-item>
 					
 			</ion-item>
@@ -45,38 +53,7 @@
 </ion-item>
 
 
-		<!--*ngFor="let data of daily"-->
-<ion-item  >  
-		<ion-item>
-			<ion-icon name="pulse"></ion-icon>
-			&nbsp;&nbsp;&nbsp;Data Kesehatan
-			<ion-badge item-right color="dark" small><font size="2">dummy</font></ion-badge>
-		</ion-item>
-		&nbsp;
-		<ion-list >
-				<ion-item >
-				&nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
-					<ion-note item-right color="dark">
-						dummy/dummy mmHg
-						</ion-note>
-				</ion-item>
-				<ion-item>
-				&nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
-					<ion-note item-right color="dark">
-						dummy jam
-						</ion-note>
-				</ion-item>
-				<ion-item text wrap>
-				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
-				<ion-card text-wrap>
-					<ion-item text-wrap>
-						<p> dummy dummydummydummydummydummydummy dummydummy dummy dummy dummy dummydummydummydummydummydummydummydummy </p>
-					</ion-item>
-				</ion-card>
-				</ion-item>
-		</ion-list>
-
-	</ion-item>
+	
 
 
 

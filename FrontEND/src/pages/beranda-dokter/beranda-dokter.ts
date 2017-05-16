@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
 import { AlertController } from 'ionic-angular';
 import { AkuSehat } from '../aku-sehat/aku-sehat';
 import { PengaturanDokter } from '../pengaturan-dokter/pengaturan-dokter';
@@ -13,6 +14,8 @@ import { Http } from '@angular/http';
 })
 export class BerandaDokter {
 
+  
+
   pasien: any;
   name:string;
   specialization:string;
@@ -22,10 +25,13 @@ export class BerandaDokter {
   bank:string;
   telephone:number;
   sum:number;
+  no_tel_patient:number;
+
+  nomor:number;
   
 
 
-  constructor(public navCtrl: NavController,public alertCtrl: AlertController, public navParams: NavParams, public http: Http, public data: Data) {
+  constructor(private callNumber: CallNumber,public navCtrl: NavController,public alertCtrl: AlertController, public navParams: NavParams, public http: Http, public data: Data) {
   }
 
   ionViewDidLoad() {
@@ -53,13 +59,10 @@ export class BerandaDokter {
 
 
 
-  teleponPasien(){
-	let alert = this.alertCtrl.create({
-      title: '',
-      subTitle: 'Menelepon pasien ...',
-      buttons: ['OK']
-    });
-    alert.present();
+  teleponPasien(nomor){
+	this.callNumber.callNumber(String(this.nomor) , true)
+  .then(() => console.log('Launched dialer!'))
+  .catch(() => console.log('Error launching dialer'));
 
   }
 

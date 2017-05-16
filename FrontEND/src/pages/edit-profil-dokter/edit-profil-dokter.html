@@ -1,9 +1,4 @@
-<!--
-  Generated template for the EditProfilPasien page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
@@ -14,27 +9,20 @@
 
 
 <ion-content padding>
+
 	<ion-item>
-	    <ion-label stacked color="dark"><font size="3">Nama</font></ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-label stacked color="dark"><font size="2">Nama</font></ion-label>
+	    <ion-input [(ngModel)]="name" type="text" value="{{name}}" required></ion-input>
 	</ion-item>
 
 	<ion-item>
-	    <ion-label stacked color="dark"><font size="3">Email</font></ion-label>
-	    <ion-input type="email"></ion-input>
-	</ion-item>
-
-	<ion-item>
-	    <ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
-	    <ion-input type="number"></ion-input>
+	    <ion-label stacked color="dark"><font size="2">Nomor Telepon</font></ion-label>
+	    <ion-input [(ngModel)]="no_tel_doctor" type="number" value="{{no_tel_doctor}}" required></ion-input>
 	</ion-item>	
-	<ion-item>
-	    <ion-label stacked color="dark" lineHeight="22"><font size="3">Alamat</font></ion-label>
-	    <ion-textarea autosize type="text"></ion-textarea>
-	</ion-item>
+
 	<ion-item>
 	    <ion-label><font size="3" color="black">Rekening</font></ion-label>
-	    <ion-select [(ngModel)]="rekening">
+	    <ion-select [(ngModel)]="bank_doctor" >
 	      <ion-option value="mandiri">Mandiri</ion-option>
 	      <ion-option value="bni">BNI</ion-option>
 	      <ion-option value="bri">BRI</ion-option>
@@ -44,37 +32,40 @@
 	</ion-item>
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Nomor Rekening</font></ion-label>
-	    <ion-input type="number"></ion-input>
+	    <ion-input [(ngModel)]="no_account_doctor" type="number" value="{{no_account_doctor}}" required></ion-input>
 	</ion-item>
 	<ion-item>
 	    <ion-label><font size="3" color="black">Spesialisasi</font></ion-label>
-	    <ion-select [(ngModel)]="rekening">
-	      <ion-option value="mandiri">Umum</ion-option>
-	      <ion-option value="bni">Gigi</ion-option>
-	      <ion-option value="bri">Anak</ion-option>
-	      <ion-option value="bca">Kandungan</ion-option>
-	      <ion-option value="btn">THT</ion-option>
+	    <ion-select [(ngModel)]="specialization">
+		    <ion-option value="Umum">Umum</ion-option>
+			<ion-option value="Gigi">Gigi</ion-option>
+			<ion-option value="Anak">Anak</ion-option>
+			<ion-option value="Kandungan">Kandungan</ion-option>
+			<ion-option value="THT">THT</ion-option>
 	    </ion-select>
 	</ion-item>
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Rumah Sakit</font></ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-input [(ngModel)]="hospital" *ngFor="let data of profilDokter" type="text"  required placeholder="(Nama Rumah Sakit)"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Jumlah Pasien Maksimal</font></ion-label>
-	    <ion-input type="number"></ion-input>
+	    <ion-input [(ngModel)]="sum_patient" type="number" value="{{sum_patient}}" required></ion-input>
 	</ion-item>
 
 	<ion-item>
 		    <ion-label stacked color="dark"><font size="3">Riwayat Pendidikan</font></ion-label>
-			<ion-textarea autosize type="text"></ion-textarea>
+			<ion-textarea autosize [(ngModel)]="educational_background" *ngFor="let data of profilDokter" type="text"  required ></ion-textarea>
 		  </ion-item>
 
 		<ion-item>
 		    <ion-label stacked color="dark"><font size="3">Riwayat Bekerja</font></ion-label>
-		    <ion-textarea autosize type="text"></ion-textarea>
+		    <ion-textarea autosize  [(ngModel)]="experience" *ngFor="let data of profilDokter" type="text"  required ></ion-textarea>
 		</ion-item>
+
+
+
 
 	<button ion-button block (click)='simpanProfil()'>SIMPAN</button>
 

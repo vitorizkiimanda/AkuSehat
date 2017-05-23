@@ -1,10 +1,19 @@
 <?php
 require_once 'php_action/db_connect.php';
+session_start();
+
+  if($_SESSION['id']==1){
+  }
+  else{
+  header('location:../index.php');
+      exit();
+  }
  ?>
 
  <!DOCTYPE html>
  <html>
  <head>
+   <a href="../logout.php"style="float: right;">Logout</a>
    <title> Database Kesehatan Harian</title>
 
    <style type="text/css">
@@ -28,7 +37,7 @@ require_once 'php_action/db_connect.php';
     <thead>
       <tr>
         <th>id_pat</th>
-          <th>date</th>
+        <th>date_daily</th>
         <th>tension_sistol</th>
         <th>tension_diastol</th>
         <th>sleep_duration</th>
@@ -51,8 +60,8 @@ require_once 'php_action/db_connect.php';
             <td>".$row['sleep_duration']."</td>
             <td>".$row['daily_description']."</td>
             <td>
-              <a href='edit.php?id_pat=".$row['id_pat']."'><button type='button'>Edit</button></a>
-              <a href='remove.php?id_pat=".$row['id_pat']."'><button type='button'>Remove</button></a>
+              <a href='edit.php?id_pat=".$row['id_pat']."&&date_daily=".$row['date_daily']."'><button type='button'>Edit</button></a>
+              <a href='remove.php?id_pat=".$row['id_pat']."&&date_daily=".$row['date_daily']."'><button type='button'>Remove</button></a>
           </tr>";
         }
       } else {

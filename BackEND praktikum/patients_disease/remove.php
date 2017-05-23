@@ -15,7 +15,7 @@ if($_GET['id_history']){
  <!DOCTYPE html>
  <html>
  <head>
-   <title>Remove Patient</title>
+   <title>Remove Patients Disease</title>
 </head>
 <body>
 

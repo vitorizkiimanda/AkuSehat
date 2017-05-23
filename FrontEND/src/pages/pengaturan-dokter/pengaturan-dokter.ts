@@ -5,6 +5,7 @@ import { MyApp } from '../../app/app.component.ts';
 import { AlertController } from 'ionic-angular';
 
 
+import { Data } from '../../providers/data';
 
 @Component({
   selector: 'page-pengaturan-dokter',
@@ -12,7 +13,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class PengaturanDokter {
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public app: App, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,public data: Data, public alertCtrl: AlertController, public app: App, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -34,6 +35,7 @@ export class PengaturanDokter {
           text: 'Ya',
           handler: () => {
             console.log('Agree clicked'),
+            this.data.logout();
             this.app.getRootNav().setRoot(MyApp);
           }
         }

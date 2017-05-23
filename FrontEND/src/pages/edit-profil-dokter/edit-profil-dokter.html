@@ -12,12 +12,12 @@
 
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="2">Nama</font></ion-label>
-	    <ion-input [(ngModel)]="name" type="text" value="{{name}}" required></ion-input>
+	    <ion-input placeholder="nama" [(ngModel)]="name" type="text" value="{{name}}" required></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="2">Nomor Telepon</font></ion-label>
-	    <ion-input [(ngModel)]="no_tel_doctor" type="number" value="{{no_tel_doctor}}" required></ion-input>
+	    <ion-input placeholder="nomor telepon" [(ngModel)]="no_tel_doctor" type="number" value="{{no_tel_doctor}}" required></ion-input>
 	</ion-item>	
 
 	<ion-item>
@@ -32,7 +32,7 @@
 	</ion-item>
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Nomor Rekening</font></ion-label>
-	    <ion-input [(ngModel)]="no_account_doctor" type="number" value="{{no_account_doctor}}" required></ion-input>
+	    <ion-input placeholder="nomor rekening" [(ngModel)]="no_account_doctor" type="number" value="{{no_account_doctor}}" required></ion-input>
 	</ion-item>
 	<ion-item>
 	    <ion-label><font size="3" color="black">Spesialisasi</font></ion-label>
@@ -46,22 +46,22 @@
 	</ion-item>
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Rumah Sakit</font></ion-label>
-	    <ion-input [(ngModel)]="hospital" *ngFor="let data of profilDokter" type="text"  required placeholder="(Nama Rumah Sakit)"></ion-input>
+	    <ion-input placeholder="rumah sakit" [(ngModel)]="hospital" *ngFor="let data of profilDokter" type="text"  required placeholder="(Nama Rumah Sakit)"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Jumlah Pasien Maksimal</font></ion-label>
-	    <ion-input [(ngModel)]="sum_patient" type="number" value="{{sum_patient}}" required></ion-input>
+	    <ion-input placeholder="(jumlah pasien maksimal)" [(ngModel)]="sum_patient" type="number" value="{{sum_patient}}" required></ion-input>
 	</ion-item>
 
 	<ion-item>
 		    <ion-label stacked color="dark"><font size="3">Riwayat Pendidikan</font></ion-label>
-			<ion-textarea autosize [(ngModel)]="educational_background" *ngFor="let data of profilDokter" type="text"  required ></ion-textarea>
+			<ion-textarea autosize placeholder="pendidikan" [(ngModel)]="educational_background" *ngFor="let data of profilDokter" type="text"  required ></ion-textarea>
 		  </ion-item>
 
 		<ion-item>
 		    <ion-label stacked color="dark"><font size="3">Riwayat Bekerja</font></ion-label>
-		    <ion-textarea autosize  [(ngModel)]="experience" *ngFor="let data of profilDokter" type="text"  required ></ion-textarea>
+		    <ion-textarea placeholder="pekerjaan" autosize  [(ngModel)]="experience" *ngFor="let data of profilDokter" type="text"  required ></ion-textarea>
 		</ion-item>
 
 

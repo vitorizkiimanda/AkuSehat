@@ -21,6 +21,10 @@
   <form action="php_action/create.php" method="post">
     <table cellspacing="0" cellpadding="0">
       <tr>
+        <th>Id History</th>
+        <td><input type="number" name="id_history" placeholder="Id history" /></td>
+      </tr>
+      <tr>
         <th>Jenis Penyakit</th>
         <td><input type="text" name="disease_type" placeholder="Jenis Penyakit" /></td>
       </tr>

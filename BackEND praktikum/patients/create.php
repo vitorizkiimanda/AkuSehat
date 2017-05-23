@@ -34,8 +34,8 @@
       </tr>
       <tr>
         <tr>
-          <th>No Rekening</th>
-          <td><input type="number" name="no_account_patient" placeholder="Nomor Rekening" /></td>
+          <th>Alamat</th>
+          <td><input type="text" name="address_patient" placeholder="Alamat Pasien" /></td>
         </tr>
       <tr>
         <th>Jenis Kelamin</th>

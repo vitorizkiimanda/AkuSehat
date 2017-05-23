@@ -2,7 +2,7 @@
 require_once 'db_connect.php';
 
 if($_POST) {
-  $id_pat = $_POST['id_pat'];
+  $id_accounting = $_POST['id_accounting'];
 
   $sql = "UPDATE accounting SET active = 2 where id_accounting = {$id_accounting}";
   if($connect->query($sql) === TRUE) {

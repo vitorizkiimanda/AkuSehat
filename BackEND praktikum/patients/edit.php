@@ -48,8 +48,8 @@ if($_GET['id_patient']){
           <td><input type="password" name="password_patient" placeholder="Password" value="<?php echo $data['password_patient']?>"/></td>
         </tr>
           <tr>
-            <th>No Rekening</th>
-            <td><input type="number" name="no_account_patient" placeholder="Nomor Rekening" value="<?php echo $data['no_account_patient']?>"/></td>
+            <th>Alamat</th>
+            <td><input type="text" name="address_patient" placeholder="Alamat Pasien" value="<?php echo $data['address_patient']?>"/></td>
           </tr>
         <tr>
           <th>Jenis Kelamin</th>

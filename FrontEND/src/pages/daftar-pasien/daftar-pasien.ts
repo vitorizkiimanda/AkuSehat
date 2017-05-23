@@ -6,6 +6,7 @@ import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
 import { AlertController } from 'ionic-angular';
 import { ProfilPasienDokter } from '../profil-pasien-dokter/profil-pasien-dokter';
+import { HarianPasienPage } from '../harian-pasien/harian-pasien';
 
 @Component({
   selector: 'page-daftar-pasien',
@@ -63,11 +64,11 @@ export class DaftarPasien {
   }
 
 
-  profilPasien(){
-     this.navCtrl.push(ProfilPasienDokter);
+  profilPasien(data){
+     this.navCtrl.push(ProfilPasienDokter, data);
   }
-  harianPasien(){
-     this.navCtrl.push(ProfilPasienDokter);
+  harianPasien(data){
+     this.navCtrl.push(HarianPasienPage, data);
   }
 
 

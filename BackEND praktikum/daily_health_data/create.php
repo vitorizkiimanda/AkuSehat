@@ -24,10 +24,11 @@
         <th>Id Pasien</th>
         <td><input type="number" name="id_pat" placeholder="id pasien" /></td>
       </tr>
-    <tr>
-        <th>Date</th>
-        <td><input type="date" name="date_daily" /></td>
+      <tr>
+        <th>Tanggal</th>
+        <td><input type="date" name="date_daily" placeholder="tanggal" /></td>
       </tr>
+
       <tr>
         <th>Tensi Sistol</th>
         <td><input type="number" name="tension_sistol" placeholder="Tensi sistol" /></td>

@@ -1,10 +1,19 @@
 <?php
 require_once 'php_action/db_connect.php';
+session_start();
+
+  if($_SESSION['id']==1){
+  }
+  else{
+  header('location:../index.php');
+      exit();
+  }
  ?>
 
  <!DOCTYPE html>
  <html>
  <head>
+  <a href="../logout.php"style="float: right;">Logout</a>
    <title>Associative Table</title>
    <style type="text/css">
     .manageMember{
@@ -27,9 +36,7 @@ require_once 'php_action/db_connect.php';
     <thead>
       <tr>
         <th>id_doct</th>
-        <th>is_pat</th>
-        <th>name_pat</th>
-        <th>no_tel_pat</th>
+        <th>id_pat</th>
         <th>Option</th>
       </tr>
     </thead>
@@ -43,8 +50,6 @@ require_once 'php_action/db_connect.php';
           echo"<tr>
             <td>".$row['id_doct']."</td>
             <td>".$row['id_pat']."</td>
-            <td>".$row['name_pat']."</td>
-            <td>".$row['no_tel_pat']."</td>
             <td>
               <a href='edit.php?id_pat=".$row['id_pat']."'><button type='button'>Edit</button></a>
               <a href='remove.php?id_pat=".$row['id_pat']."'><button type='button'>Remove</button></a>

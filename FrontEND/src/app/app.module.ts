@@ -29,6 +29,8 @@ import { ProfilDokter } from '../pages/profil-dokter/profil-dokter';
 import { ProfilPasienDokter } from '../pages/profil-pasien-dokter/profil-pasien-dokter';
 import { SignupDokter } from '../pages/signup-dokter/signup-dokter';
 import { DaftarPasien } from '../pages/daftar-pasien/daftar-pasien';
+import { HarianPasienPage } from '../pages/harian-pasien/harian-pasien';
+
 import { Data } from '../providers/data';
 
 import { CallNumber } from '@ionic-native/call-number';
@@ -37,7 +39,10 @@ import {Storage } from '@ionic/storage';
 import { BackgroundMode } from '@ionic-native/background-mode';
 import { Vibration } from '@ionic-native/vibration';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -65,6 +70,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
     AkuSehat,
     TabsDokter,
     DaftarPasien,
+    HarianPasienPage,
     TabsPage
   ],
   imports: [
@@ -98,6 +104,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
     AkuSehat,
     TabsDokter,
     DaftarPasien,
+    HarianPasienPage,
     TabsPage
   ],
   providers: [
@@ -107,7 +114,10 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
     CallNumber,
     BackgroundMode,
     Vibration,
+    File,
+    Transfer,
     Camera,
+    FilePath,
     LocalNotifications,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

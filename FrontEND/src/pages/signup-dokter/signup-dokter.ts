@@ -25,6 +25,9 @@ export class SignupDokter {
   bank_number:number;
   specialization:string;
   patients_max:number;
+  experience:string;
+  hospital:string;
+  educational_background:string;
 
 
   submitted= false;
@@ -65,7 +68,10 @@ export class SignupDokter {
         bank:this.bank,
         bank_number:this.bank_number,
         specialization:this.specialization,
-        patients_max:this.patients_max
+        patients_max:this.patients_max,
+        experience:this.experience,
+        hospital:this.hospital,
+        educational_background:this.educational_background
 
       });
 console.log(input);

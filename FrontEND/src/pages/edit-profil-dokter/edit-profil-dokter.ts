@@ -86,13 +86,13 @@ export class EditProfilDokter {
         this.http.post(this.data.BASE_URL+"/edit_profile_doctor.php?doctor="+this.id_doctor,input).subscribe(data => {
         let response = data.json();
         // console.log(response);
-        // this.data.login(response.data);
+        
 	  if(response.status=="200"){
 
        
        // this.data.login(response.data);
           
-          
+          this.data.login(response.data,"dokter");
           // this.navCtrl.push(ProfilPasien);
           let alert = this.alertCtrl.create({
           title: 'Data Tersimpan!',

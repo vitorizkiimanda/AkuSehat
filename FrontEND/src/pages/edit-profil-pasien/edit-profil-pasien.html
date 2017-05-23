@@ -17,7 +17,7 @@
 
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="2">Nama</font></ion-label>
-	    <ion-input [(ngModel)]="name" type="text" value="{{name}}" required></ion-input>
+	    <ion-input [(ngModel)]="name" type="text" placeholder="nama" value="{{name}}" required></ion-input>
 	</ion-item>
 
 	<!--<ion-item>
@@ -27,13 +27,13 @@
 
 	<ion-item>
 	    <ion-label stacked color="dark"><font size="2">Nomor Telepon</font></ion-label>
-	    <ion-input [(ngModel)]="no_tel_patient" type="number" value="{{no_tel_patient}}" required></ion-input>
+	    <ion-input placeholder="nomor telepon" [(ngModel)]="no_tel_patient" type="number" value="{{no_tel_patient}}" required></ion-input>
 	</ion-item>	
 
 
 	<ion-item>
 	    <ion-label stacked color="dark" lineHeight="22"><font size="2">Alamat</font></ion-label>
-	    <ion-textarea [(ngModel)]="address_patient" autosize type="text" value="{{address_patient}}" required></ion-textarea>
+	    <ion-textarea placeholder="email" [(ngModel)]="address_patient" autosize type="text" value="{{address_patient}}" required></ion-textarea>
 	</ion-item>
 
 
@@ -64,22 +64,22 @@
 
 	  <ion-item>
 	    <ion-label stacked color="dark"><font size="2">Alergi</font></ion-label>
-		<ion-textarea [(ngModel)]="allergy" *ngFor="let data of history" value="{{data.allergy}}" autosize type="text"></ion-textarea>
+		<ion-textarea placeholder="alergi" [(ngModel)]="allergy" *ngFor="let data of history" value="{{data.allergy}}" autosize type="text"></ion-textarea>
 	  </ion-item>
 
 		<ion-item>
 		    <ion-label stacked color="dark"><font size="2">Cacat</font></ion-label>
-		    <ion-textarea [(ngModel)]="disability" *ngFor="let data of history" value="{{data.disability}}" autosize type="text"></ion-textarea>
+		    <ion-textarea placeholder="cacat" [(ngModel)]="disability" *ngFor="let data of history" value="{{data.disability}}" autosize type="text"></ion-textarea>
 		</ion-item>
 
 		<ion-item>
 		    <ion-label stacked color="dark"><font size="2">Operasi</font></ion-label>
-			<ion-textarea [(ngModel)]="operation" *ngFor="let data of history" value="{{data.operation}}" autosize type="text"></ion-textarea>
+			<ion-textarea placeholder="operasi" [(ngModel)]="operation" *ngFor="let data of history" value="{{data.operation}}" autosize type="text"></ion-textarea>
 		  </ion-item>
 
 		<ion-item>
 		    <ion-label stacked color="dark"><font size="2">Deskripsi</font></ion-label>
-		    <ion-textarea  *ngFor="let data of history" value="{{data.description}}" [(ngModel)]="description"autosize type="text"></ion-textarea>
+		    <ion-textarea placeholder="deskripsi"  *ngFor="let data of history" value="{{data.description}}" [(ngModel)]="description"autosize type="text"></ion-textarea>
 		</ion-item>
 
 

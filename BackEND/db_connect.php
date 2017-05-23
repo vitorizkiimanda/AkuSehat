@@ -18,6 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
+
+// $localhost = "localhost";
+// $username = "root";
+// $password = "";
+// $db_name = "akusehat";
 $localhost = "mysql.idhostinger.com";
 $username = "u152232156_admin";
 $password = "akusehat";

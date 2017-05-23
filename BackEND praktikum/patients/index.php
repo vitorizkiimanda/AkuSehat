@@ -1,10 +1,19 @@
 <?php
 require_once 'php_action/db_connect.php';
+session_start();
+
+  if($_SESSION['id']==1){
+  }
+  else{
+  header('location:../index.php');
+      exit();
+  }
  ?>
 
  <!DOCTYPE html>
  <html>
  <head>
+   <a href="../logout.php"style="float: right;">Logout</a>
    <title>Database Patient</title>
 
    <style type="text/css">
@@ -31,7 +40,9 @@ require_once 'php_action/db_connect.php';
         <th>name_patient</th>
         <th>email_patient</th>
         <th>password_patient</th>
+        <th>address_patient</th>
         <th>sex_patient</th>
+        <th>bank_patient</th>
         <th>no_tel_patient</th>
         <th>Option</th>
       </tr>
@@ -48,7 +59,9 @@ require_once 'php_action/db_connect.php';
             <td>".$row['name_patient']."</td>
             <td>".$row['email_patient']."</td>
             <td>".$row['password_patient']."</td>
+            <td>".$row['address_patient']."</td>
             <td>".$row['sex_patient']."</td>
+            <td>".$row['bank_patient']."</td>
             <td>".$row['no_tel_patient']."</td>
             <td>
               <a href='edit.php?id_patient=".$row['id_patient']."'><button type='button'>Edit</button></a>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams,LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { BerandaDokter } from '../beranda-dokter/beranda-dokter';
 import { TabsDokter } from '../tabs-dokter/tabs-dokter';
@@ -20,7 +20,7 @@ export class LoginDokter {
   submitted = false;  //ini di declare awalnya false dlu
 
   constructor(private vibration: Vibration,public navCtrl: NavController,
-  public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data) {
+  public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -28,7 +28,7 @@ export class LoginDokter {
   }
 
   gotoTab(){
-    this.navCtrl.push(TabsDokter);
+    this.navCtrl.setRoot(TabsDokter);
   }
 
   signUp(){
@@ -38,7 +38,11 @@ export class LoginDokter {
 
   login(form: NgForm){
     this.submitted = true;
+    let loading = this.loadCtrl.create({
+        content: 'memuat..'
+    });
     if(form.valid){
+      loading.present();
       let input = JSON.stringify({
         email: this.email, 
         password: this.password
@@ -47,11 +51,13 @@ export class LoginDokter {
         let response = data.json();
 	if(response.status=="200"){
         //console.log(response);
-        this.data.login(response.data);//masukin data ke localstorage
+        this.data.login(response.data,"dokter");//masukin data ke localstorage
         this.gotoTab();
+        loading.dismiss();
       }
       else
            {
+             loading.dismiss();
              let alert = this.alertCtrl.create({
                 title: 'Gagal Masuk',
                 subTitle: 'Email atau Password salah!',      

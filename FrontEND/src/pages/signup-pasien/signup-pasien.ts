@@ -21,6 +21,15 @@ export class SignupPasien {
   telephone:string;
   address:string;
 
+  age:number;
+  weight:number;
+  height:number;
+  allergy:string;
+  disability:string;
+  operation:string;
+  description:string;
+  
+  
   submitted= false;
   submitted2= true;
 
@@ -54,7 +63,15 @@ export class SignupPasien {
         password:this.password,
         sex:this.sex,
         telephone:this.telephone,
-        address:this.address
+        address:this.address,
+        age:this.age,
+        weight:this.weight,
+        height:this.height,
+        allergy:this.allergy,
+        operation:this.operation,
+        disability:this.disability,
+        description:this.description
+        
 
       });
 console.log(input);

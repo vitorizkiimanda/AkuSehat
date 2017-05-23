@@ -4,8 +4,10 @@ require_once 'db_connect.php';
 if($_POST){
   $year = $_POST['year'];
   $month = $_POST['month'];
+  $id_accounting = $_POST['id_accounting'];
+  $verified = $_POST['verified'];
 
-  $sql = "UPDATE accounting SET year = '$year', month = '$month' WHERE id_accounting = {$id_accounting}";
+  $sql = "UPDATE accounting SET year = '$year', month = '$month', verified = '$verified' WHERE id_accounting = {$id_accounting}";
   if($connect->query($sql) === TRUE) {
     echo "<p>Successfully Updated! </p>";
     echo "<a href='../edit.php?id_accounting=".$id_accounting."'><button type='button'>Back</button></a>";

@@ -60,7 +60,8 @@ export class BerandaDokter {
 
 
   teleponPasien(nomor){
-	this.callNumber.callNumber(String(this.nomor) , true)
+    console.log(nomor);
+	this.callNumber.callNumber(String(nomor) , true)
   .then(() => console.log('Launched dialer!'))
   .catch(() => console.log('Error launching dialer'));
 

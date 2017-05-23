@@ -16,7 +16,7 @@ if($_GET['id_pat']){
  <!DOCTYPE html>
  <html>
  <head>
-   <title>Edit Data Pembayaran</title>
+   <title>Edit Patients Doctors</title>
 
    <style type="text/css">
    fieldset{
@@ -32,7 +32,7 @@ if($_GET['id_pat']){
  <body>
 
   <fieldset>
-    <legend>Edit Data Pembayaran</legend>
+    <legend>Edit Associative Table</legend>
     <form action="php_action/update.php" method="post">
       <table cellspacing="0" cellpadding="0">
           <tr>
@@ -40,8 +40,8 @@ if($_GET['id_pat']){
             <td><input type="number" name="id_doct" placeholder="id dokter" value="<?php echo $data['id_doct']?>"/></td>
           </tr>
           <tr>
-            <th>no_tel_pat</th>
-            <td><input type="number" name="no_tel_pat" placeholder="nomor telepon pasien" value="<?php echo $data['no_tel_pat']?>"/></td>
+            <th>Id Pasien</th>
+            <td><input type="number" name="id_pat" placeholder="id pasien" value="<?php echo $data['id_pat']?>"/></td>
           </tr>
             <tr>
               <input type="hidden" name="id_pat" value=<?php echo $data['id_pat']?> />

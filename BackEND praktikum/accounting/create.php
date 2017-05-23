@@ -18,11 +18,11 @@
 
 <fieldset>
   <legend>Add Accounting Record</legend>
-  <form action="php_action/create.php" method="post">
+  <form action="php_action/create.php" method="post" enctype="multipart/form-data">
     <table cellspacing="0" cellpadding="0">
       <tr>
         <th>Id Pasien</th>
-        <td><input type="number" name="id_pat" placeholder="id dokter" /></td>
+        <td><input type="number" name="id_pat" placeholder="id pasien" /></td>
       </tr>
       <tr>
         <th>Bulan</th>
@@ -47,8 +47,12 @@
         <td><input type="int" name="year" placeholder="Tahun" /></td>
       </tr>
       <tr>
+      <th>Bukti<br>Pembayaran</th>
+      <td><input type="file" placeholder="Upload bukti pembayaran, max 1 MB" name="pic_acc" required></td>
+      </tr>
+      <tr>
         <td><button type="submit">Save Changes</button></td>
-        <td><a href="index.php"><button type="button">Back</button></td>
+        <td><a href="upload.php"><button type="button">Back</button></td>
       </tr>
     </table>
   </form>

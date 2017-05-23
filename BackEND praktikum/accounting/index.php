@@ -1,10 +1,21 @@
 <?php
 require_once 'php_action/db_connect.php';
+session_start();
+
+  if($_SESSION['id']==1){
+  }
+  else{
+  header('location:../index.php');
+      exit();
+  }
  ?>
+
+
 
  <!DOCTYPE html>
  <html>
  <head>
+    <a href="../logout.php"style="float: right;">Logout</a>
    <title> Database Pembayaran</title>
 
    <style type="text/css">
@@ -32,6 +43,7 @@ require_once 'php_action/db_connect.php';
         <th>year</th>
         <th>month</th>
         <th>verified</th>
+        <th>pic_acc</th>
         <th>Option</th>
       </tr>
     </thead>
@@ -48,6 +60,7 @@ require_once 'php_action/db_connect.php';
             <td>".$row['year']."</td>
             <td>".$row['month']."</td>
             <td>".$row['verified']."</td>
+            <td>".$row['pic_acc']."</td>
             <td>
               <a href='edit.php?id_accounting=".$row['id_accounting']."'><button type='button'>Edit</button></a>
               <a href='remove.php?id_accounting=".$row['id_accounting']."'><button type='button'>Remove</button></a>

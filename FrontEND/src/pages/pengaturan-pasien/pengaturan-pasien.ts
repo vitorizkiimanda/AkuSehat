@@ -6,13 +6,15 @@ import { AlertController } from 'ionic-angular';
 
 import {LocalNotifications} from 'ionic-native';
 
+import { Data } from '../../providers/data';
+
 @Component({
   selector: 'page-pengaturan-pasien',
   templateUrl: 'pengaturan-pasien.html',
 })
 export class PengaturanPasien {
 
-  constructor(public navCtrl: NavController,public alertCtrl: AlertController, public app: App, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public data : Data,public alertCtrl: AlertController, public app: App, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -42,6 +44,7 @@ export class PengaturanPasien {
           text: 'Ya',
           handler: () => {
             console.log('Agree clicked'),
+            this.data.logout();
             this.app.getRootNav().setRoot(MyApp);
           }
         }

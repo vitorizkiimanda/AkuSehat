@@ -1,15 +1,17 @@
 <?php
 require_once 'php_action/db_connect.php';
 
-if($_GET['id_pat']){
+if($_GET['id_pat'] && $_GET['date_daily']){
   $id_pat = $_GET['id_pat'];
+  $date_daily = $_GET['date_daily'];
 
-  $sql = "SELECT * FROM daily_health_data WHERE id_pat = {$id_pat}";
+  $sql = "SELECT * FROM daily_health_data WHERE id_pat = {$id_pat} AND date_daily = {$date_daily}";
   $result = $connect->query($sql);
 
   $data = $result->fetch_assoc();
 
   $connect->close();
+
 }
  ?>
 
@@ -36,14 +38,6 @@ if($_GET['id_pat']){
     <form action="php_action/update.php" method="post">
       <table cellspacing="0" cellpadding="0">
         <tr>
-          <th>Id Pasien</th>
-          <td><input type="number" name="id_pat" placeholder="id pasien" value="<?php echo $data['id_pat']?>"/></td>
-        </tr>
-          <tr>
-        <th>Date</th>
-        <td><input type="date" name="date_daily" value="<?php echo $data['date_daily']?>"/></td>
-      </tr>
-        <tr>
           <th>Tensi Sistol</th>
           <td><input type="number" name="tension_sistol" placeholder="Tensi sistol" value="<?php echo $data['tension_sistol']?>"/></td>
         </tr>
@@ -63,6 +57,7 @@ if($_GET['id_pat']){
             </tr>
             <tr>
               <input type="hidden" name="id_pat" value=<?php echo $data['id_pat']?> />
+              <input type="hidden" name="date_daily" value=<?php echo $data['date_daily']?> />
               <td><button type="submit">Save Changes</button></td>
               <td><a href="index.php"><button type="button">Back</button></td>
             </tr>

@@ -6,6 +6,9 @@ import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
 
 
+
+
+
 @Component({
   selector: 'page-edit-profil-pasien',
   templateUrl: 'edit-profil-pasien.html',
@@ -15,6 +18,7 @@ export class EditProfilPasien {
   history: any;
   history2: any;
 
+  
   name:string;
   id_patient:number;
   address_patient:string;
@@ -32,6 +36,7 @@ export class EditProfilPasien {
   constructor(public navCtrl: NavController,public http: Http, public data: Data, public alertCtrl: AlertController, public navParams: NavParams) {
   }
 
+   
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditProfilPasien');
   }
@@ -112,7 +117,7 @@ export class EditProfilPasien {
        
        // this.data.login(response.data);
           
-
+          this.data.login(response.data,"pasien");
           // this.navCtrl.push(ProfilPasien);
           let alert = this.alertCtrl.create({
           title: 'Data Tersimpan!',
@@ -144,5 +149,14 @@ export class EditProfilPasien {
       }
     });
   }
+
+
+
+ 
+
+
+
+
+
 
 }

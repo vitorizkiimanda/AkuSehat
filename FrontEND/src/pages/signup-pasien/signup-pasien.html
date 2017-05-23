@@ -7,6 +7,10 @@
 </ion-header>
 
 
+<!--ni pilih dokter
+i
+              <ion-option *ngFor="let data of dataKomoditas" value="{{data.komoditas_id}}">{{data.name}}</ion-option>-->
+
 
 <ion-content padding>
 
@@ -54,7 +58,7 @@
 			</p>
 
 			<ion-item>
-				<ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+				<ion-label><font size="2" color="black">Jenis Kelamin</font></ion-label>
 				<ion-select [(ngModel)]="sex" name="sex" #jk="ngModel" required>
 				<ion-option value="L">Laki-laki</ion-option>
 				<ion-option value="P">Perempuan</ion-option>
@@ -67,7 +71,7 @@
 
 
 			<ion-item>
-				<ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+				<ion-label stacked color="dark"><font size="2">Nomor Telepon</font></ion-label>
 				<ion-input [(ngModel)]="telephone" name="telephone" type="number" #telpon="ngModel" required>
 				</ion-input>
 			</ion-item>
@@ -82,6 +86,72 @@
 			</ion-item>
 			<p ion-text [hidden]="alamat.valid || submitted == false" color="danger" padding-left>
 				Address is required
+			</p>
+
+			<ion-item></ion-item>
+			<ion-item text-center><font size="3">Riwayat Kesehatan</font></ion-item>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Umur (tahun)</font></ion-label>
+				<ion-input [(ngModel)]="age" name="age" type="number" #umur="ngModel" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="umur.valid || submitted == false" color="danger" padding-left>
+				Umur is required
+			</p>
+			
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Berat Badan (kg)</font></ion-label>
+				<ion-input [(ngModel)]="weight" name="weight" type="number" #berat="ngModel" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="berat.valid || submitted == false" color="danger" padding-left>
+				Berat badan is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Tinggi Badan (cm)</font></ion-label>
+				<ion-input [(ngModel)]="height" name="height" type="number" #tinggi="ngModel" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="tinggi.valid || submitted == false" color="danger" padding-left>
+				Tinggi badan is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Alergi</font></ion-label>
+				<ion-input [(ngModel)]="allergy" name="allergy" type="text" #alergi="ngModel" value="-" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="alergi.valid || submitted == false" color="danger" padding-left>
+				Isi dengan '-' bila tidak ada.
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Cacat</font></ion-label>
+				<ion-input [(ngModel)]="disability" name="disability" type="text" #cacat="ngModel"  required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="cacat.valid || submitted == false" color="danger" padding-left>
+				Isi dengan '-' bila tidak ada.
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Operasi</font></ion-label>
+				<ion-input [(ngModel)]="operation" name="operation" type="text" #operasi="ngModel" value="-" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="operasi.valid || submitted == false" color="danger" padding-left>
+				Isi dengan '-' bila tidak ada.
+			</p>
+
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Deskripsi Kesehatan</font></ion-label>
+				<ion-textarea  [(ngModel)]="description" name="description" type="text" #deskripsi="ngModel" required autosize></ion-textarea>
+			</ion-item>
+			<p ion-text [hidden]="deskripsi.valid || submitted == false" color="danger" padding-left>
+				Deskripsi Kesehatan is required
 			</p>
 
 		</ion-list>

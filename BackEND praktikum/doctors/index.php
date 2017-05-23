@@ -1,10 +1,19 @@
 <?php
 require_once 'php_action/db_connect.php';
+session_start();
+
+  if($_SESSION['id']==1){
+  }
+  else{
+  header('location:../index.php');
+      exit();
+  }
  ?>
 
  <!DOCTYPE html>
  <html>
  <head>
+   <a href="../logout.php"style="float: right;">Logout</a>
    <title> Database Dokter</title>
 
    <style type="text/css">

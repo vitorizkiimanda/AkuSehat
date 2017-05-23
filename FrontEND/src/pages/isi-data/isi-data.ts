@@ -10,6 +10,9 @@ import { Data } from '../../providers/data';
 import { NgForm } from '@angular/forms';
 import {LocalNotifications} from 'ionic-native';
 
+var dateNow = new Date();
+
+
 @Component({
   selector: 'page-isi-data',
   templateUrl: 'isi-data.html',
@@ -24,6 +27,10 @@ export class IsiData {
   diastol: number;
 
   id_patient:number;
+  
+
+  // dateNow= date("YYYY-mm-dd");
+  // timestamp = date("Y-m-d H:i:s");
 
   constructor(public navCtrl: NavController,
   public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data) {
@@ -46,6 +53,8 @@ export class IsiData {
   }
 
   ionViewWillEnter() {
+    
+    // console.log(displayFormat(dateNow, "dddd , mmmm dS , yyyy"));
     //ini ni ngambil value yang di return dari data.ts
     this.data.getDataPasien().then((data) => {
       this.id_patient = data.id_patient;
@@ -57,7 +66,8 @@ export class IsiData {
     this.submitted = true;
     if(form.valid){
       let input = JSON.stringify({
-        date_daily: this.date_daily,
+        date_daily: dateNow,
+        // date_daily:this.date_daily,
         sistol: this.sistol,
         duration: this.duration,
         description: this.description, 
@@ -66,7 +76,7 @@ export class IsiData {
         this.http.post(this.data.BASE_URL+"/daily_health.php?patient="+this.id_patient,input).subscribe(data => {
         let response = data.json();
   	if(response.status=="200"){
-        //console.log(response);
+        console.log(response);
         //this.data.login(response.data);
 
         let alert = this.alertCtrl.create({

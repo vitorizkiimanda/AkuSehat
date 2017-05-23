@@ -55,7 +55,7 @@
 			</p>
 
 			<ion-item>
-				<ion-label><font size="3" color="black">Jenis Kelamin</font></ion-label>
+				<ion-label><font size="2" color="black">Jenis Kelamin</font></ion-label>
 				<ion-select [(ngModel)]="sex" name="sex" #jk="ngModel" required>
 				<ion-option value="L">Laki-laki</ion-option>
 				<ion-option value="P">Perempuan</ion-option>
@@ -68,7 +68,7 @@
 
 
 			<ion-item>
-				<ion-label stacked color="dark"><font size="3">Nomor Telepon</font></ion-label>
+				<ion-label stacked color="dark"><font size="2">Nomor Telepon</font></ion-label>
 				<ion-input [(ngModel)]="telephone" name="telephone" type="number" #telpon="ngModel" required>
 				</ion-input>
 			</ion-item>
@@ -78,7 +78,7 @@
 
 
 			<ion-item>
-				<ion-label><font size="2" color="black">Bank</font></ion-label>
+				<ion-label><font size="2" color="black">Rekening</font></ion-label>
 				<ion-select [(ngModel)]="bank" name="bank" #bang="ngModel" required>
 				<ion-option value="mandiri">Mandiri</ion-option>
 				<ion-option value="bni">BNI</ion-option>
@@ -125,7 +125,32 @@
 				Jumlah Pasien Maksimal is required
 			</p>
 			
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Riwayat Pendidikan</font></ion-label>
+				<ion-input [(ngModel)]="educational_background" name="educational_background" type="text" #pengalaman="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="pengalaman.valid || submitted == false" color="danger" padding-left>
+				Riwayat pendidikan is required
+			</p>
 
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Riwayat Bekerja</font></ion-label>
+				<ion-input [(ngModel)]="experience" name="experience" type="text" #pengalaman="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="pengalaman.valid || submitted == false" color="danger" padding-left>
+				Riwayat bekerja is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Rumah Sakit</font></ion-label>
+				<ion-input [(ngModel)]="hospital" name="hospital" type="text" #rs="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="rs.valid || submitted == false" color="danger" padding-left>
+				Rumah sakit saat ini is required
+			</p>
 
 		</ion-list>
 

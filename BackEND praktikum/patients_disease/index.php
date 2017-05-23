@@ -1,10 +1,19 @@
 <?php
 require_once 'php_action/db_connect.php';
+session_start();
+
+  if($_SESSION['id']==1){
+  }
+  else{
+  header('location:../index.php');
+      exit();
+  }
  ?>
 
  <!DOCTYPE html>
  <html>
  <head>
+   <a href="../logout.php"style="float: right;">Logout</a>
    <title>Database Patient Disease</title>
 
    <style type="text/css">
@@ -27,7 +36,7 @@ require_once 'php_action/db_connect.php';
   <table border="1" cellspacing="0" cellpadding="0">
     <thead>
       <tr>
-        <th>id_patient</th>
+        <th>id_history</th>
         <th>disease_type</th>
         <th>hospitalized_date</th>
         <th>hospitalized_long</th>

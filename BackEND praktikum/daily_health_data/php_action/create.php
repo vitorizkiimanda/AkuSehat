@@ -11,7 +11,7 @@ if($_POST) {
   $daily_description = $_POST['daily_description'];
 
 
-  $sql = "INSERT INTO daily_health_data (id_pat,date_daily,tension_sistol,tension_diastol,sleep_duration,daily_description,active) VALUES ('$id_pat','$date_daily','$tension_sistol','$tension_diastol','$sleep_duration','$daily_description',1)";
+  $sql = "INSERT INTO daily_health_data (id_daily_health,id_pat,date_daily,tension_sistol,tension_diastol,sleep_duration,daily_description,active) VALUES ('','$id_pat','$date_daily','$tension_sistol','$tension_diastol','$sleep_duration','$daily_description',1)";
   if($connect->query($sql) === TRUE) {
     echo "<p>New Record Successfully Created!</p>";
     echo "<a href='../create.php'><button type='button'>Back</button></a>";

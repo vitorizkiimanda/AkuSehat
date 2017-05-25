@@ -13,6 +13,11 @@ import { Vibration } from '@ionic-native/vibration';
 })
 export class SignupPasien {
 
+  dokter:any;
+
+  testRadioOpen: boolean;
+  testRadioResult;
+
   name:string;
   email:string;
   password:string;
@@ -20,6 +25,7 @@ export class SignupPasien {
   sex:string;
   telephone:string;
   address:string;
+  choose_doctor:string;
 
   age:number;
   weight:number;
@@ -40,12 +46,26 @@ export class SignupPasien {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPasien');
   }
+  ionViewWillEnter() {
+    this.pilih_doctor();
+  }
+
+  pilih_doctor(){
+    this.http.get(this.data.BASE_URL+"/choose_doctor.php").subscribe(data => {
+      let response = data.json();
+      console.log(response);
+      if(response.status=="200"){
+        this.dokter= response.data;   //ini disimpen ke variabel pasien diatas itu ,, yang udah di delacre
+      }
+    });
+  }
+  
 
   akunBaru(){
 
   	let alert = this.alertCtrl.create({
-      title: 'Kamu Terdaftar!',
-      subTitle: 'Silahkan Masuk <br><br> Harap lengkapi profil.',
+      title: 'Selamat Kamu Terdaftar!',
+      subTitle: 'silahkan login.',
       buttons: ['OK']
     });
     alert.present();
@@ -70,7 +90,8 @@ export class SignupPasien {
         allergy:this.allergy,
         operation:this.operation,
         disability:this.disability,
-        description:this.description
+        description:this.description,
+        choose_doctor:this.choose_doctor
         
 
       });
@@ -112,7 +133,15 @@ console.log(input);
         password:this.password,
         sex:this.sex,
         telephone:this.telephone,
-        address:this.address
+        address:this.address,
+        age:this.age,
+        weight:this.weight,
+        height:this.height,
+        allergy:this.allergy,
+        operation:this.operation,
+        disability:this.disability,
+        description:this.description,
+        choose_doctor:this.choose_doctor
 
          
       });
@@ -146,6 +175,58 @@ console.log(input);
     }
   }
 
+
+
+  doRadio() {
+    let alert = this.alertCtrl.create();
+    alert.setTitle('Spesialisasi Dokter');
+
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Umum',
+      value: 'Umum',
+      checked: true
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Anak',
+      value: 'Anak'
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Gigi',
+      value: 'Gigi'
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Kandungan',
+      value: 'Kandungan'
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'THT',
+      value: 'THT'
+    });
+
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'Ok',
+      handler: data => {
+        console.log('Radio data:', data);
+        this.testRadioOpen = false;
+        this.testRadioResult = data;
+      }
+    });
+
+    alert.present().then(() => {
+      this.testRadioOpen = true;
+    });
+  }
 
 
 

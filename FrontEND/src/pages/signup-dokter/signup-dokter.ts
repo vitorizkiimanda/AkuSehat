@@ -44,8 +44,8 @@ export class SignupDokter {
   akunBaru(){
 
   	let alert = this.alertCtrl.create({
-      title: 'Kamu Terdaftar!',
-      subTitle: 'Harap lengkapi profil.',
+      title: 'Selamat Kamu Terdaftar!',
+      subTitle: 'silahkan login.',
       buttons: ['OK']
     });
     alert.present();
@@ -114,7 +114,10 @@ console.log(input);
         bank:this.bank,
         bank_number:this.bank_number,
         specialization:this.specialization,
-        patients_max:this.patients_max
+        patients_max:this.patients_max,
+        experience:this.experience,
+        hospital:this.hospital,
+        educational_background:this.educational_background
       });
 
       if(this.password==this.password2){

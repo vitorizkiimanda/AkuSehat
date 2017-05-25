@@ -18,7 +18,7 @@
 
 <fieldset>
   <legend>Add Data</legend>
-  <form action="php_action/create.php" method="post">
+  <form action="php_action/create.php" method="post" enctype="multipart/form-data">
     <table cellspacing="0" cellpadding="0">
       <tr>
         <th>Nama</th>
@@ -58,6 +58,9 @@
       <tr>
         <th>Nomor Telepon</th>
         <td><input type="number" name="no_tel_patient" placeholder="No Telepon" /></td>
+      </tr>
+      <th>Foto<br>Profil</th>
+      <td><input type="file" placeholder="Upload foto profil pasien" name="profile_pict_pat" required></td>
       </tr>
       <tr>
         <td><button type="submit">Save Changes</button></td>

@@ -18,7 +18,7 @@
 
 <fieldset>
   <legend>Add Data</legend>
-  <form action="php_action/create.php" method="post">
+  <form action="php_action/create.php" method="post" enctype="multipart/form-data">
     <table cellspacing="0" cellpadding="0">
       <tr>
         <th>Nama</th>
@@ -68,6 +68,10 @@
       <tr>
         <th>Jumlah Pasien</th>
         <td><input type="number" name="sum_patient" placeholder="Jumlah maksimal pasien yang disanggupi" /></td>
+      </tr>
+      <tr>
+      <th>Foto<br>Profil</th>
+      <td><input type="file" placeholder="Upload foto profil dokter" name="profile_pict_doc" required></td>
       </tr>
       <tr>
         <td><button type="submit">Save Changes</button></td>

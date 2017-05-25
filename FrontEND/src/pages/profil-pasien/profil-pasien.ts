@@ -223,7 +223,7 @@ public pathForImage(img) {
 
 public uploadImage() {
   // Destination URL
-  var url = "http://yoururl/upload.php";
+  var url = this.data.BASE_URL+"/upload.php";
  
   // File for Upload
   var targetPath = this.pathForImage(this.lastImage);

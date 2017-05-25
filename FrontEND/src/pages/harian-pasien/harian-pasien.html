@@ -39,6 +39,35 @@
 	</ion-item >
 		<ion-item text-center><font size="4">Data Kesehatan Harian</font></ion-item>
 		
+		
+
+
+
+		<!--<ion-row>
+      <ion-col no-padding>
+        <div class="filterKomoditas">
+          <ion-item no-lines >
+            <ion-label stacked>Komoditas</ion-label>
+            <ion-select [(ngModel)]="choosedKomoditas" (ionChange)="showselected(choosedKomoditas)" name="pilihKomoditas">
+              <ion-option value="All">Semua komoditas</ion-option>
+              <ion-option *ngFor="let data of dataKomoditas" value="{{data.komoditas_id}}">{{data.name}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-col>
+      <ion-col no-padding [hidden]="segment=='now'">
+         <ion-item no-lines> 	
+           <ion-label stacked>Tanggal</ion-label>
+          <ion-datetime displayFormat="D MMMM YYYY" pickerFormat="D MMMM YYYY" [(ngModel)]="dateFilter" (ionChange)="changeDateFilter(dateFilter)" name="date" max="2100" #date="ngModel" required placeholder="Perkiraan waktu panen">
+          </ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+		-->
+
+
+
+
 	<ion-item *ngFor="let data of daily" >
 		<ion-item>
 			<ion-icon name="pulse"></ion-icon>
@@ -70,5 +99,6 @@
 		</ion-list>
 
 	</ion-item>
+
 
 </ion-content>

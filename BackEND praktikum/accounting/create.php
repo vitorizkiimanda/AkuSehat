@@ -52,7 +52,7 @@
       </tr>
       <tr>
         <td><button type="submit">Save Changes</button></td>
-        <td><a href="upload.php"><button type="button">Back</button></td>
+        <td><a href="index.php"><button type="button">Back</button></td>
       </tr>
     </table>
   </form>

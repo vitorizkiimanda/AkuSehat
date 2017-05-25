@@ -46,6 +46,7 @@ session_start();
         <th>specialization</th>
         <th>sum_patient</th>
         <th>no_tel</th>
+        <th>profile_pict_doc</th>
         <th>Option</th>
       </tr>
     </thead>
@@ -67,6 +68,7 @@ session_start();
             <td>".$row['specialization']."</td>
             <td>".$row['sum_patient']."</td>
             <td>".$row['no_tel_doctor']."</td>
+            <td>".$row['profile_pict_doc']."</td>
             <td>
               <a href='edit.php?id_doctor=".$row['id_doctor']."'><button type='button'>Edit</button></a>
               <a href='remove.php?id_doctor=".$row['id_doctor']."'><button type='button'>Remove</button></a>

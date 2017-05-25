@@ -33,7 +33,7 @@ if($_GET['id_accounting']){
 
   <fieldset>
     <legend>Edit Data Pembayaran</legend>
-    <form action="php_action/update.php" method="post">
+    <form action="php_action/update.php" method="post" enctype="multipart/form-data">
       <table cellspacing="0" cellpadding="0">
           <tr>
             <th>Bulan</th>
@@ -64,7 +64,10 @@ if($_GET['id_accounting']){
                   <option value="Y">Sudah diverifikasi</option>
                </select></td>
           </tr>
-
+          <tr>
+          <th>Bukti<br>Pembayaran</th>
+          <td><input type="file" placeholder="Upload bukti pembayaran, max 1 MB" name="pic_acc"  value=<?php echo $data['pic_acc']?>></td>
+          </tr>
             <tr>
               <input type="hidden" name="id_accounting" value=<?php echo $data['id_accounting']?> />
               <td><button type="submit">Save Changes</button></td>

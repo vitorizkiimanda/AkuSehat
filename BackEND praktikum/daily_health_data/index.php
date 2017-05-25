@@ -60,8 +60,8 @@ session_start();
             <td>".$row['sleep_duration']."</td>
             <td>".$row['daily_description']."</td>
             <td>
-              <a href='edit.php?id_pat=".$row['id_pat']."&&date_daily=".$row['date_daily']."'><button type='button'>Edit</button></a>
-              <a href='remove.php?id_pat=".$row['id_pat']."&&date_daily=".$row['date_daily']."'><button type='button'>Remove</button></a>
+            <a href='edit.php?id_daily_health=".$row['id_daily_health']."'><button type='button'>Edit</button></a>
+            <a href='remove.php?id_daily_health=".$row['id_daily_health']."'><button type='button'>Remove</button></a>
           </tr>";
         }
       } else {

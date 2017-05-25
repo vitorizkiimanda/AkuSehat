@@ -83,13 +83,13 @@
                 <h3>Database</h3>
                 <br>
                 <div class="links">
-                    <a href="http://localhost/akusehat_fatim/doctors/">Doctors</a>
-                    <a href="http://localhost/akusehat_fatim/doctors_spesification/">Doctors Spesification</a>
-                    <a href="http://localhost/akusehat_fatim/patients/">Patients</a>
-                    <a href="http://localhost/akusehat_fatim/health_history/">Patients Health History</a>
-                    <a href="http://localhost/akusehat_fatim/patients_disease/">Patients Disease</a>
-                    <a href="http://localhost/akusehat_fatim/daily_health_data/">Patients Daily Health Data</a>
-                    <a href="http://localhost/akusehat_fatim/accounting/">Accounting</a>
+                    <a href="http://localhost/akusehat/doctors/">Doctors</a>
+                    <a href="http://localhost/akusehat/doctors_spesification/">Doctors Spesification</a>
+                    <a href="http://localhost/akusehat/patients/">Patients</a>
+                    <a href="http://localhost/akusehat/health_history/">Patients Health History</a>
+                    <a href="http://localhost/akusehat/patients_disease/">Patients Disease</a>
+                    <a href="http://localhost/akusehat/daily_health_data/">Patients Daily Health Data</a>
+                    <a href="http://localhost/akusehat/accounting/">Accounting</a>
                 </div>
             </div>
         </div>

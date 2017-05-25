@@ -33,7 +33,7 @@ if($_GET['id_patient']){
 
   <fieldset>
     <legend>Edit Data</legend>
-    <form action="php_action/update.php" method="post">
+    <form action="php_action/update.php" method="post" enctype="multipart/form-data">
       <table cellspacing="0" cellpadding="0">
         <tr>
           <th>Nama</th>
@@ -70,6 +70,10 @@ if($_GET['id_patient']){
         <tr>
           <th>Nomor Telepon</th>
           <td><input type="number" name="no_tel_patient" placeholder="No Telepon" value="<?php echo $data['no_tel_patient']?>"/></td>
+        </tr>
+        <tr>
+        <th>Foto<br>Profil</th>
+        <td><input type="file" placeholder="Upload foto profil pasien" name="profile_pict_pat" value="<?php echo $data['profile_pict_pat']?>"></td>
         </tr>
         <tr>
           <input type="hidden" name="id_patient" value=<?php echo $data['id_patient']?> />

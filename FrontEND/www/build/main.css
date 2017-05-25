@@ -21320,6 +21320,18 @@ page-edit-profil-pasien .text-input::placeholder {
   font-size: 85%;
 }
 
+page-harian-pasien .filterKomoditas ion-item {
+  padding-bottom: 10px;
+}
+
+page-harian-pasien .filterKomoditas ion-item ion-label {
+  padding-bottom: 6px;
+}
+
+page-harian-pasien .contenthistory5 {
+  padding-top: 20px;
+}
+
 page-isi-data .text-input::-webkit-input-placeholder {
   color: #bcc0c6;
   font-size: 85%;

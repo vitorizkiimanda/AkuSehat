@@ -6,6 +6,7 @@ import { AlertController } from 'ionic-angular';
 import { Vibration } from '@ionic-native/vibration';
 import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
+import { KomentarDokterPage } from '../komentar-dokter/komentar-dokter';
 
 var dateNow = new Date();
 
@@ -57,6 +58,12 @@ export class HarianPasienPage {
     })
     
   }
+
+  komentar(data){
+     this.navCtrl.push(KomentarDokterPage, data);
+  }
+
+
   changeDateFilter(date){
     this.date_daily = moment(date).format('01-MM-YYYY');
     // this.date_daily_update = this.date_daily;

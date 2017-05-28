@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="{{theme}}">
+    <ion-title>
+      Komentar
+    </ion-title>
+  </ion-navbar>	
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item *ngFor="let data of daily" >
+  <!--<ion-item>-->
+		<ion-item>
+			<ion-icon name="pulse"></ion-icon>
+			
+			<ion-badge item-right color="dark" small><font size="2">{{data.date_daily}}</font></ion-badge>
+		</ion-item>
+		&nbsp;
+		
+				<ion-item >
+				&nbsp;&nbsp;&nbsp;&nbsp; Tekanan Darah
+					<ion-note item-right color="dark">
+						{{data.tension_sistol}}/{{data.tension_diastol}} mmHg
+						</ion-note>
+				</ion-item>
+				<ion-item>
+				&nbsp;&nbsp;&nbsp;&nbsp; Durasi Tidur
+					<ion-note item-right color="dark">
+						{{data.sleep_duration}} jam
+						</ion-note>
+				</ion-item>
+				<ion-item no-lines text wrap>
+				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
+				<ion-card text-wrap>
+					<ion-item text-wrap>
+						<p>  {{data.daily_description}}</p>
+					</ion-item>
+				</ion-card>
+				</ion-item>
+				
+		
+
+	</ion-item>
+ 
+  <h4 ion-text text-center>
+			<strong>Komentar</strong>
+	</h4>
+
+	<ion-item text-wrap *ngFor="let data of dataKomentar" >
+      <p ion-text text-right><font size="2">{{data.date}}</font></p>
+      <font size="3">{{data.sender}}</font>
+      <p>{{data.comments}}</p>   
+  </ion-item>
+
+	<ion-item no-lines></ion-item>
+
+	<form #komentarForm="ngForm" novalidate>
+		<ion-list >
+			<ion-item>
+				<!--<ion-label stacked>Email</ion-label>-->
+				<ion-input placeholder="ketik komentar" [(ngModel)]="comment_doctor" name="comment_patient" type="text" #komen="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button color="{{theme}}"  ion-button (click)="komentar(komentarForm)" type="submit" block>komentar</button>
+			</ion-col>
+		</ion-row>		
+
+		
+
+	</form>
+
+
+
+
+</ion-content>

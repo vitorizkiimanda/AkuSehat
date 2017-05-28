@@ -17,10 +17,13 @@ export class KomentarPage {
   theme:string;
 
   daily:any;
+  dataKomentar:any;
 
   id_daily_h:number;
   id_patient:number;
   comment_patient:string;
+
+  name:string;
 
   submitted = false;
 
@@ -32,6 +35,7 @@ export class KomentarPage {
 
     this.id_daily_h = dataKesehatan.id_daily_h;
     this.id_patient = dataKesehatan.id_patient;
+    this.name = dataKesehatan.name_patient;
     
     console.log(dataKesehatan);
   }
@@ -47,10 +51,12 @@ export class KomentarPage {
         content: 'memuat..'
     });
     loading.present();
+    
     this.data.getDataPasien().then((data) => {
       this.theme= data.theme;
 
       this.getDataKesehatan();
+      this.showKomentar();
       
 
     })
@@ -70,6 +76,18 @@ export class KomentarPage {
     });
   }
 
+  showKomentar(){
+    this.http.get(this.data.BASE_URL+"/show_comment.php?id_daily_h="+this.id_daily_h).subscribe(data => {
+      let response = data.json();
+      console.log(response);
+      if(response.status=="200"){
+        this.dataKomentar= response.data;   //ini disimpen ke variabel pasien diatas itu ,, yang udah di delacre
+        
+        
+      }
+    });
+  }
+
 
   komentar(form: NgForm){
     
@@ -83,14 +101,15 @@ export class KomentarPage {
         comment_patient:this.comment_patient,
         date: dateNow
       });
-        this.http.post(this.data.BASE_URL+"/comments_patient.php?patient="+this.id_patient+ "&id_daily_h="+this.id_daily_h,input).subscribe(data => {
+        console.log(input);
+        this.http.post(this.data.BASE_URL+"/comments_patients.php?patient="+this.id_patient+ "&id_daily_h="+this.id_daily_h,input).subscribe(data => {
         let response = data.json();
         
 	if(response.status=="200"){
-        console.log(response);
-        this.data.login(response.data,"pasien");
-        
+        console.log(response);    
         loading.dismiss();
+        this.ionViewWillEnter();
+        form.reset(); //untuk reset input form
         
       }
       
@@ -109,6 +128,7 @@ export class KomentarPage {
 
       });
     }
+    
     
   }
 

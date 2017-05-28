@@ -34,6 +34,7 @@ import { PilihDokterLagiPage } from '../pages/pilih-dokter-lagi/pilih-dokter-lag
 import { ThemePage } from '../pages/theme/theme';
 import { ThemeDoctorPage } from '../pages/theme-doctor/theme-doctor';
 import { KomentarPage } from '../pages/komentar/komentar';
+import { KomentarDokterPage } from '../pages/komentar-dokter/komentar-dokter';
 
 import { Data } from '../providers/data';
 
@@ -79,6 +80,7 @@ import { Camera } from '@ionic-native/camera';
     ThemePage,
     ThemeDoctorPage,
     KomentarPage,
+    KomentarDokterPage,
     TabsPage
   ],
   imports: [
@@ -117,6 +119,7 @@ import { Camera } from '@ionic-native/camera';
     ThemePage,
     ThemeDoctorPage,
     KomentarPage,
+    KomentarDokterPage,
     TabsPage
   ],
   providers: [

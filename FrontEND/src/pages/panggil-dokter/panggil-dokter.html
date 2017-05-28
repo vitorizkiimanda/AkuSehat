@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Telepon Dokter
     </ion-title>
@@ -16,7 +16,7 @@
 <ion-content class="card-background-page" padding>
 
   <ion-fab bottom right>
-    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
+    <button color="{{theme}}" ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
     <ion-fab-list side="top">
       <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
       <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
@@ -31,7 +31,7 @@
 		</div>
 	</ion-card>
 
-<button ion-button icon-left round block color="secondary" (click)="teleponDokter()">
+<button ion-button color="{{theme}}" icon-left round block color="secondary" (click)="teleponDokter()">
 	  			<ion-icon name="ios-call"></ion-icon>
 	  			Telepon
 			</button>

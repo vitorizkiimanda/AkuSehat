@@ -23,13 +23,17 @@ import { BayarUpload } from '../pages/bayar-upload/bayar-upload';
 import { ProfilDokterPasien } from '../pages/profil-dokter-pasien/profil-dokter-pasien';
 import { BerandaDokter } from '../pages/beranda-dokter/beranda-dokter';
 import { EditProfilDokter } from '../pages/edit-profil-dokter/edit-profil-dokter';
-import { PanggilPasien } from '../pages/panggil-pasien/panggil-pasien';
 import { PengaturanDokter } from '../pages/pengaturan-dokter/pengaturan-dokter';
 import { ProfilDokter } from '../pages/profil-dokter/profil-dokter';
 import { ProfilPasienDokter } from '../pages/profil-pasien-dokter/profil-pasien-dokter';
 import { SignupDokter } from '../pages/signup-dokter/signup-dokter';
 import { DaftarPasien } from '../pages/daftar-pasien/daftar-pasien';
 import { HarianPasienPage } from '../pages/harian-pasien/harian-pasien';
+import { TambahRiwayatPage } from '../pages/tambah-riwayat/tambah-riwayat';
+import { PilihDokterLagiPage } from '../pages/pilih-dokter-lagi/pilih-dokter-lagi';
+import { ThemePage } from '../pages/theme/theme';
+import { ThemeDoctorPage } from '../pages/theme-doctor/theme-doctor';
+import { KomentarPage } from '../pages/komentar/komentar';
 
 import { Data } from '../providers/data';
 
@@ -55,7 +59,6 @@ import { Camera } from '@ionic-native/camera';
     Beranda,
     BerandaDokter,
     EditProfilDokter,
-    PanggilPasien,
     PengaturanDokter,
     ProfilDokter,
     ProfilPasienDokter,
@@ -71,6 +74,11 @@ import { Camera } from '@ionic-native/camera';
     TabsDokter,
     DaftarPasien,
     HarianPasienPage,
+    TambahRiwayatPage,
+    PilihDokterLagiPage,
+    ThemePage,
+    ThemeDoctorPage,
+    KomentarPage,
     TabsPage
   ],
   imports: [
@@ -89,8 +97,7 @@ import { Camera } from '@ionic-native/camera';
     Beranda,
     BerandaDokter,
     EditProfilDokter,
-    PanggilPasien,
-        PengaturanDokter,
+    PengaturanDokter,
     ProfilDokter,
     ProfilPasienDokter,
     SignupDokter,
@@ -105,6 +112,11 @@ import { Camera } from '@ionic-native/camera';
     TabsDokter,
     DaftarPasien,
     HarianPasienPage,
+    TambahRiwayatPage,
+    PilihDokterLagiPage,
+    ThemePage,
+    ThemeDoctorPage,
+    KomentarPage,
     TabsPage
   ],
   providers: [

@@ -24,6 +24,8 @@ export class ProfilDokter {
     specialization :string;
     sum_patient:string;
 
+    theme:string;
+
   constructor(public http: Http, public data: Data,public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams) {
   }
 
@@ -42,7 +44,7 @@ export class ProfilDokter {
       this.no_account_doctor = data.no_account_doctor;
       this.specialization = data.specialization;
       this.sum_patient = data.sum_patient;
-
+      this.theme= data.theme;
 
       this.getProfilDokter();
       this.getProfilDokterSum();

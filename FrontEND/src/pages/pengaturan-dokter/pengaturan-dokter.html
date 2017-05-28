@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Pengaturan
     </ion-title>
@@ -10,8 +10,29 @@
 <ion-content padding>
 
 
-<button ion-button block (click)='signout()' color="danger">Keluar Akun</button>
+<ion-item no-lines></ion-item>
 
+<button ion-button block (click)='presentModal()' color="{{theme}}">Pilih Tema</button>
+<ion-item no-lines></ion-item>
+<button ion-button block (click)='signout()' color="danger">Keluar Akun</button>
+<!--<ion-row>					
+			<ion-col text-center>
+	  			
+							<font size="4">Pilih Tema</font>
+	  		
+			</ion-col>				
+	</ion-row>
+	<ion-item no-lines>-->
+	<!--<button block round ion-button (click)='kirimTema("primary")' >Ocean Breeze</button>
+	<button block round ion-button (click)='kirimTema("secondary")' color="secondary">Nature Life</button>
+  <button block round ion-button (click)='kirimTema("greenArmy")' color="greenArmy">Green Army</button>
+	<button block round ion-button (click)='kirimTema("magenta")' color="magenta">Soft Magenta</button>
+	<button block round ion-button (click)='kirimTema("pink")' color="pink">Pink Blush</button>
+	<button block round ion-button (click)='kirimTema("softRed")' color="softRed">Soft Red</button>
+	<button block round ion-button (click)='kirimTema("orange")' color="orange">Orange Active</button>
+	<button block round ion-button (click)='kirimTema("dark")' color="dark">Dark</button>-->
+
+<!--</ion-item>-->
 
 
 </ion-content>

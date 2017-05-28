@@ -3,7 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AkuSehat } from '../aku-sehat/aku-sehat';
 import { PengaturanPasien } from '../pengaturan-pasien/pengaturan-pasien';
 import { ProfilDokterPasien } from '../profil-dokter-pasien/profil-dokter-pasien';
-
+import { Data } from '../../providers/data';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -12,11 +13,22 @@ import { ProfilDokterPasien } from '../profil-dokter-pasien/profil-dokter-pasien
 })
 export class BayarUpload {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  theme: string;
+
+  constructor(public data: Data,public http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BayarUpload');
+  }
+
+   ionViewWillEnter(){
+    this.data.getDataPasien().then((data) => {
+    
+      this.theme= data.theme;
+
+    })
+    
   }
 
   gotoSettings(){

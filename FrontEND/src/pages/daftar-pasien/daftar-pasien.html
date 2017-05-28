@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Daftar Pasien
     </ion-title>
@@ -18,7 +18,7 @@
   </ion-refresher>
 
 	<ion-fab bottom right>
-    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
+    <button color="{{theme}}" ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
     <ion-fab-list side="top">
       <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
       <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
@@ -30,24 +30,30 @@
 
 <ion-item *ngFor="let data of pasien">
 	<ion-list>
-			<ion-item>
+			<ion-item no-lines>
 					<ion-thumbnail item-left>
 						<img src="assets/pict/person-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
 					</ion-thumbnail>
-					<ion-item text-wrap>
+					<ion-item no-lines text-wrap>
 						<font size="4"> {{data.name_patient}}</font>
 						<ion-row responsive-sm>
 							<ion-col>
-								 <ion-icon name="person" color="primary" (click)="profilPasien(data)" ></ion-icon>
+								 <ion-icon name="person" color="{{theme}}" (click)="profilPasien(data)" ></ion-icon>
 								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								 <ion-icon name="pulse" color="primary" (click)="harianPasien(data)" ></ion-icon>
+								 <ion-icon name="pulse" color="{{theme}}" (click)="harianPasien(data)" ></ion-icon>
                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <ion-icon name="map" color="primary" (click)="harianPasien()" ></ion-icon>
+                 
 							</ion-col>
-						</ion-row>		
+						</ion-row>	
+            	
 					</ion-item>
 					
 			</ion-item>
+      <ion-row no-lines>
+              <ion-col text-right no-lines>
+                <ion-icon name="ios-trash" color="danger" (click)="hapusPasien(data)" ></ion-icon>
+              </ion-col>
+            </ion-row>
 
 		</ion-list>
 </ion-item>

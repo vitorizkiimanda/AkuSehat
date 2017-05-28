@@ -44,17 +44,19 @@
                                 
     $query_register = mysqli_query($connect, "UPDATE health_history SET age='$age', weight='$weight', height='$height', disability='$disability', allergy='$allergy', operation='$operation', description='$description' WHERE id_pat='$id' ");
             
-        
+    $query_select = mysqli_query($connect, "SELECT * FROM patients P JOIN health_history H WHERE id_patient=id_pat AND id_pat='$id'");      
+        $row=mysqli_fetch_assoc($query_select);
+            $data =array(
+                'message' => "Wah datanya lengkap",
+                'data' => $row,
+                'status' => "200"
+            );
         
     }
     else {
         $query_user = mysqli_query($connect, "SELECT * FROM patients WHERE id_patient='$id'");        
         if(mysqli_num_rows($query_user)){
-            $row=mysqli_fetch_assoc($query_user);
-            $data =array(
-                'message' => "Wah datanya kurang lengkap",
-                'status' => "200"
-            );
+           
             
             //update database patient
             $postdata = file_get_contents("php://input");
@@ -82,7 +84,13 @@
             
             mysqli_query($connect, "INSERT INTO health_history (id_history,id_pat, age, weight, height, allergy, disability, operation, description ,active) VALUES ('$id','$id','$age','$weight', '$height', '$allergy', '$disability','$operation','$description','1'");
             
-            
+           $query_select = mysqli_query($connect, "SELECT * FROM patients P JOIN health_history H WHERE id_patient=id_pat AND id_pat='$id'");      
+        $row=mysqli_fetch_assoc($query_select);
+            $data =array(
+                'message' => "Wah datanya lengkap",
+                'data' => $row,
+                'status' => "200"
+            ); 
         }
         else {
             $data =array(

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams,LoadingController } from 'ionic-angular';
 import { ProfilPasien } from '../profil-pasien/profil-pasien';
 import { AlertController } from 'ionic-angular';
 import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
 
-
+import { Vibration } from '@ionic-native/vibration';
 
 
 
@@ -18,6 +18,7 @@ export class EditProfilPasien {
   history: any;
   history2: any;
 
+  theme: string;
   
   name:string;
   id_patient:number;
@@ -33,7 +34,7 @@ export class EditProfilPasien {
 
   address:string;
 
-  constructor(public navCtrl: NavController,public http: Http, public data: Data, public alertCtrl: AlertController, public navParams: NavParams) {
+  constructor(private vibration: Vibration,public navCtrl: NavController,public http: Http, public data: Data, public alertCtrl: AlertController, public navParams: NavParams,public loadCtrl: LoadingController) {
   }
 
    
@@ -51,6 +52,7 @@ export class EditProfilPasien {
       // this.name_doctor = data.name_doctor;
       this.id_patient = data.id_patient;
       //this.id_doctor = data.id_doct;
+       this.theme= data.theme;
       
       this.getRiwayatKesehatan();
       this.getDataHistory();
@@ -68,6 +70,7 @@ export class EditProfilPasien {
 
     this.editProfil();
   	this.navCtrl.push(ProfilPasien);
+    this.ionViewWillEnter();
   }
 
 
@@ -96,7 +99,10 @@ export class EditProfilPasien {
 
   editProfil()
   {
-    
+      let loading = this.loadCtrl.create({
+        content: 'memuat..'
+    });
+    loading.present();
       let input = JSON.stringify({
         name:this.name,
         no_tel_patient:this.no_tel_patient,
@@ -116,23 +122,26 @@ export class EditProfilPasien {
 
        
        // this.data.login(response.data);
-          
-          this.data.login(response.data,"pasien");
+          loading.dismiss();
+          this.data.login(response.data,"pasien"); //ini buat nyimpen data baru ke providers lagi ,, jadi overwrite gitu
           // this.navCtrl.push(ProfilPasien);
           let alert = this.alertCtrl.create({
           title: 'Data Tersimpan!',
+          subTitle: 'Lakukan refresh dengan cara menarik halaman kebawah',
           buttons: ['OK']
           });
           alert.present();
       }
       else
            {
+             loading.dismiss();
              let alert = this.alertCtrl.create({
                 title: 'Gagal Mengubah Profil',
                 subTitle: '',      
                 buttons: ['OK']
               });
               alert.present();
+              this.vibration.vibrate(1000);
            }
 
       });

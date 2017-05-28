@@ -16,6 +16,9 @@ export class PanggilDokter {
 
   telephone:number;
 
+  theme: string;
+  
+
   constructor(public navCtrl: NavController, private callNumber: CallNumber,public data: Data,public alertCtrl: AlertController , public http: Http , public navParams: NavParams) {
   }
 
@@ -29,6 +32,7 @@ export class PanggilDokter {
     //ini ni ngambil value yang di return dari data.ts
     this.data.getDataPasien().then((data) => {
       this.telephone = data.no_tel_doctor;
+      this.theme= data.theme;
       
     })
 

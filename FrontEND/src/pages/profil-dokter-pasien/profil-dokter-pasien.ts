@@ -12,6 +12,7 @@ export class ProfilDokterPasien {
 
   profilDokter: any;
   id_patient:number;
+  theme:string;
 
   constructor(public http: Http, public data: Data,public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -24,7 +25,7 @@ export class ProfilDokterPasien {
     //ini ni ngambil value yang di return dari data.ts
     this.data.getDataPasien().then((data) => {
       this.id_patient = data.id_patient;
-      
+      this.theme= data.theme;
       this.getProfilDokter();
     })
 

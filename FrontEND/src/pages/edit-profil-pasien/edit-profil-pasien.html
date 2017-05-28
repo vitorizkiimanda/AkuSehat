@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Edit Profil
     </ion-title>
@@ -86,6 +86,6 @@
 	  <ion-item></ion-item>
 
 
-	<button ion-button block (click)='simpanProfil()'>SIMPAN</button>
+	<button color="{{theme}}" ion-button block (click)='simpanProfil()'>SIMPAN</button>
 
 </ion-content>

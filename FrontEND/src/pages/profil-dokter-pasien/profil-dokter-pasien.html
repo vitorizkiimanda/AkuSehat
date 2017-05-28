@@ -1,6 +1,6 @@
 
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Profil
     </ion-title>
@@ -18,14 +18,7 @@
     </ion-refresher-content>
   </ion-refresher>
 
-	<ion-fab bottom right>
-    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
-    <ion-fab-list side="top">
-      <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
-      <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
-      
-    </ion-fab-list>
-  </ion-fab>
+	
 
 	<ion-card>
 	  <img src="assets/pict/doctor-flat.png" style='height: 40vh; width: 40vh; display: block; margin: auto;'>

@@ -60,7 +60,7 @@ export class LoginDokter {
              loading.dismiss();
              let alert = this.alertCtrl.create({
                 title: 'Gagal Masuk',
-                subTitle: 'Email atau Password salah!',      
+                subTitle: 'Email atau Password salah',      
                 buttons: ['OK']
               });
               this.vibration.vibrate(1000);

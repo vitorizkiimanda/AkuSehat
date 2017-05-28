@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Profil Pasien
     </ion-title>
@@ -29,7 +29,7 @@
 	  <img src="assets/pict/person-flat.png"  style='height: 40vh; width: 40vh; display: block; margin: auto;'>
 	  <ion-item>
 	  <button ion-button clear item-right>
-			  <ion-icon name="ios-image" color="primary" (click)="presentActionSheet()"></ion-icon>
+			  <ion-icon name="ios-image" color="{{theme}}" (click)="presentActionSheet()"></ion-icon>
 			</button>
 		</ion-item>
 	  <ion-card-content>
@@ -145,7 +145,6 @@
 		
 		
 	</ion-list>
-	<button ion-button block (click)='editProfil()'>EDIT</button>
 
 
 <!--

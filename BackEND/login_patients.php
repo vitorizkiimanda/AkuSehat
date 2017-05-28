@@ -30,7 +30,7 @@
         $row=mysqli_fetch_assoc($query_login);
 
         $data =array(
-            'message' => "Login Success",
+            'message' => "Login Success, but Patient dont't have Doctor",
             'data' => $row,
             'status' => "200"
         );

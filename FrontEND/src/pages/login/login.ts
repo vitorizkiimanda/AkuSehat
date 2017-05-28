@@ -32,7 +32,7 @@ export class Login {
   showBantuan(){
 	let alert = this.alertCtrl.create({
       title: '',
-      subTitle: 'Pilih PASIEN jika anda pasien. Pilih DOKTER jika anda dokter.',
+      subTitle: 'Pilih PASIEN jika anda pasien.<br>Pilih DOKTER jika anda dokter.',
       buttons: ['OK']
     });
     alert.present();

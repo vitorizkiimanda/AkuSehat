@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Beranda
     </ion-title>
@@ -24,7 +24,7 @@
 
 
   <ion-fab bottom right>
-    <button ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
+    <button color="{{theme}}" ion-fab mini><ion-icon name="ios-menu"></ion-icon></button>
     <ion-fab-list side="top">
       <button ion-fab (click)='gotoSettings()'><ion-icon name="ios-settings"></ion-icon></button>
       <button ion-fab (click)='gotoAbout()'><ion-icon name="information"></ion-icon></button>
@@ -58,7 +58,7 @@
 
 <ion-item *ngFor="let data of pasien">
 	  <button ion-button clear item-right>
-			  <ion-icon name="call"  (click)='teleponPasien(data.no_tel_patient)'></ion-icon>
+			  <ion-icon color="{{theme}}" name="call"  (click)='teleponPasien(data.no_tel_patient)'></ion-icon>
 		</button>
 	  {{data.name_patient}}
 </ion-item>

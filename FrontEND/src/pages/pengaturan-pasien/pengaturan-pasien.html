@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Pengaturan
     </ion-title>
@@ -9,23 +9,37 @@
 
 <ion-content padding>
 
-		<ion-item>
+		<!--<ion-item>
 		    <ion-label color="dark">Pengingat isi data rutin   : &nbsp;&nbsp;&nbsp;</ion-label>
 		    <ion-input type="time"></ion-input>
 		</ion-item>
 		<ion-item>
 	    <ion-label stacked color="dark"><font size="3">Pengingat pembayaran</font></ion-label>
 	  	  <ion-input type="date"></ion-input>
-		  </ion-item>
+		  </ion-item>-->
 
+<ion-item no-lines></ion-item>
+<button ion-button block (click)='presentModal()' color="{{theme}}">Pilih Tema</button>
+<ion-item no-lines></ion-item>
+<button ion-button block (click)='signout()' color="danger">Keluar Akun</button>
+<!--
+<ion-row>					
+			<ion-col text-center>
+	  			
+							<font size="4">Pilih Tema</font>
+	  		
+			</ion-col>				
+	</ion-row>
+	<ion-item no-lines>
+	<button block round ion-button (click)='kirimTema("primary")' >Default</button>
+	<button block round ion-button (click)='kirimTema("secondary")' color="secondary">Secondary</button>
+	<button block round ion-button (click)='kirimTema("danger")' color="danger">Danger</button>
+	<button block round ion-button (click)='kirimTema("dark")' color="dark">Dark</button>
 
-<button ion-button block (click)='signout()' color="danger">
-	Keluar Akun
-</button>
-
-<button ion-button block (click)='signout()' color="danger">
+</ion-item>-->
+<!--<button ion-button block (click)='signout()' color="danger">
 	Test LocalNotif
-</button>
+</button>-->
 
 
 

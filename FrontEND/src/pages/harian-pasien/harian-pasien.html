@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="{{theme}}">
     <ion-title>
       Data Harian Pasien
     </ion-title>
@@ -43,27 +43,16 @@
 
 
 
-		<!--<ion-row>
-      <ion-col no-padding>
-        <div class="filterKomoditas">
-          <ion-item no-lines >
-            <ion-label stacked>Komoditas</ion-label>
-            <ion-select [(ngModel)]="choosedKomoditas" (ionChange)="showselected(choosedKomoditas)" name="pilihKomoditas">
-              <ion-option value="All">Semua komoditas</ion-option>
-              <ion-option *ngFor="let data of dataKomoditas" value="{{data.komoditas_id}}">{{data.name}}</ion-option>
-            </ion-select>
-          </ion-item>
-        </div>
-      </ion-col>
+		<ion-row text-center>
       <ion-col no-padding [hidden]="segment=='now'">
-         <ion-item no-lines> 	
-           <ion-label stacked>Tanggal</ion-label>
-          <ion-datetime displayFormat="D MMMM YYYY" pickerFormat="D MMMM YYYY" [(ngModel)]="dateFilter" (ionChange)="changeDateFilter(dateFilter)" name="date" max="2100" #date="ngModel" required placeholder="Perkiraan waktu panen">
+         <ion-item  item-center> 	
+           <ion-label stacked text-center><font size="3">Pilih Bulan dan Tahun</font></ion-label>
+          <ion-datetime class="tanggal" text-center displayFormat="MMMM YYYY" pickerFormat="MM YYYY" [(ngModel)]="date_daily" (ionChange)="changeDateFilter(date_daily)" name="date_daily" min="2000" #date="ngModel" required >
           </ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
-		-->
+		
 
 
 

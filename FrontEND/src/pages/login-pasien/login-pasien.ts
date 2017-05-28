@@ -7,6 +7,7 @@ import { Http } from '@angular/http';
 import { Data } from '../../providers/data';
 import { NgForm } from '@angular/forms';
 import { Vibration } from '@ionic-native/vibration';
+import { PilihDokterLagiPage } from '../pilih-dokter-lagi/pilih-dokter-lagi';
 
 @Component({
   selector: 'page-login-pasien',
@@ -27,6 +28,9 @@ export class LoginPasien {
 
   gotoTab(){
   	this.navCtrl.setRoot(TabsPage);
+  }
+  gotoPilihDokter(){
+    this.navCtrl.setRoot(PilihDokterLagiPage);
   }
 
   signUp(){
@@ -49,16 +53,22 @@ export class LoginPasien {
         
 	if(response.status=="200"){
         //console.log(response);
-        this.data.login(response.data,"pasien");
+        this.data.login(response.data,"pasien");//input data ke local storage
         this.gotoTab();
         loading.dismiss();
+      }
+      else if(response.status=="503"){
+        this.data.login(response.data,"pasien");
+        this.gotoPilihDokter();
+        loading.dismiss();
+      
       }
       else
            {
              loading.dismiss();
              let alert = this.alertCtrl.create({
                 title: 'Gagal Masuk',
-                subTitle: 'Email atau Password salah!',      
+                subTitle: 'Email atau Password salah',      
                 buttons: ['OK']
               });
               this.vibration.vibrate(1000);

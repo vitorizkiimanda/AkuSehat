@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams,LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Beranda } from '../beranda/beranda';
 import { AkuSehat } from '../aku-sehat/aku-sehat';
@@ -27,13 +27,16 @@ export class IsiData {
   diastol: number;
 
   id_patient:number;
+
+  theme: string;
+  
   
 
   // dateNow= date("YYYY-mm-dd");
   // timestamp = date("Y-m-d H:i:s");
 
   constructor(public navCtrl: NavController,
-  public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data) {
+  public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
     LocalNotifications.on("click", (notification, state) => {
             let alert = alertCtrl.create({
                 title: "Notification Clicked",
@@ -58,13 +61,20 @@ export class IsiData {
     //ini ni ngambil value yang di return dari data.ts
     this.data.getDataPasien().then((data) => {
       this.id_patient = data.id_patient;
+      this.theme= data.theme;
     })
 
   }
 
   simpanData(form: NgForm){
+    let loading = this.loadCtrl.create({
+        content: 'menambahkan..'
+    });
+
+
     this.submitted = true;
     if(form.valid){
+      loading.present();
       let input = JSON.stringify({
         date_daily: dateNow,
         // date_daily:this.date_daily,
@@ -78,7 +88,7 @@ export class IsiData {
   	if(response.status=="200"){
         console.log(response);
         //this.data.login(response.data);
-
+        loading.dismiss();
         let alert = this.alertCtrl.create({
           title: 'Data Tersimpan!',
           buttons: ['OK']
@@ -86,9 +96,11 @@ export class IsiData {
         alert.present();
 
         this.navCtrl.push(Beranda);
+        
       }
       else
            {
+             loading.dismiss();
              let alert = this.alertCtrl.create({
                 title: 'Gagal',
                 subTitle: 'silahkan coba lagi',      

@@ -1,7 +1,5 @@
 <?php
-    
-
-  include 'db_connect.php';
+include 'db_connect.php';
     $id=$_GET['doctor'];
     $query_user = mysqli_query($connect, "SELECT * FROM patients_doctors JOIN patients WHERE id_pat=id_patient && id_doct='$id'");
     

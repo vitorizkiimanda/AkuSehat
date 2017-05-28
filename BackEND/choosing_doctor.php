@@ -1,10 +1,4 @@
 <?php
-    
-
-    header('Access-Control-Allow-Origin; *');
-    header('Access-Control-Methods; GET, POST, PUT, OPTIONS');
-    header('Access-Control-Allow-Header; Content-Type');
-
   include 'db_connect.php';
     $id_doct=$_GET['doctor'];
     $id_pat=$_GET['patient'];

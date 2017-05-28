@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="{{theme}}">
+    <ion-title>
+      Pilih Dokter
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+
+<ion-content padding>
+  
+	<ion-item no-lines></ion-item>
+  <ion-row>					
+			<ion-col text-center>
+	  			<h3 ion-text>
+							<strong>Anda Tidak Memiliki Dokter</strong>
+	  			</h3>
+			</ion-col>				
+	</ion-row>
+	<div>
+	  			<p>
+							Dokter telah mengapus anda dari list pasien-nya. Untuk melanjutkan penggunaan aplikasi AkuSehat! anda harus memilih dokter kembali. 
+					</p>
+	</div>
+
+<form #signupForm="ngForm" novalidate>
+  
+
+  <ion-row responsive-sm>
+			<ion-col>
+				<button center block  outline ion-button round (click)="doRadio()">
+					<div *ngIf="!choose_doctor">Pilih Dokter</div>
+					<div *ngIf="choose_doctor">Dokter {{choose_doctor}}</div>
+				</button>
+				
+				<p ion-text text-center [hidden]="choose_doctor || submitted == false" color="danger" padding-left>
+				Pilih satu spesialisasi dokter
+			</p>
+			</ion-col>
+		</ion-row>
+    <ion-col>
+				<button ion-button block (click)="signup(signupForm)" type="submit">Lanjut</button>
+			</ion-col>
+
+</form>
+
+</ion-content>

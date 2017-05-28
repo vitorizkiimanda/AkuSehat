@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams , App } from 'ionic-angular';
+import {  NavController, NavParams , App,LoadingController } from 'ionic-angular';
 import { Login } from '../login/login';
 import { MyApp } from '../../app/app.component.ts';
 import { AlertController } from 'ionic-angular';
-
-
 import { Data } from '../../providers/data';
+import { Http } from '@angular/http';
+import { Vibration } from '@ionic-native/vibration';
+import { ModalController } from 'ionic-angular';
+import { ThemeDoctorPage } from '../theme-doctor/theme-doctor';
 
 @Component({
   selector: 'page-pengaturan-dokter',
@@ -13,11 +15,34 @@ import { Data } from '../../providers/data';
 })
 export class PengaturanDokter {
 
-  constructor(public navCtrl: NavController,public data: Data, public alertCtrl: AlertController, public app: App, public navParams: NavParams) {
+  theme:string;
+ 
+
+  id_doctor:number;
+
+  constructor(public modalCtrl: ModalController,public navCtrl: NavController,private vibration: Vibration,public http: Http,public data: Data, public alertCtrl: AlertController, public app: App, public navParams: NavParams,public loadCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PengaturanDokter');
+  }
+
+  ionViewWillEnter() {
+    //ini ni ngambil value yang di return dari data.ts
+    
+    this.data.getDataDokter().then((data) => {
+     
+      this.id_doctor = data.id_doctor;
+       this.theme= data.theme;
+      
+    })
+
+  }
+
+  presentModal() {
+    this.navCtrl.push(ThemeDoctorPage);
+    // let modal = this.modalCtrl.create(ThemeDoctorPage);
+    // modal.present();
   }
 
   signout(){
@@ -43,6 +68,10 @@ export class PengaturanDokter {
     });
     confirm.present();
   }
+
+
+  
+
 }
 
 

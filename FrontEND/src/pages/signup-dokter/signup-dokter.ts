@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams,LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { LoginDokter } from '../login-dokter/login-dokter';
 import { Http } from '@angular/http';
@@ -19,7 +19,7 @@ export class SignupDokter {
   password:string;
   password2:string;
   sex:string;
-  telephone:string;
+  telephone:number;
   address:string;
   bank:string;
   bank_number:number;
@@ -33,8 +33,11 @@ export class SignupDokter {
   submitted= false;
   submitted2= true;
 
+  isValidFormTelephone= true;
+  isValidFormNorek= true;
+  isValidFormPasienMax= true;
 
-  constructor(private vibration: Vibration,public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data) {
+  constructor(private vibration: Vibration,public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -52,6 +55,39 @@ export class SignupDokter {
 
 
   	this.navCtrl.push(LoginDokter);
+  }
+
+  checkTelephone(){
+    console.log(this.telephone);
+    if(this.telephone<0){
+      this.isValidFormTelephone=false;
+      // this.telephoneMessage = "Jangan minus coy";
+    } else {
+      // this.telephoneMessage=null;
+      this.isValidFormTelephone=true;
+    }
+
+  }
+
+  checkRekening(){
+    console.log(this.bank_number);
+    if(this.bank_number<0){
+      this.isValidFormNorek=false;
+      // this.ageMessage = "Jangan minus coy";
+    } else {
+      // this.telephoneMessage=null;
+      this.isValidFormNorek=true;
+    }
+
+  }
+
+  checkPasienmax(){
+    console.log(this.patients_max);
+    if(this.patients_max<0){
+      this.isValidFormPasienMax=false;
+    } else {
+      this.isValidFormPasienMax=true;
+    }
   }
 
   daftar(){
@@ -102,8 +138,16 @@ console.log(input);
 
 
   signup(form: NgForm){ 
+    let loading = this.loadCtrl.create({
+        content: 'mendaftarkan..'
+    });
+
     this.submitted = true;
-    if(form.valid){
+    this.checkTelephone();
+    this.checkRekening();
+    this.checkPasienmax();
+    if(form.valid && this.isValidFormTelephone && this.isValidFormNorek && this.isValidFormPasienMax){
+      loading.present();
       let input = JSON.stringify({
         name:this.name,
         email:this.email,
@@ -128,9 +172,22 @@ console.log(input);
        
        // this.data.login(response.data);
         this.akunBaru();
+        loading.dismiss();
+      }
+      else if(response.status=="409"){
+             loading.dismiss();
+             this.vibration.vibrate(1000);
+             let alert = this.alertCtrl.create({
+                title: 'Email sudah terdaftar',
+                subTitle: 'Silahkan pilih email lain.',      
+                buttons: ['OK']
+              });
+              alert.present();
       }
       else
            {
+             loading.dismiss();
+             this.vibration.vibrate(1000);
              let alert = this.alertCtrl.create({
                 title: 'Gagal Membuat Akun',
                 subTitle: 'Periksa kembali data.',      
@@ -142,10 +199,30 @@ console.log(input);
       });
     }
     else {
+        loading.dismiss();
         this.vibration.vibrate(1000);
+        let alert = this.alertCtrl.create({
+                title: 'Gagal Membuat Akun',
+                subTitle: 'Periksa kembali data.',      
+                buttons: ['OK']
+              });
+              alert.present();
         this.submitted2 = false;
       }
     }
+
+    else
+    {
+            loading.dismiss();
+            this.vibration.vibrate(1000);
+             let alert = this.alertCtrl.create({
+                title: 'Gagal Membuat Akun',
+                subTitle: 'Periksa kembali data.',      
+                buttons: ['OK']
+              });
+              alert.present();
+    }
+
   }
 
 

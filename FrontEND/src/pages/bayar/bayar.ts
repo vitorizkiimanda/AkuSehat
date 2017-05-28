@@ -5,7 +5,8 @@ import { BayarUpload } from '../bayar-upload/bayar-upload';
 import { AkuSehat } from '../aku-sehat/aku-sehat';
 import { PengaturanPasien } from '../pengaturan-pasien/pengaturan-pasien';
 import { ProfilDokterPasien } from '../profil-dokter-pasien/profil-dokter-pasien';
-
+import { Data } from '../../providers/data';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-bayar',
@@ -13,7 +14,9 @@ import { ProfilDokterPasien } from '../profil-dokter-pasien/profil-dokter-pasien
 })
 export class Bayar {
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams) {
+  theme: string;
+
+  constructor(public data: Data,public http: Http,public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -21,7 +24,11 @@ export class Bayar {
   }
 
   ionViewWillEnter(){
+    this.data.getDataPasien().then((data) => {
+    
+      this.theme= data.theme;
 
+    })
     
   }
 

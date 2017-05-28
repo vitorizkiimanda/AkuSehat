@@ -26,7 +26,7 @@
 			</ion-item>
 			
 			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>
-				Email is required
+				Email harus diisi
 			</p>
 
 			<ion-item>
@@ -35,7 +35,7 @@
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
-				Password is required
+				Password harus diisi
 			</p>
 		</ion-list>
 
@@ -43,7 +43,15 @@
 			<ion-col>
 				<button ion-button (click)="login(loginForm)" type="submit" block>Masuk</button>
 			</ion-col>
-		</ion-row>		
+		</ion-row>
+
+<!--		
+		<div text-center>
+			<button ion-button medium>
+				Click Here
+			</button>
+		</div>
+				-->
 
 		<ion-grid>
 			<ion-row>

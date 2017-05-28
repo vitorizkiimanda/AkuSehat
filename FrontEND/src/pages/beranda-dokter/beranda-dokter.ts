@@ -14,7 +14,7 @@ import { Http } from '@angular/http';
 })
 export class BerandaDokter {
 
-  
+  theme: string;
 
   pasien: any;
   name:string;
@@ -45,6 +45,7 @@ export class BerandaDokter {
       this.specialization = data.specialization;
       // this.email = data.email_doctor;
       this.id_doctor = data.id_doctor;
+       this.theme= data.theme;
       // this.bank_number = data.no_account_doctor;
       // this.telephone = data.no_tel_doctor;
       // this.bank = data.bank_doctor;

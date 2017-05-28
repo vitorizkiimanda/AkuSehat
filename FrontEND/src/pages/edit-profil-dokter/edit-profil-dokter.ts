@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams,LoadingController } from 'ionic-angular';
 import { ProfilDokter } from '../profil-dokter/profil-dokter';
 import { AlertController } from 'ionic-angular';
 import { Data } from '../../providers/data';
@@ -11,6 +11,7 @@ import { Http } from '@angular/http';
 })
 export class EditProfilDokter {
 
+  theme: string;
 
   profilDokter: any;
   profilDokterSum : any;
@@ -26,7 +27,7 @@ export class EditProfilDokter {
     hospital:string;
     educational_background:string;
 
-  constructor(public navCtrl: NavController,public http: Http, public data: Data, public alertCtrl: AlertController, public navParams: NavParams) {
+  constructor(public loadCtrl: LoadingController,public navCtrl: NavController,public http: Http, public data: Data, public alertCtrl: AlertController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -45,6 +46,7 @@ export class EditProfilDokter {
       this.no_account_doctor = data.no_account_doctor;
       this.specialization = data.specialization;
       this.sum_patient = data.sum_patient;
+       this.theme= data.theme;
       
        this.getProfilDokter();
     })
@@ -70,7 +72,10 @@ export class EditProfilDokter {
 
   editProfil()
   {
-    
+    let loading = this.loadCtrl.create({
+        content: 'menyimpan..'
+    });
+    loading.present();
       let input = JSON.stringify({
         name:this.name,
         no_tel_doctor:this.no_tel_doctor,
@@ -91,17 +96,19 @@ export class EditProfilDokter {
 
        
        // this.data.login(response.data);
-          
+          loading.dismiss();
           this.data.login(response.data,"dokter");
           // this.navCtrl.push(ProfilPasien);
           let alert = this.alertCtrl.create({
           title: 'Data Tersimpan!',
+          subTitle: 'Lakukan refresh dengan cara menarik halaman kebawah',
           buttons: ['OK']
           });
           alert.present();
       }
       else
            {
+             loading.dismiss();
              let alert = this.alertCtrl.create({
                 title: 'Gagal Mengubah Profil',
                 subTitle: '',      

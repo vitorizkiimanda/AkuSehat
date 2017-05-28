@@ -8,7 +8,8 @@ import { Bayar } from '../bayar/bayar';
 import { ProfilDokter } from '../profil-dokter/profil-dokter';
 import { PengaturanDokter } from '../pengaturan-dokter/pengaturan-dokter';
 import { DaftarPasien } from '../daftar-pasien/daftar-pasien';
-
+import { Data } from '../../providers/data';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-tabs-dokter',
@@ -16,7 +17,20 @@ import { DaftarPasien } from '../daftar-pasien/daftar-pasien';
 })
 export class TabsDokter {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  theme: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public data: Data,public http: Http) {
+  }
+
+  ionViewWillEnter() {
+    //ini ni ngambil value yang di return dari data.ts
+    
+    this.data.getDataDokter().then((data) => {
+    
+      this.theme= data.theme;
+      
+    })
+
   }
 
   ionViewDidLoad() {

@@ -7,6 +7,7 @@ import { PengaturanPasien } from '../pengaturan-pasien/pengaturan-pasien';
 import { ProfilDokterPasien } from '../profil-dokter-pasien/profil-dokter-pasien';
 import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
+import { TambahRiwayatPage } from '../tambah-riwayat/tambah-riwayat';
 
 import { File } from '@ionic-native/file';
 import { Transfer, TransferObject } from '@ionic-native/transfer';
@@ -22,6 +23,8 @@ declare var cordova: any;
   templateUrl: 'profil-pasien.html',
 })
 export class ProfilPasien {
+
+  theme:string;
 
   history: any;
   history2: any;
@@ -56,11 +59,13 @@ export class ProfilPasien {
       this.address_patient = data.address_patient;
       this.name_doctor = data.name_doctor;
       this.id_patient = data.id_patient;
+      this.theme= data.theme;
       //this.id_doctor = data.id_doct;
       
       this.getRiwayatKesehatan();
       this.getDataHistory();
     })
+    
 
   }
 
@@ -75,6 +80,10 @@ export class ProfilPasien {
     });
     alert.present();
 
+  }
+
+  tambahRiwayat(){
+    this.navCtrl.push(TambahRiwayatPage);
   }
 
   doRefresh(refresher) {

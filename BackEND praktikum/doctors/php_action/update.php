@@ -5,7 +5,7 @@ if($_POST){
   $name_doctor = $_POST['name_doctor'];
   $email_doctor = $_POST['email_doctor'];
   $hash_password_doctor = $_POST['password_doctor'];
-  $password_doctor = hash('sha256',$hash_password_doctor);
+  $password_doctor = md5($hash_password_doctor);
   $no_account_doctor =$_POST['no_account_doctor'];
   $bank_doctor =$_POST['bank_doctor'];
   $sex_doctor = $_POST['sex_doctor'];

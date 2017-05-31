@@ -26,7 +26,11 @@
 		<ion-list>
 			<ion-item>
 					<ion-thumbnail item-left>
-						<img src="assets/pict/person-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+						
+						<img [src]="photo" *ngIf="profile_pict_pat" alt="avatar" style='height: 25vw; width: 25vw; display: block; margin: auto;' >
+
+						<img src="assets/pict/person-flat.png" *ngIf="!profile_pict_pat" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+
 					</ion-thumbnail>
 					<ion-item text-wrap>
 						<font size="4">{{name}}</font>
@@ -77,7 +81,7 @@
 						{{data.sleep_duration}} jam
 						</ion-note>
 				</ion-item>
-				<ion-item text wrap>
+				<ion-item no-lines text wrap>
 				&nbsp;&nbsp;&nbsp;&nbsp;  Deskripsi
 				<ion-card text-wrap>
 					<ion-item text-wrap>
@@ -86,7 +90,7 @@
 				</ion-card>
 				</ion-item>
 				<ion-item no-lines>
-					<button ion-button round block (click)="komentar(data)" color="{{theme}}">Komentar</button>
+					<button ion-button round block (click)="komentar(data)" color="{{theme}}">Komentar &nbsp; <div *ngIf='data.comment_counter>0' > ({{data.comment_counter}})</div></button>
 				</ion-item>
 		</ion-list>
 

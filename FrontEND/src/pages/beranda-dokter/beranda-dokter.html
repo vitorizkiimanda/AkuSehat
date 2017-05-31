@@ -38,7 +38,10 @@
 	<ion-list>
 		<ion-item text-wrap>
 		    <ion-thumbnail item-left>
-		      <img src="assets/pict/doctor-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+		      <img [src]="photo" *ngIf="profile_pict_doct" alt="avatar" style='height: 25vw; width: 25vw; display: block; margin: auto;' >
+          
+        	<img src="assets/pict/person-flat.png" *ngIf="!profile_pict_doct" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+
 		    </ion-thumbnail>
 		    <font size="4">{{name}}</font>
 		    <p text-wrap>Dokter {{specialization}}</p>

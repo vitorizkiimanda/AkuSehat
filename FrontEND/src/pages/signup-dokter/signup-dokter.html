@@ -84,7 +84,7 @@
 
 			
 
-			<ion-item>
+			<!--<ion-item>
 				<ion-label><font size="2" color="black">Rekening</font></ion-label>
 				<ion-select [(ngModel)]="bank" name="bank" #bang="ngModel" required>
 				<ion-option value="mandiri">Mandiri</ion-option>
@@ -104,21 +104,24 @@
 				<ion-input [(ngModel)]="bank_number" (ionChange)="checkRekening()" name="bank_number" type="number" #rekening="ngModel" pattern="[0-9]{1}[0-9]{1,}" maxlength="30" required>
 				</ion-input>
 			</ion-item>
-			<!--<p ion-text [hidden]="rekening.valid || submitted == false" color="danger" padding-left>
-				Nomor Rekening is required
-			</p>-->
+			
 			<div ion-text [hidden]="rekening.valid || submitted == false"  padding-left>
 				<p color="danger" *ngIf="!bank_number">Nomor rekening harus diisi</p>
 				<p color="danger" *ngIf="bank_number">Nomor rekening salah</p>
-			</div>
+			</div>-->
 
 			<ion-item>
 				<ion-label><font size="2" color="black">Spesialisasi</font></ion-label>
 				<ion-select [(ngModel)]="specialization" name="specialization" #spesialisasi="ngModel" required>
 			    <ion-option value="Umum">Umum</ion-option>
-				<ion-option value="Gigi">Gigi</ion-option>
 				<ion-option value="Anak">Anak</ion-option>
+				<ion-option value="Bedah">Bedah</ion-option>
+				<ion-option value="Gigi">Gigi</ion-option>
+				<ion-option value="Jantung">Jantung</ion-option>
 				<ion-option value="Kandungan">Kandungan</ion-option>
+				<ion-option value="Kulit">Kulit</ion-option>
+				<ion-option value="Mata">Mata</ion-option>
+				<ion-option value="Orthopaedi">Orthopaedi</ion-option>
 				<ion-option value="THT">THT</ion-option>
 				</ion-select>
 			</ion-item>

@@ -17,7 +17,7 @@ export class DaftarPasien {
 
 theme: string;
 
-  pasien: any;
+  pasien: any;  
   name:string;
   specialization:string;
   email:string;
@@ -29,6 +29,8 @@ theme: string;
   no_tel_patient:number;
 
   id_patient:number;
+
+  alamat="http://akusehat.pe.hu";
 
   constructor(private vibration: Vibration,public navCtrl: NavController,public alertCtrl: AlertController, public navParams: NavParams, public http: Http, public data: Data) {
   }
@@ -147,7 +149,8 @@ theme: string;
       let response = data.json();
       console.log(response);
       if(response.status=="200"){
-        this.pasien= response.data;   //ini disimpen ke variabel pasien diatas itu ,, yang udah di delacre
+        this.pasien= response.data;
+        this.pasien.profile_pict_pat = this.alamat+response.data.profile_pict_pat;   //ini disimpen ke variabel pasien diatas itu ,, yang udah di delacre
       }
     });
   }

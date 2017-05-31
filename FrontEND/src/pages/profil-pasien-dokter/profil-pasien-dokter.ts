@@ -4,6 +4,8 @@ import {  NavController, NavParams } from 'ionic-angular';
 import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
 
+import { AlertController } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-profil-pasien-dokter',
@@ -24,9 +26,12 @@ export class ProfilPasienDokter {
   address_patient:string;
 
   no_tel_patient:number;
+
+  photo:string;
+  profile_pict_pat:string;
   
 
-  constructor(public http: Http, public data: Data,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public http: Http, public data: Data,public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,) {
 
     let pasien = this.navParams.data; //ngambil data yang dikirim
 
@@ -35,6 +40,8 @@ export class ProfilPasienDokter {
     this.address_patient = pasien.address_patient;
     this.no_tel_patient = pasien.no_tel_patient;
     this.id_patient = pasien.id_patient;
+    this.profile_pict_pat = pasien.profile_pict_pat;
+    this.photo = pasien.profile_pict_pat;
 
     console.log(pasien);
 
@@ -64,15 +71,19 @@ export class ProfilPasienDokter {
 
   getRiwayatKesehatan(){
 
-
-    // nah ini nnti dipisah aja jadi 2 ,, eheheheh 
-
-
     this.http.get(this.data.BASE_URL+"/health_history.php?patient="+this.id_patient).subscribe(data => { 
       let response = data.json();
       console.log(response);
       if(response.status=="200"){
         this.history= response.data;   //ini disimpen ke variabel pasien diatas itu ,, yang udah di delacre
+      }
+      else {
+        let alert = this.alertCtrl.create({
+                title: 'Gagal Mengambil Data',
+                subTitle: 'Silahkan coba lagi',      
+                buttons: ['OK']
+              });
+              alert.present();
       }
     });
   }

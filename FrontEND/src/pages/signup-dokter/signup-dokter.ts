@@ -34,7 +34,7 @@ export class SignupDokter {
   submitted2= true;
 
   isValidFormTelephone= true;
-  isValidFormNorek= true;
+  
   isValidFormPasienMax= true;
 
   constructor(private vibration: Vibration,public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
@@ -69,17 +69,7 @@ export class SignupDokter {
 
   }
 
-  checkRekening(){
-    console.log(this.bank_number);
-    if(this.bank_number<0){
-      this.isValidFormNorek=false;
-      // this.ageMessage = "Jangan minus coy";
-    } else {
-      // this.telephoneMessage=null;
-      this.isValidFormNorek=true;
-    }
-
-  }
+ 
 
   checkPasienmax(){
     console.log(this.patients_max);
@@ -90,50 +80,50 @@ export class SignupDokter {
     }
   }
 
-  daftar(){
+//   daftar(){
 
-    let input = JSON.stringify({
+//     let input = JSON.stringify({
 
 
-        name:this.name,
-        email:this.email,
-        password:this.password,
-        sex:this.sex,
-        telephone:this.telephone,
-        address:this.address,
-        bank:this.bank,
-        bank_number:this.bank_number,
-        specialization:this.specialization,
-        patients_max:this.patients_max,
-        experience:this.experience,
-        hospital:this.hospital,
-        educational_background:this.educational_background
+//         name:this.name,
+//         email:this.email,
+//         password:this.password,
+//         sex:this.sex,
+//         telephone:this.telephone,
+//         address:this.address,
+//         bank:this.bank,
+//         bank_number:this.bank_number,
+//         specialization:this.specialization,
+//         patients_max:this.patients_max,
+//         experience:this.experience,
+//         hospital:this.hospital,
+//         educational_background:this.educational_background
 
-      });
-console.log(input);
-    this.http.post(this.data.BASE_URL+"/register_doctors.php", input).subscribe(data => {
-           console.log(data);
-           let response = data.json();
+//       });
+// console.log(input);
+//     this.http.post(this.data.BASE_URL+"/register_doctors.php", input).subscribe(data => {
+//            console.log(data);
+//            let response = data.json();
            
-           if(response.status=="200"){
-             this.akunBaru();
-           }
-           else
-           {
-             let alert = this.alertCtrl.create({
-                title: 'Gagal Membuat Akun!',
-                subTitle: 'Periksa kembali data.',      
-                buttons: ['OK']
-              });
-              alert.present();
-           }
-           console.log(response);
+//            if(response.status=="200"){
+//              this.akunBaru();
+//            }
+//            else
+//            {
+//              let alert = this.alertCtrl.create({
+//                 title: 'Gagal Membuat Akun!',
+//                 subTitle: 'Periksa kembali data.',      
+//                 buttons: ['OK']
+//               });
+//               alert.present();
+//            }
+//            console.log(response);
            
-        }, err => { 
+//         }, err => { 
            
-        });
+//         });
 
-  }
+//   }
 
 
 
@@ -144,9 +134,9 @@ console.log(input);
 
     this.submitted = true;
     this.checkTelephone();
-    this.checkRekening();
+   
     this.checkPasienmax();
-    if(form.valid && this.isValidFormTelephone && this.isValidFormNorek && this.isValidFormPasienMax){
+    if(form.valid && this.isValidFormTelephone  && this.isValidFormPasienMax){
       loading.present();
       let input = JSON.stringify({
         name:this.name,
@@ -154,9 +144,9 @@ console.log(input);
         password:this.password,
         sex:this.sex,
         telephone:this.telephone,
-        address:this.address,
-        bank:this.bank,
-        bank_number:this.bank_number,
+        // address:this.address,
+        // bank:this.bank,
+        // bank_number:this.bank_number,
         specialization:this.specialization,
         patients_max:this.patients_max,
         experience:this.experience,
@@ -164,6 +154,7 @@ console.log(input);
         educational_background:this.educational_background
       });
 
+      console.log(input);
       if(this.password==this.password2){
         this.http.post(this.data.BASE_URL+"/register_doctors.php",input).subscribe(data => {
         let response = data.json();

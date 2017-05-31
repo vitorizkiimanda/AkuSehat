@@ -18,8 +18,8 @@ export class TabsPage {
   tab1Root = Beranda;
   tab2Root = ProfilPasien;
   tab3Root = IsiData;
-  tab4Root = Bayar;
-  tab5Root = PanggilDokter;
+  // tab4Root = Bayar;
+  tab4Root = PanggilDokter;
 
   constructor(public data: Data,public http: Http) {
 

@@ -14,9 +14,15 @@ import { Http } from '@angular/http';
 })
 export class PanggilDokter {
 
+  dokter:any;
+
   telephone:number;
 
   theme: string;
+
+  photo:string;
+  profile_pict_doct:string;
+  id_doctor:number;
   
 
   constructor(public navCtrl: NavController, private callNumber: CallNumber,public data: Data,public alertCtrl: AlertController , public http: Http , public navParams: NavParams) {
@@ -33,11 +39,33 @@ export class PanggilDokter {
     this.data.getDataPasien().then((data) => {
       this.telephone = data.no_tel_doctor;
       this.theme= data.theme;
+      this.id_doctor= data.id_doctor;
+      this.profile_pict_doct = data.profile_pict_doct;
+      this.photo = this.data.BASE_URL+data.profile_pict_doct;
+      // this.getFotoDokter();
       
     })
 
   }
 
+
+  getFotoDokter(){
+   
+      this.http.get(this.data.BASE_URL+"/images_doctors.php?doctor="+this.id_doctor).subscribe(data => {
+      let response = data.json();
+      
+      if(response.status=="200"){
+        console.log(response);
+        this.dokter= response.data;  
+        this.profile_pict_doct=response.data[0].profile_pict_doct;
+        this.photo = this.data.BASE_URL+this.profile_pict_doct;    
+
+        // console.log(response.data.profile_pict_doct);   
+        console.log(this.photo);
+      }
+    });
+    
+  }
 
 
 teleponDokter(){

@@ -8,6 +8,16 @@
 
 
 <ion-content padding>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tarik untuk memperbaharui"
+      refreshingSpinner="circles"
+      refreshingText="Memperbaharui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
 
   <ion-item *ngFor="let data of daily" >
   <!--<ion-item>-->
@@ -49,9 +59,15 @@
 
 	
 	<ion-item text-wrap *ngFor="let data of dataKomentar" >
-      <p ion-text text-right><font size="2">{{data.date}}</font></p>
-      <font size="3">{{data.sender}}</font>
-      <p>{{data.comments}}</p>   
+      <!--<p ion-text text-right><font size="2">{{data.date}}</font></p>-->
+      <div *ngIf='data.type==1'>
+				<font size="3">{{data.sender}}</font>
+				<p>{{data.comments}}</p>
+      </div>
+			<div *ngIf='data.type==2' text-right>
+				<font size="3">{{data.sender}}</font>
+				<p>{{data.comments}}</p>
+      </div>   
   </ion-item>
 	
 

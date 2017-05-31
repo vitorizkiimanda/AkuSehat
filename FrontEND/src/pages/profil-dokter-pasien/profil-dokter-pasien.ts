@@ -14,6 +14,9 @@ export class ProfilDokterPasien {
   id_patient:number;
   theme:string;
 
+  profile_pict_doct:string;
+  photo:string;
+
   constructor(public http: Http, public data: Data,public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -21,11 +24,15 @@ export class ProfilDokterPasien {
     console.log('ionViewDidLoad ProfilDokterPasien');
   }
 
+  
+
   ionViewWillEnter() {
     //ini ni ngambil value yang di return dari data.ts
     this.data.getDataPasien().then((data) => {
       this.id_patient = data.id_patient;
       this.theme= data.theme;
+      this.profile_pict_doct = data.profile_pict_doct;
+      this.photo = this.data.BASE_URL+data.profile_pict_doct;
       this.getProfilDokter();
     })
 

@@ -31,8 +31,10 @@ export class Beranda {
   id_patient:number;
   address_patient:string;
   date_daily:string;
+  photo:string;
+  profile_pict_pat:string;
   
-
+  foto= false;
 
   constructor(public navCtrl: NavController, public data: Data,public alertCtrl: AlertController , public http: Http) {
 
@@ -53,11 +55,16 @@ export class Beranda {
     //ini ni ngambil value yang di return dari data.ts
     
     this.data.getDataPasien().then((data) => {
+      console.log(data);
       this.name = data.name_patient;
       // this.email = data.email_patient;
       this.id_patient = data.id_patient;
       this.theme= data.theme;
       this.address_patient = data.address_patient;
+      this.profile_pict_pat = data.profile_pict_pat;
+      this.photo = this.data.BASE_URL+data.profile_pict_pat;
+      this.cek();
+
       //this.id_doctor = data.id_doct;
 
       //cek punya dokter atau nggak
@@ -67,6 +74,12 @@ export class Beranda {
       // this.tema();
     })
 
+  }
+
+  cek(){
+    if(this.photo!=null){
+      this.foto = true;
+    }
   }
 
   tema(){

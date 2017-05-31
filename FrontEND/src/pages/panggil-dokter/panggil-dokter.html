@@ -24,11 +24,11 @@
     </ion-fab-list>
   </ion-fab>
 
-	<ion-card (tap)="teleponDokter()">
-	    <img src="assets/pict/doctor-flat.png"/>
-	    <div class="card-title">
-		    
-		</div>
+	<ion-card  (tap)="teleponDokter()">
+    <img [src]="photo" *ngIf="profile_pict_doct" alt="avatar" style='height: 40vh; width: 40vh; display: block; margin: auto;' >
+
+		<img src="assets/pict/person-flat.png" *ngIf="!profile_pict_doct" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
+	    
 	</ion-card>
 
 <button ion-button color="{{theme}}" icon-left round block color="secondary" (click)="teleponDokter()">

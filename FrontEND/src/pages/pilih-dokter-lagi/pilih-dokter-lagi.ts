@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams,LoadingController } from 'ionic-angular';
+import {  NavController, NavParams,App,LoadingController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { AlertController } from 'ionic-angular';
 import { SignupPasien } from '../signup-pasien/signup-pasien';
@@ -7,6 +7,7 @@ import { Http } from '@angular/http';
 import { Data } from '../../providers/data';
 import { NgForm } from '@angular/forms';
 import { Vibration } from '@ionic-native/vibration';
+import { MyApp } from '../../app/app.component.ts';
 
 @Component({
   selector: 'page-pilih-dokter-lagi',
@@ -26,7 +27,7 @@ export class PilihDokterLagiPage {
   submitted = false;
   isValidFormChoose = false;
 
-  constructor(private vibration: Vibration,public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
+  constructor(private vibration: Vibration,public app: App,public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -108,14 +109,15 @@ for(let data of this.dokter){
         
 	if(response.status=="200"  && this.isValidFormChoose){
         //console.log(response);
-        this.data.login(response.data,"pasien");
-        this.gotoTab();
+        this.data.logout();
+        this.app.getRootNav().setRoot(MyApp);
         loading.dismiss();
         let alert = this.alertCtrl.create({
-                title: 'Berhasil',
-                subTitle: 'Anda mendapatkan dokter baru.',      
+                title: 'Anda mendapatkan dokter baru',
+                subTitle: 'silahkan masuk',      
                 buttons: ['OK']
               });
+            alert.present();
       }
       else if(!this.isValidFormChoose)
            {

@@ -32,7 +32,12 @@
 	<ion-list>
 			<ion-item no-lines>
 					<ion-thumbnail item-left>
-						<img src="assets/pict/person-flat.png" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+
+            <img [src]="data.profile_pict_pat" *ngIf="data.profile_pict_pat" alt="avatar" style='height: 25vw; width: 25vw; display: block; margin: auto;' >
+
+						<img src="assets/pict/person-flat.png" *ngIf="!data.profile_pict_pat" style='height: 25vw; width: 25vw; display: block; margin: auto;'>
+
+
 					</ion-thumbnail>
 					<ion-item no-lines text-wrap>
 						<font size="4"> {{data.name_patient}}</font>

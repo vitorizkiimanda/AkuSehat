@@ -27,14 +27,20 @@
   </ion-fab>
 
 	<ion-card>
-	  <img src="assets/pict/doctor-flat.png" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
+		<ion-item no-lines></ion-item>
+
+		<img [src]="photo" *ngIf="profile_pict_doct" alt="avatar" style='height: 40vh; width: 40vh; display: block; margin: auto;' >
+          
+    <img src="assets/pict/person-flat.png" *ngIf="!profile_pict_doct" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
+
+
 	  <ion-item>
 	  <button ion-button clear item-right>
-			  <ion-icon name="ios-image" color="{{theme}}" (click)='editFoto()'></ion-icon>
+			  <ion-icon name="ios-image" color="{{theme}}" (click)='updatePicture()'></ion-icon>
 			</button>
 		</ion-item>
 	  <ion-card-content>
-	    <ion-card-title>
+	    <ion-card-title text-center>
 	      {{name}}
 	      </ion-card-title>
 	  </ion-card-content>
@@ -53,13 +59,13 @@
 	     <p>{{no_tel_doctor}}</p>
 	  </ion-item>
 
-	  <ion-item>
+	  <!--<ion-item>
 	    <ion-icon name="card" item-left></ion-icon>
 	     <font size="3">Rekening</font>
 	     <p>{{bank_doctor}}</p>
 	     <p>{{no_account_doctor}}</p>
-	  </ion-item>
-
+	  </ion-item>-->
+		
 	  <ion-item>
 	    <ion-icon name="medkit" item-left></ion-icon>
 	     <font size="3">Spesialisasi</font>

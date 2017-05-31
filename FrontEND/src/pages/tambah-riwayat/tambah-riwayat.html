@@ -31,25 +31,23 @@
 
       <ion-item>
 				<ion-label stacked color="dark"><font size="2">Tanggal Dirawat</font></ion-label>
-				<ion-input [(ngModel)]="hospitalized_date"  name="hospitalized_date" type="date" #dirawat="ngModel" spellcheck="false" autocapitalize="off"
+				<ion-input [(ngModel)]="hospitalized_date" (ionChange)="checkDate()"  name="hospitalized_date" type="date" #dirawat="ngModel" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
 			</ion-item>
-      <p ion-text [hidden]="dirawat.valid || submitted == false" color="danger" padding-left>
+      <p ion-text [hidden]="dirawat.valid || submitted1 == false" color="danger" padding-left>
 				Tanggal dirawat harus diisi
 			</p>
 
 
       <ion-item>
 				<ion-label stacked color="dark"><font size="2">Lama Dirawat</font></ion-label>
-				<ion-input [(ngModel)]="hospitalized_long" (ionChange)="checkLama()" name="hospitalized_date" type="number" placeholder="(hari)" #lama="ngModel" required>
+				<ion-input [(ngModel)]="hospitalized_long" (ionChange)="checkLama()" name="hospitalized_long" pattern="[0-9]{1,}" type="number" placeholder="(hari)" #lama="ngModel" required>
 				</ion-input>
 			</ion-item>
-			<!--<p ion-text [hidden]="maksimal.valid || submitted == false" color="danger" padding-left>
-				Jumlah Pasien Maksimal is required
-			</p>-->
-			<div ion-text [hidden]="(lama.valid || submitted == false) && hospitalized_long>0"  padding-left>
-				<p color="danger" [hidden]="lama.valid || submitted == false">Lama dirawat harus diisi</p>
+			
+			<div ion-text [hidden]="(lama.valid || submitted2 == false) && hospitalized_long>0"  padding-left>
+				<p color="danger" [hidden]="lama.valid || submitted2 == false">Lama dirawat harus diisi</p>
 				<p color="danger" *ngIf="hospitalized_long<0">Lama dirawat salah</p>
 			</div>
 

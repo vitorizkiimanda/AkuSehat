@@ -12,7 +12,11 @@ import {LocalNotifications} from 'ionic-native';
 })
 export class TambahRiwayatPage {
 
-  submitted= false;
+  submitted = false;
+  submitted1= false;
+  submitted2= false;
+
+
   hospitalized_date:string;
   hospitalized_long:number;
   disease_type:string;
@@ -20,6 +24,7 @@ export class TambahRiwayatPage {
   id_patient:number;
 
   isValidFormLama= true;
+  isValidFormDate= false;
 
   theme: string;
 
@@ -53,6 +58,12 @@ export class TambahRiwayatPage {
 
   }
 
+  checkDate(){
+    console.log(this.hospitalized_long);
+    this.isValidFormLama=true;
+
+  }
+
 
   simpanData(form: NgForm){
 
@@ -61,8 +72,11 @@ export class TambahRiwayatPage {
     });
 
     this.submitted = true;
+    this.submitted1 = true;
+    this.submitted2 = true;
     this.checkLama();
-    if(form.valid && this.isValidFormLama){
+    
+    if(form.valid && this.isValidFormLama && this.isValidFormLama){
       loading.present();
       let input = JSON.stringify({
    

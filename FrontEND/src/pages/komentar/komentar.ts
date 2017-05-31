@@ -64,6 +64,16 @@ export class KomentarPage {
 
   }
 
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.ionViewWillEnter();
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
+
   getDataKesehatan(){
     this.http.get(this.data.BASE_URL+"/comment_daily.php?id_daily_h="+this.id_daily_h).subscribe(data => {
       let response = data.json();

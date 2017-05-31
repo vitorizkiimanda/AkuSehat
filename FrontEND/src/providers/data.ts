@@ -5,8 +5,9 @@ import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class Data {
-  // public BASE_URL = 'http://localhost/akusehat/BackEND';
+  // public BASE_URL = 'http://localhost/akusehat/localhost';
   public BASE_URL = 'http://akusehat.pe.hu';
+  
   public HAS_LOGGED_IN = 'status_login';
   
   constructor(public http: Http , public storage: Storage) {

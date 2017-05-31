@@ -210,6 +210,7 @@ console.log(input);
         // this.submitted2 = true;
         this.http.post(this.data.BASE_URL+"/register_patients.php",input).subscribe(data => {
         let response = data.json();
+        console.log(input);
         
 	  if(response.status=="200"){
 

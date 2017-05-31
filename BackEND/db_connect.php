@@ -10,7 +10,7 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
     if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
-        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
 
     if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
         header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
@@ -18,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-$localhost = "localhost";
-$username = "root";
-$password = "root";
-$db_name = "akusehat";
+$localhost = "mysql.idhostinger.com";
+$username = "u152232156_admin";
+$password = "akusehat";
+$db_name = "u152232156_sehat";
 
 //create connection
-$connect = new mysqli($localhost, $username, $password, $db_name);
+$connect = mysqli_connect($localhost, $username, $password, $db_name);
 
 //check connection
 if($connect->connect_error) {

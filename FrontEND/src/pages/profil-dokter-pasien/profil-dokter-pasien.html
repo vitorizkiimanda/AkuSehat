@@ -21,10 +21,12 @@
 	
 
 	<ion-card>
-	  <img src="assets/pict/doctor-flat.png" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
+	  <img [src]="photo" *ngIf="profile_pict_doct" alt="avatar" style='height: 40vh; width: 40vh; display: block; margin: auto;' >
+
+		<img src="assets/pict/person-flat.png" *ngIf="!profile_pict_doct" style='height: 40vh; width: 40vh; display: block; margin: auto;'>
 	  <ion-card-content>
-	    <ion-card-title  *ngFor="let data of profilDokter">
-	      {{data.name_doctor}}
+	    <ion-card-title text-center *ngFor="let data of profilDokter">
+	      dr.{{data.name_doctor}}
 	      </ion-card-title>
 	  </ion-card-content>
 	</ion-card>

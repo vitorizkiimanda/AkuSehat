@@ -15,6 +15,8 @@ import { Http } from '@angular/http';
 export class BerandaDokter {
 
   theme: string;
+  photo:string;
+  profile_pict_doct:string;
 
   pasien: any;
   name:string;
@@ -41,11 +43,14 @@ export class BerandaDokter {
   ionViewWillEnter() {
     //ini ni ngambil value yang di return dari data.ts
     this.data.getDataDokter().then((data) => {
+      console.log(data);
       this.name = data.name_doctor;
       this.specialization = data.specialization;
       // this.email = data.email_doctor;
       this.id_doctor = data.id_doctor;
-       this.theme= data.theme;
+      this.theme= data.theme;
+      this.photo = this.data.BASE_URL+data.profile_pict_doct;
+      this.profile_pict_doct = data.profile_pict_doct;
       // this.bank_number = data.no_account_doctor;
       // this.telephone = data.no_tel_doctor;
       // this.bank = data.bank_doctor;

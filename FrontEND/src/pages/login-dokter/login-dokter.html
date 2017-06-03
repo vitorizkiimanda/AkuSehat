@@ -36,9 +36,14 @@
 
 			<ion-item>
 				<ion-label stacked>Password</ion-label>
-				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>
+				<ion-input [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel" required>
 				</ion-input>
 			</ion-item>
+			<div text-right >
+				<ion-icon  [hidden]="lihat == false" name="md-eye" color="primary" (click)="showPassword()" ></ion-icon>
+
+				<ion-icon  [hidden]="lihat == true" name="md-eye-off" color="primary" (click)="hidePassword()" ></ion-icon>
+			</div>
 			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
 				Password harus diisi
 			</p>

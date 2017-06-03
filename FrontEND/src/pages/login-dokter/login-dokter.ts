@@ -18,6 +18,8 @@ export class LoginDokter {
   email:string;
   password:string;
   submitted = false;  //ini di declare awalnya false dlu
+  status:string;
+  lihat = true;
 
   constructor(private vibration: Vibration,public navCtrl: NavController,
   public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
@@ -25,6 +27,18 @@ export class LoginDokter {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginDokter');
+    this.status = "password";
+  }
+  showPassword(){
+    this.status = "text";
+    this.lihat = false;
+    console.log(this.status);
+  }
+
+  hidePassword(){
+    this.status = "password";
+    this.lihat = true;
+    console.log(this.status);
   }
 
   gotoTab(){

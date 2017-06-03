@@ -152,6 +152,15 @@
 							<font size="3">Lama Dirawat</font>
 							<p>{{data.hospitalized_long}} Hari</p>
 						</ion-item>
+						<ion-row responsive-sm no-lines>
+							<ion-col no-lines text-right>
+								 <ion-icon name="md-create" color="{{theme}}" (click)="editPenyakitPasien(data)" ></ion-icon>
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								 <ion-icon name="ios-trash" color="danger" (click)="hapusPenyakitPasien(data)" ></ion-icon>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 
+							</ion-col>
+						</ion-row>	
 				</ion-item>
 				<button color="{{theme}}" (click)='tambahRiwayat()' round clear block ion-button icon-left>
 					<ion-icon name="md-add-circle"></ion-icon>

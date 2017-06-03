@@ -39,7 +39,7 @@
 				<ion-label padding-left stacked color="dark"><font size="2">Tekanan Darah (mmHg)</font></ion-label>
 				<ion-row>
 					<ion-col >
-					<ion-input text-center [(ngModel)]="sistol" placeholder="Sistolik" name="sistol" type="number" #sistolikk="ngModel" value="" required>
+					<ion-input text-center [(ngModel)]="sistol" placeholder="Sistolik" pattern="[0-9]{1,2}" maxlength="3"name="sistol" type="number" #sistolikk="ngModel" value="" required>
 					</ion-input>
 					</ion-col>
 					
@@ -48,7 +48,7 @@
 					</ion-col>	
 						
 					<ion-col>
-					<ion-input text-center [(ngModel)]="diastol" placeholder="Diastolik" name="diastol" type="number" #diastolikk="ngModel" value="" required>
+					<ion-input text-center [(ngModel)]="diastol" placeholder="Diastolik" pattern="[0-9]{1,2}" maxlength="3" name="diastol" type="number" #diastolikk="ngModel" value="" required>
 					</ion-input>
 					</ion-col>
 					
@@ -58,8 +58,8 @@
 					
 					<ion-col text-center>
 							<p ion-text [hidden]="diastolikk.valid && sistolikk.valid || submitted == false" color="danger">
-									Tekanan Darah harus diisi
-								</p>
+									Tekanan Darah harus diisi<br>(harap isi dengan benar)
+							</p>
 					</ion-col>	
 						
 					
@@ -76,13 +76,13 @@
 
 			<ion-item>
 				<ion-label stacked color="dark"><font size="2">Durasi Tidur</font></ion-label>
-				<ion-input [(ngModel)]="duration" placeholder="(jam)" name="duration" type="number" #tidurr="ngModel" spellcheck="false" autocapitalize="off"
+				<ion-input [(ngModel)]="duration" placeholder="(jam)" name="duration" type="number" pattern="[1-9]{1}" maxlength="2" minlength="1" #tidurr="ngModel" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
 			</ion-item>
 			
 			<p ion-text [hidden]="tidurr.valid || submitted == false" color="danger" padding-left>
-				Durasi Tidur harus diisi
+				Durasi Tidur harus diisi (harap isi dengan benar)
 			</p>
 
 			<ion-item>

@@ -1,0 +1,67 @@
+
+<ion-header>
+  <ion-navbar color="{{theme}}">
+    <ion-title>
+      Edit Riwayat Penyakit
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+
+	
+
+<form #simpanDataForm="ngForm" novalidate>
+		<ion-list >
+		
+		
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Nama Penyakit</font></ion-label>
+				<ion-input [(ngModel)]="disease_type" name="disease_type" type="text" #penyakit="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+      <p ion-text [hidden]="penyakit.valid || submitted == false" color="danger" padding-left>
+				Nama Penyakit harus diisi
+			</p>
+
+      <ion-item>
+				<ion-label stacked color="dark"><font size="2">Tanggal Dirawat</font></ion-label>
+				<ion-input [(ngModel)]="hospitalized_date" (ionChange)="checkDate()"  name="hospitalized_date" type="date" #dirawat="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+      <p ion-text [hidden]="dirawat.valid || submitted1 == false" color="danger" padding-left>
+				Tanggal dirawat harus diisi
+			</p>
+
+
+      <ion-item>
+				<ion-label stacked color="dark"><font size="2">Lama Dirawat</font></ion-label>
+				<ion-input [(ngModel)]="hospitalized_long" (ionChange)="checkLama()" name="hospitalized_long" pattern="[0-9]{1,}" type="number" placeholder="(hari)" #lama="ngModel" required>
+				</ion-input>
+			</ion-item>
+			
+			<div ion-text [hidden]="(lama.valid || submitted2 == false) && hospitalized_long>0"  padding-left>
+				<p color="danger" [hidden]="lama.valid || submitted2 == false">Lama dirawat harus diisi</p>
+				<p color="danger" *ngIf="hospitalized_long<0">Lama dirawat salah</p>
+			</div>
+
+			
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button color="{{theme}}" ion-button (click)="simpanData(simpanDataForm)" type="submit" block>SIMPAN</button>
+			</ion-col>
+		</ion-row>	
+	</form>
+
+
+
+<ion-item no-lines></ion-item>
+</ion-content>

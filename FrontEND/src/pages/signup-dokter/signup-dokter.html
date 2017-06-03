@@ -27,7 +27,7 @@
 
 			<ion-item>
 				<ion-label stacked color="dark"><font size="2">Email</font></ion-label>
-				<ion-input [(ngModel)]="email" name="email" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
+				<ion-input [(ngModel)]="email" name="email" type="email" #mail="ngModel" pattern="[^@\]+@[^@\]+\.[^@\s]+" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
 			</ion-item>
@@ -38,11 +38,11 @@
 
 			<ion-item>
 				<ion-label stacked color="dark"><font size="2">Password</font></ion-label>
-				<ion-input [(ngModel)]="password" name="pass" type="password" #pass="ngModel" required>
+				<ion-input [(ngModel)]="password" minlength="8" name="pass" type="password" #pass="ngModel" required>
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
-				Password harus diisi
+				Password harus diisi (minimal 8 karakter)
 			</p>
 
 

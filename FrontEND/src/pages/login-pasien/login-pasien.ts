@@ -18,12 +18,29 @@ export class LoginPasien {
   email:string;
   password:string;
   submitted = false;
+  status:string;
+  lihat = true;
   
   constructor(private vibration: Vibration,public navCtrl: NavController, public http: Http,public alertCtrl: AlertController , public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
+
+    
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPasien');
+    this.status = "password";
+  }
+  showPassword(){
+    this.status = "text";
+    this.lihat = false;
+    console.log(this.status);
+  }
+
+  hidePassword(){
+    this.status = "password";
+    this.lihat = true;
+    console.log(this.status);
   }
 
   gotoTab(){

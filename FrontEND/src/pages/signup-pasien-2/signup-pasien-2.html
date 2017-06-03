@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Buat Akun
+    </ion-title>
+  </ion-navbar>		
+</ion-header>
+
+
+<!--ni pilih dokter
+i
+              <ion-option *ngFor="let data of dataKomoditas" value="{{data.komoditas_id}}">{{data.name}}</ion-option>-->
+
+
+<ion-content padding>
+
+<form #signupForm="ngForm" novalidate>
+		<ion-list >
+			
+			<ion-item text-center><font size="3">Riwayat Kesehatan</font></ion-item>
+
+      
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Umur (tahun)</font></ion-label>
+				<ion-input [(ngModel)]="age" (ionChange)="checkUmur()" name="age"  maxlength="3" type="number" #umur="ngModel" required placeholder="" >
+				</ion-input>
+			</ion-item>
+			<div ion-text [hidden]="(umur.valid || submitted == false) && age>0"  padding-left>
+				<p color="danger" [hidden]="umur.valid || submitted == false">Umur harus diisi</p>
+				<p color="danger" *ngIf="age<0">Umur salah</p>
+			</div>
+			
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Berat Badan (kg)</font></ion-label>
+				<ion-input [(ngModel)]="weight" (ionChange)="checkBB()" name="weight" maxlength="3" type="number" #berat="ngModel" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<div ion-text [hidden]="(berat.valid || submitted == false) && weight>0"  padding-left>
+				<p color="danger" [hidden]="berat.valid || submitted == false">Berat badan harus diisi</p>
+				<p color="danger" *ngIf="weight<0">Berat badan salah</p>
+			</div>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Tinggi Badan (cm)</font></ion-label>
+				<ion-input [(ngModel)]="height" (ionChange)="checkTB()" min="0" name="height" maxlength="3" type="number" #tinggi="ngModel" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<div ion-text [hidden]="(tinggi.valid || submitted == false) && height>0"  padding-left>
+				<p color="danger" [hidden]="tinggi.valid || submitted == false">Tinggi badan harus diisi</p>
+				<p color="danger" *ngIf="height<0">Tinggi badan salah</p>
+			</div>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Alergi</font></ion-label>
+				<ion-input [(ngModel)]="allergy" name="allergy" type="text" #alergi="ngModel" value="-" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="alergi.valid || submitted == false" color="danger" padding-left>
+				Isi dengan "-" bila tidak ada.
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Cacat</font></ion-label>
+				<ion-input [(ngModel)]="disability" name="disability" type="text" #cacat="ngModel"  required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="cacat.valid || submitted == false" color="danger" padding-left>
+				Isi dengan "-" bila tidak ada.
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Operasi</font></ion-label>
+				<ion-input [(ngModel)]="operation" name="operation" type="text" #operasi="ngModel" value="-" required placeholder="">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="operasi.valid || submitted == false" color="danger" padding-left>
+				Isi dengan "-" bila tidak ada.
+			</p>
+
+
+			<ion-item>
+				<ion-label stacked color="dark"><font size="2">Deskripsi Kesehatan</font></ion-label>
+				<ion-textarea   [(ngModel)]="description" name="description" type="text" #deskripsi="ngModel" required autosize></ion-textarea>
+			</ion-item>
+			<p ion-text [hidden]="deskripsi.valid || submitted == false" color="danger" padding-left>
+				Deskripsi kesehatan harus diisi
+			</p>
+
+			
+
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button center block  outline ion-button round (click)="doRadio()">
+					<div *ngIf="!choose_doctor">Pilih Dokter</div>
+					<div *ngIf="choose_doctor">Dokter {{choose_doctor}}</div>
+				</button>
+				
+				<p ion-text [hidden]="choose_doctor || submitted == false" color="danger" padding-left>
+				Pilih satu
+			</p>
+			</ion-col>
+			<ion-col>
+				<button ion-button block (click)="signup(signupForm)" type="submit">DAFTAR</button>
+			</ion-col>
+		</ion-row>
+
+	</form>
+
+
+
+	
+
+</ion-content>
+

@@ -8,6 +8,7 @@ import { ProfilDokterPasien } from '../profil-dokter-pasien/profil-dokter-pasien
 import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
 import { TambahRiwayatPage } from '../tambah-riwayat/tambah-riwayat';
+import { RiwayatEditPage } from '../riwayat-edit/riwayat-edit';
 
 import { File } from '@ionic-native/file';
 import { Transfer, TransferObject } from '@ionic-native/transfer';
@@ -91,6 +92,63 @@ export class ProfilPasien {
       this.getDataHistory();
     })
     
+
+  }
+
+
+  editPenyakitPasien(data){
+     this.navCtrl.push(RiwayatEditPage, data);
+  }
+
+  hapusPenyakitPasien(data){
+    let id_patient_disease = data.id_patient_disease;
+    let confirm = this.alertCtrl.create({
+      title: 'Anda yakin?',
+      message: 'Penghapusan data riwayat penyakit tidak bisa dibatalkan',
+      buttons: [
+        {
+          text: 'Tidak',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Ya',
+          handler: () => {
+            console.log('Agree clicked');
+
+            this.http.get(this.data.BASE_URL+"/delete_patient_disease.php?id="+id_patient_disease).subscribe(data => {
+                let response = data.json();
+                console.log(response);
+                if(response.status=="200"){
+                  // this.pasien= response.data;
+                  this.ionViewWillEnter();  
+                  let alert = this.alertCtrl.create({
+                    title: 'Riwayat Penyakit Terhapus',
+                    subTitle: '',      
+                    buttons: ['OK']
+                  });
+                  this.vibration.vibrate(1000);
+                  alert.present();
+                }
+                else {
+                      let alert = this.alertCtrl.create({
+                    title: 'Gagal Menghapus',
+                    subTitle: '',      
+                    buttons: ['OK']
+                  });
+                  this.vibration.vibrate(1000);
+                  alert.present();
+                }
+              });
+            }
+
+          }
+        
+      ]
+    });
+    confirm.present();
+
 
   }
 

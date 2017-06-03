@@ -6,6 +6,7 @@ import { Http } from '@angular/http';
 import { Data } from '../../providers/data';
 import { NgForm } from '@angular/forms';
 import { Vibration } from '@ionic-native/vibration';
+import { SignupPasien2Page } from '../signup-pasien-2/signup-pasien-2';
 
 @Component({
   selector: 'page-signup-pasien',
@@ -48,6 +49,8 @@ export class SignupPasien {
 
   constructor(private vibration: Vibration,public navCtrl: NavController, public http: Http, public alertCtrl: AlertController, public navParams: NavParams, public data: Data,public loadCtrl: LoadingController) {
   }
+
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPasien');
@@ -176,18 +179,17 @@ console.log(input);
 
 
 
-  signup(form: NgForm){
+  nextSignup(form: NgForm){
+
     let loading = this.loadCtrl.create({
-        content: 'mendaftarkan..'
+        content: 'memuat..'
     });
 
     this.submitted = true;
     this.checkTelephone();
-    this.checkUmur();
-    this.checkBB();
-    this.checkTB();
-    if(form.valid  && this.isValidFormTelephone && this.isValidFormBB && this.isValidFormTB && this.isValidFormUmur){
-      loading.present();
+    
+
+    if(form.valid  && this.isValidFormTelephone){
       let input = JSON.stringify({
         name:this.name,
         email:this.email,
@@ -195,29 +197,27 @@ console.log(input);
         sex:this.sex,
         telephone:this.telephone,
         address:this.address,
-        age:this.age,
-        weight:this.weight,
-        height:this.height,
-        allergy:this.allergy,
-        operation:this.operation,
-        disability:this.disability,
-        description:this.description,
-        choose_doctor:this.choose_doctor
 
-         
       });
       if(this.password==this.password2){
-        // this.submitted2 = true;
-        this.http.post(this.data.BASE_URL+"/register_patients.php",input).subscribe(data => {
+        console.log(input);
+
+          
+        loading.present();   
+        let mail = JSON.stringify({
+        email:this.email,
+        
+        });
+        
+        this.http.post(this.data.BASE_URL+"/register_patients_email.php",mail).subscribe(data => {
         let response = data.json();
         console.log(input);
         
 	  if(response.status=="200"){
 
-       
-       // this.data.login(response.data);
-        this.akunBaru();
-        loading.dismiss();
+       loading.dismiss();
+       this.navCtrl.push(SignupPasien2Page, input);
+        
       }
       else if(response.status=="409"){
              loading.dismiss();
@@ -234,83 +234,40 @@ console.log(input);
              loading.dismiss();
              this.vibration.vibrate(1000);
              let alert = this.alertCtrl.create({
-                title: 'Gagal Membuat Akun',
-                subTitle: 'Periksa kembali data.',      
+                title: 'Proses Gagal',
+                subTitle: 'Periksa kembali data',      
                 buttons: ['OK']
               });
               alert.present();
            }
 
       });
-    }
-    else {
-        loading.dismiss();
-         this.vibration.vibrate(1000);
-         let alert = this.alertCtrl.create({
-                title: 'Gagal Membuat Akun',
-                subTitle: 'Periksa kembali data.',      
-                buttons: ['OK']
-              });
-              alert.present();
-         this.submitted2 = false;
       }
     }
     else if(!this.isValidFormChoose)
     {
-      loading.dismiss();
+      
             this.vibration.vibrate(1000);
              let alert = this.alertCtrl.create({
                 title: 'Lengkapi Data',
-                subTitle: '',      
+                subTitle: 'Harap isi data dengan benar',      
                 buttons: ['OK']
               });
               alert.present();
     }
     else
     {
-            loading.dismiss();
+           
             this.vibration.vibrate(1000);
              let alert = this.alertCtrl.create({
                 title: 'Gagal Membuat Akun',
-                subTitle: 'Periksa kembali data.',      
+                subTitle: 'Periksa kembali data',      
                 buttons: ['OK']
               });
               alert.present();
     }
 
   }
-
-
-
-  doRadio() {
-    let alert = this.alertCtrl.create();
-    alert.setTitle('Spesialisasi Dokter');
-
-for(let data of this.dokter){
-    alert.addInput({
-      type: 'radio',
-      label: data.specialization,
-      value: data.specialization
-    });
-    }
-
-    alert.addButton('Cancel');
-    alert.addButton({
-      text: 'Ok',
-      handler: data => {
-        console.log('Radio data:', data);
-        this.testRadioOpen = false;
-        this.testRadioResult = data;
-        this.choose_doctor=data;
-        this.checkDokter();
-      }
-    });
-
-    alert.present().then(() => {
-      this.testRadioOpen = true;
-    });
-  }
-
 
 
 }

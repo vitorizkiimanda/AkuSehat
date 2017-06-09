@@ -39,7 +39,7 @@
 				<ion-label padding-left stacked color="dark"><font size="2">Tekanan Darah (mmHg)</font></ion-label>
 				<ion-row>
 					<ion-col >
-					<ion-input text-center [(ngModel)]="sistol" placeholder="Sistolik" pattern="[0-9]{1,2}" maxlength="3"name="sistol" type="number" #sistolikk="ngModel" value="" required>
+					<ion-input text-center [(ngModel)]="sistol" placeholder="Sistolik" pattern="[0-9]{1,}" minlength="2" maxlength="3"name="sistol" type="number" #sistolikk="ngModel" value="" required>
 					</ion-input>
 					</ion-col>
 					
@@ -48,7 +48,7 @@
 					</ion-col>	
 						
 					<ion-col>
-					<ion-input text-center [(ngModel)]="diastol" placeholder="Diastolik" pattern="[0-9]{1,2}" maxlength="3" name="diastol" type="number" #diastolikk="ngModel" value="" required>
+					<ion-input text-center [(ngModel)]="diastol" placeholder="Diastolik" pattern="[0-9]{1,}" minlength="2" maxlength="3" name="diastol" type="number" #diastolikk="ngModel" value="" required>
 					</ion-input>
 					</ion-col>
 					

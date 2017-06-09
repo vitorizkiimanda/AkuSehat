@@ -15,6 +15,7 @@ import { SignupPasien2Page } from '../signup-pasien-2/signup-pasien-2';
 export class SignupPasien {
 
   dokter:any;
+  
 
   testRadioOpen: boolean;
   testRadioResult;
@@ -54,10 +55,15 @@ export class SignupPasien {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPasien');
+    
   }
+  
   ionViewWillEnter() {
     this.pilih_doctor();
   }
+
+  
+
   checkTelephone(){
     console.log(this.telephone);
     if(this.telephone<0){

@@ -19,26 +19,26 @@
 <form #loginForm="ngForm" novalidate>
 		<ion-list >
 			<ion-item>
-				<ion-label stacked>Email</ion-label>
+				<ion-label floating>Email</ion-label>
 				<ion-input [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
 			</ion-item>
-			
 			<p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left>
-				Email harus diisi
+			Email harus diisi
 			</p>
-			<ion-item>
-				<ion-label stacked>Password</ion-label>
-				
-				<ion-input [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel" required>
-				</ion-input>
-			</ion-item>
-			<div text-right >
-				<ion-icon  [hidden]="lihat == false" name="md-eye" color="primary" (click)="showPassword()" ></ion-icon>
 
-				<ion-icon  [hidden]="lihat == true" name="md-eye-off" color="primary" (click)="hidePassword()" ></ion-icon>
-			</div>
+			<ion-item>
+				<ion-label floating>Password</ion-label>
+				
+				
+				<ion-input  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  required>
+				</ion-input>
+				<button class='tombol' [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
+				<button class='tombol' [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
+				
+
+			</ion-item>
 			
 			<p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
 				Password harus diisi

@@ -53,9 +53,10 @@ i
 			</p>
 
 			<ion-item>
-				<ion-label stacked color="dark"><font size="2">konfirmasi Password</font></ion-label>
+				<ion-label stacked color="dark"><font size="2">Konfirmasi Password</font></ion-label>
 				<ion-input [(ngModel)]="password2" name="pass2" type="password" #passconfirm="ngModel" required>
 				</ion-input>
+
 			</ion-item>
 			<!--<p ion-text [hidden]="submitted2 == true" color="danger" padding-left>
 				Password salah
@@ -93,7 +94,7 @@ i
 				<ion-textarea  [(ngModel)]="address" name="address" type="text" #alamat="ngModel" required autosize></ion-textarea>
 			</ion-item>
 			<p ion-text [hidden]="alamat.valid || submitted == false" color="danger" padding-left>
-				Address harus diisi
+				Alamat harus diisi
 			</p>
 		</ion-list>
 
